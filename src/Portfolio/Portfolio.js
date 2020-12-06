@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       paddingTop: theme.spacing(5),
       width: "100%",
-      height: "50%",
+      //height: "100%",
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
@@ -48,9 +48,9 @@ const useStyles = makeStyles((theme) => ({
     height: "100%",
 
     [theme.breakpoints.down("sm")]: {
-      paddingTop: theme.spacing(5),
+      //padding: theme.spacing(5, 0),
       width: "100%",
-      height: "50%",
+      //height: "100%",
       display: "flex",
       alignItems: "center",
       justifyContent: "center",

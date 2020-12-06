@@ -5,10 +5,16 @@ import JavascriptIcon from "../Images/Javascript.png";
 import JavaIcon from "../Images/Java.png";
 import HtmlIcon from "../Images/html5.png";
 import CssIcon from "../Images/css3.png";
+import CIcon from "../Images/c.png";
+import RubyIcon from "../Images/ruby.png";
 import ReactIcon from "../Images/React.png";
 import NodejsIcon from "../Images/nodejs.png";
 import GitIcon from "../Images/git.png";
 import GitHubIcon from "../Images/github.png";
+import GradleIcon from "../Images/gradle.png";
+import IMovieIcon from "../Images/imovie.png";
+import MongoDbIcon from "../Images/mongodb.PNG";
+
 // import MuiIcon from "../Images/mui.png";
 import Tooltip from "@material-ui/core/Tooltip";
 import Typography from "@material-ui/core/Typography";
@@ -26,7 +32,8 @@ const useStyles = makeStyles((theme) => ({
   iconHolder: {
     marginTop: theme.spacing(2),
     marginBottom: theme.spacing(2),
-    [theme.breakpoints.down("xs")]: {
+
+    [theme.breakpoints.down("sm")]: {
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
@@ -51,9 +58,6 @@ export default function Icons() {
         Languages
       </Typography>
       <div className={classes.iconHolder}>
-        <Tooltip title="Python" TransitionComponent={Zoom} enterTouchDelay="50">
-          <img src={PythonIcon} className={classes.icon} alt="python icon" />
-        </Tooltip>
         <Tooltip title="Java" TransitionComponent={Zoom} enterTouchDelay="50">
           <img src={JavaIcon} className={classes.icon} alt="java icon" />
         </Tooltip>
@@ -68,11 +72,20 @@ export default function Icons() {
             alt="javascript icon"
           />
         </Tooltip>
+        <Tooltip title="Python" TransitionComponent={Zoom} enterTouchDelay="50">
+          <img src={PythonIcon} className={classes.icon} alt="python icon" />
+        </Tooltip>
         <Tooltip title="HTML5" TransitionComponent={Zoom} enterTouchDelay="50">
           <img src={HtmlIcon} className={classes.icon} alt="html5 icon" />
         </Tooltip>
         <Tooltip title="CSS3" TransitionComponent={Zoom} enterTouchDelay="50">
           <img src={CssIcon} className={classes.icon} alt="css3 icon" />
+        </Tooltip>
+        <Tooltip title="C" TransitionComponent={Zoom} enterTouchDelay="50">
+          <img src={CIcon} className={classes.icon} alt="c icon" />
+        </Tooltip>
+        <Tooltip title="Ruby" TransitionComponent={Zoom} enterTouchDelay="50">
+          <img src={RubyIcon} className={classes.icon} alt="ruby icon" />
         </Tooltip>
       </div>
       <Typography variant="subtitle1" className={classes.title}>
@@ -93,7 +106,20 @@ export default function Icons() {
           <img src={GitIcon} className={classes.icon} alt="git icon" />
         </Tooltip>
         <Tooltip title="GitHub" TransitionComponent={Zoom} enterTouchDelay="50">
-          <img src={GitHubIcon} className={classes.icon} alt="Github icon" />
+          <img src={GitHubIcon} className={classes.icon} alt="github icon" />
+        </Tooltip>
+        <Tooltip title="Gradle" TransitionComponent={Zoom} enterTouchDelay="50">
+          <img src={GradleIcon} className={classes.icon} alt="gradle icon" />
+        </Tooltip>
+        <Tooltip
+          title="mongoDB"
+          TransitionComponent={Zoom}
+          enterTouchDelay="50"
+        >
+          <img src={MongoDbIcon} className={classes.icon} alt="mongodb icon" />
+        </Tooltip>
+        <Tooltip title="iMovie" TransitionComponent={Zoom} enterTouchDelay="50">
+          <img src={IMovieIcon} className={classes.icon} alt="imovie icon" />
         </Tooltip>
       </div>
     </div>

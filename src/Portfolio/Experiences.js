@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
     // marginLeft: theme.spacing(20),
     [theme.breakpoints.down("sm")]: {
       marginLeft: theme.spacing(0),
-
+      flexWrap: "wrap",
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
@@ -47,6 +47,8 @@ const useStyles = makeStyles((theme) => ({
 
   card: {
     width: 450,
+    //marginBottom: theme.spacing(5),
+    margin: theme.spacing(0, 0, 5, 0),
     [theme.breakpoints.down("md")]: {
       width: 350,
     },
@@ -60,7 +62,9 @@ const useStyles = makeStyles((theme) => ({
   },
 
   duration: {
-    marginBottom: theme.spacing(3),
+    margin: theme.spacing(1, 0, 3, 0),
+    fontStyle: "italic",
+    //fontSize: 14,
   },
 
   jobscope: {
@@ -68,13 +72,16 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: theme.spacing(1),
     fontStyle: "italic",
   },
+
+  employer: {},
 }));
 
 /*---- My Experiences (Update here, format: {jobTitle: , description: , duration: }) ----*/
 const experiences = [
   {
     jobTitle: "CS2030S Teaching Assistant",
-    duration: "Aug 2020 - Present",
+    company: "National University of Singapore",
+    duration: "Aug 2020 - Nov 2020",
     description:
       "Organize and conduct scheduled sessions to teach object-oriented programming \
       and functional programming to students.",
@@ -82,6 +89,17 @@ const experiences = [
       "Conduct scheduled sessions to facilitate learning of object-oriented/functional programming",
       "Assess assignments and give feedback to students",
       "Build students' proficiency in Java",
+    ],
+  },
+  {
+    jobTitle: "Part-time Software Developer",
+    company: "Inland Revenue Authority of Singapore",
+    duration: "Dec 2020 - Present",
+    description:
+      "Working on a greenfield Chat Bot Project that aims to automate personalized interactions with tax payers",
+    jobscope: [
+      "Integrating relevant data and responses into the Chat Bot for certain features",
+      "Implementing Web Hooks with the Chat Bot that push/get data to/from the main server",
     ],
   },
 ];
@@ -101,11 +119,13 @@ export default function Experiences() {
               <Typography variant="h5" component="h2">
                 {job.jobTitle}
               </Typography>
+              <Typography variant="body1" component="p" color="primary">
+                {job.company}
+              </Typography>
               <Typography
                 className={classes.duration}
                 variant="body1"
                 component="p"
-                color="primary"
               >
                 {job.duration}
               </Typography>

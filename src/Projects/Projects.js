@@ -10,6 +10,8 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
 import ModPlanner from "./My Projects/Modplanner";
+import Bob from "./My Projects/Bob";
+import CommonCents from "./My Projects/CommonCents";
 import Dialog from "./Dialog";
 
 const useStyles = makeStyles((theme) => ({
@@ -17,10 +19,11 @@ const useStyles = makeStyles((theme) => ({
     height: 750,
     paddingTop: theme.spacing(20),
     paddingBottom: theme.spacing(15),
-    zIndex: 1,
+    // zIndex: 1,
     [theme.breakpoints.down("sm")]: {
+      marginTop: theme.spacing(10),
       //   paddingTop: theme.spacing(5),
-      paddingBottom: theme.spacing(50),
+      //paddingBottom: theme.spacing(50),
     },
   },
 
@@ -35,6 +38,7 @@ const useStyles = makeStyles((theme) => ({
   },
   card: {
     height: "100%",
+    //width: 300,
     display: "flex",
     flexDirection: "column",
     backgroundColor: theme.palette.background.paper,
@@ -43,11 +47,15 @@ const useStyles = makeStyles((theme) => ({
     //paddingTop: "56.25%", // 16:9
     marginTop: "10%",
     marginBottom: "10%",
+    height: 75,
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
     // backgroundColor: "#f3f3f3",
   },
   image: {
-    height: "100%",
-    width: "100%",
+    // height: "100%",
+    // width: "100%",
   },
   logo: {
     marginLeft: theme.spacing(1),
@@ -69,26 +77,40 @@ const useStyles = makeStyles((theme) => ({
 
 // const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 /*---- My Projects (Update here, format: {title: , shortDescription, description: , links: , techStack:   }) ----*/
-const projects = [ModPlanner];
+const projects = [ModPlanner, Bob, CommonCents];
 
 export default function Portfolio() {
   const classes = useStyles();
+  const showcaseStub = {
+    large: { width: 0, height: 0 },
+    medium: { width: 0, height: 0 },
+    small: { width: 0, height: 0 },
+  };
 
   const [open, setOpen] = React.useState(false);
   const [title, setTitle] = React.useState("");
+  const [showcaseSize, setShowcaseSize] = React.useState(showcaseStub);
   const [image, setImage] = React.useState(null);
   const [description, setDescription] = React.useState("");
   const [roles, setRoles] = React.useState([]);
   const [links, setLinks] = React.useState([]);
   const [techStack, setTechStack] = React.useState([]);
 
-  const handleClick = (title, image, description, roles, links, techStack) => {
+  const handleClick = (
+    title,
+    image,
+    showcaseSize,
+    description,
+    roles,
+    links,
+    techStack
+  ) => {
     setOpen(true);
     setTitle(title);
+    setShowcaseSize(showcaseSize);
     setImage(image);
     setDescription(description);
     setRoles(roles);
-
     setLinks(links);
     setTechStack(techStack);
   };
@@ -110,19 +132,23 @@ export default function Portfolio() {
                 <CardMedia className={classes.cardMedia} title="Image title">
                   <img
                     className={classes.image}
-                    src={project.image.showcase}
+                    src={project.image.display}
                     alt="showcase"
+                    width={project.displaySize.width}
+                    height={project.displaySize.height}
                   />
                 </CardMedia>
                 <CardContent className={classes.cardContent}>
                   <div className={classes.cardTitleHolder}>
                     <Typography gutterBottom variant="h5" component="span">
                       {project.title}
-                      <img
-                        className={classes.logo}
-                        src={project.image.logo}
-                        alt="logo"
-                      />
+                      {project.image.logo && (
+                        <img
+                          className={classes.logo}
+                          src={project.image.logo}
+                          alt="logo"
+                        />
+                      )}
                     </Typography>
                   </div>
                   <Typography component="p">
@@ -137,6 +163,7 @@ export default function Portfolio() {
                       handleClick(
                         project.title,
                         project.image,
+                        project.showcaseSize,
                         project.description,
                         project.roles,
                         project.links,
@@ -157,6 +184,7 @@ export default function Portfolio() {
         open={open}
         title={title}
         image={image}
+        showcaseSize={showcaseSize}
         description={description}
         roles={roles}
         links={links}

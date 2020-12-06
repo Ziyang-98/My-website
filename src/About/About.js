@@ -51,6 +51,9 @@ const useStyles = makeStyles((theme) => ({
     height: 350,
     width: 330,
     marginLeft: theme.spacing(20),
+    [theme.breakpoints.down("lg")]: {
+      marginLeft: theme.spacing(15),
+    },
     [theme.breakpoints.down("sm")]: {
       marginLeft: theme.spacing(0),
     },
@@ -58,6 +61,9 @@ const useStyles = makeStyles((theme) => ({
 
   infoBox: {
     marginLeft: theme.spacing(15),
+    [theme.breakpoints.down("lg")]: {
+      marginLeft: theme.spacing(10),
+    },
     [theme.breakpoints.down("sm")]: {
       width: "80%",
       marginLeft: theme.spacing(0),

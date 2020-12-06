@@ -66,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
       height: theme.spacing(45),
     },
     [theme.breakpoints.down("lg")]: {
-      marginRight: theme.spacing(20),
+      marginRight: theme.spacing(12),
       width: theme.spacing(40),
       height: theme.spacing(40),
     },
