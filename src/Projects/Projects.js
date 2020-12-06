@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
   },
   outerGrid: {
-    width: 813,
+    width: 903,
     [theme.breakpoints.down("sm")]: {
       width: 543,
     },
@@ -50,10 +50,13 @@ const useStyles = makeStyles((theme) => ({
   },
   card: {
     height: "100%",
-    width: 255,
+    width: 285,
     display: "flex",
     flexDirection: "column",
     backgroundColor: theme.palette.background.paper,
+    [theme.breakpoints.down("sm")]: {
+      width: 255,
+    },
     [theme.breakpoints.down("xs")]: {
       width: 290,
     },

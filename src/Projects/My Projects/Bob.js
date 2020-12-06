@@ -1,5 +1,4 @@
 import BobImage from "../../Images/bob.PNG";
-import BobDisplay from "../../Images/bobdisplay.PNG";
 import Boblogo from "../../Images/boblogo.PNG";
 import JavaIcon from "../../Images/Java.png";
 import JavaFXIcon from "../../Images/javafx.PNG";
@@ -15,16 +14,15 @@ const Bob = {
     height: "90%",
   },
   showcaseSize: {
-    large: { width: 450, height: 350 },
-    medium: { width: 400, height: 300 },
-    small: { width: 400, height: 300 },
+    large: { width: 350, height: 500 },
+    medium: { width: 350, height: 500 },
+    small: { width: 280, height: 400 },
   },
   description:
-    "Bob is a command-line based bot that keeps track of the user's tasks, events \
-    and deadlines through conversations. Features include a variety of commands that \
-    allow users to manage their tasks in an optimal environment for CLI. \
-    Bob is a greenfield project based on a module, CS2103T, in NUS.\
-    ",
+    "Bob is a command-line based bot that keeps track of the user's tasks, events " +
+    "and deadlines through conversations. Features include a variety of commands that " +
+    "allow users to manage their tasks in an optimal environment for CLI. " +
+    "Bob is a greenfield project based on a module, CS2103T, in NUS.",
   roles: [
     "Designed and implemented the model, logic and UI of the application",
   ],

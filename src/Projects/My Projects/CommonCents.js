@@ -18,13 +18,13 @@ const CommonCents = {
   showcaseSize: {
     large: { width: 600, height: 400 },
     medium: { width: 500, height: 350 },
-    small: { width: 350, height: 250 },
+    small: { width: 350, height: 230 },
   },
   description:
-    "Common Cents is a finance-managing application that targets small business owners. \
-    It allows small business owners to keep track of their expenses as well as revenues \
-    based on simple command-line inputs. Common Cents is a complete team project based \
-    on a module, CS2103T, in NUS.",
+    "Common Cents is a finance-managing application that targets small business owners. " +
+    "It allows small business owners to keep track of their expenses as well as revenues " +
+    "based on simple command-line inputs. Common Cents is a complete team project based " +
+    "on a module, CS2103T, in NUS.",
   roles: [
     "Team Lead: Led the overall Direction and development of the project",
     "Designed and implemented the model and code structure of the project",

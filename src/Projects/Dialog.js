@@ -11,7 +11,6 @@ import IconButton from "@material-ui/core/IconButton";
 import CancelIcon from "@material-ui/icons/Cancel";
 import Zoom from "@material-ui/core/Zoom";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
-import { PinDropSharp } from "@material-ui/icons";
 
 const useStyles = makeStyles((theme) => ({
   imageHolder: {

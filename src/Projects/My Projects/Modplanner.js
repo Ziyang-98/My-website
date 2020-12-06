@@ -27,15 +27,15 @@ const Modplanner = {
     small: { width: 400, height: 100 },
   },
   description:
-    "The Mod Planner is a application in which users are able to \
-    plan their university modules, share their planners as guides, \
-    and participate in an online forum to discuss about relevant topics.\
-    The project, managed by a team of two, aims to ease the process \
-    of planning modules for NUS students.",
+    "The Mod Planner is a application in which users are able to " +
+    "plan their university modules, share their planners as guides, " +
+    "and participate in an online forum to discuss about relevant topics. " +
+    "The project, handled by a team of two, aims to ease the process " +
+    "of module planning for NUS students.",
   roles: [
     "Designed and built the frontend with ReactJS",
-    "Added Web hooks to connect the backend API to the database \
-  with NodeJS to our database, MongoDB.",
+    "Added Web hooks to connect the backend API to the database " +
+      "with NodeJS to our database, MongoDB.",
   ],
   links: [
     {
