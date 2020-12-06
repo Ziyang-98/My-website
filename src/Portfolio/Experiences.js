@@ -84,8 +84,8 @@ const experiences = [
     company: "National University of Singapore",
     duration: "Aug 2020 - Nov 2020",
     description:
-      "Organize and conduct scheduled sessions to teach object-oriented programming \
-      and functional programming to students.",
+      "Organize and conduct scheduled sessions to teach object-oriented programming " +
+      "and functional programming to students.",
     jobscope: [
       "Conduct scheduled sessions to facilitate learning of object-oriented/functional programming",
       "Assess assignments and give feedback to students",

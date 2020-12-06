@@ -1,5 +1,5 @@
 import React from "react";
-import { withStyles } from "@material-ui/core/styles";
+import { makeStyles, withStyles } from "@material-ui/core/styles";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
@@ -11,6 +11,12 @@ import AboutIcon from "@material-ui/icons/Info";
 import AccountBoxIcon from "@material-ui/icons/AccountBox";
 import EmojiObjectsIcon from "@material-ui/icons/EmojiObjects";
 import { Link } from "react-scroll";
+
+const useStyles = makeStyles((theme) => ({
+  icon: {
+    color: "#FFFFFF",
+  },
+}));
 
 const StyledMenu = withStyles({
   paper: {
@@ -45,6 +51,7 @@ const StyledMenuItem = withStyles((theme) => ({
 }))(MenuItem);
 
 export default function CustomizedMenus() {
+  const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handleClick = (event) => {
@@ -63,10 +70,9 @@ export default function CustomizedMenus() {
         variant="contained"
         onClick={handleClick}
         edge="start"
-        color="inherit"
         aria-label="menu"
       >
-        <MenuIcon />
+        <MenuIcon className={classes.icon} />
       </IconButton>
       <StyledMenu
         id="customized-menu"

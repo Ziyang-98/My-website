@@ -10,8 +10,8 @@ import MongoDbicon from "../../Images/mongodb.PNG";
 const Modplanner = {
   title: "The Mod Planner",
   shortDescription:
-    "A web application that allows NUS students to plan their modules \
-    ahead of time with access to module information, guides and a Q&A platform.",
+    "A web application that allows NUS students to plan their modules " +
+    "ahead of time with access to module information, guides and a Q&A platform.",
   image: {
     logo: ModPlannerLogo,
     display: ModPlannerImg,

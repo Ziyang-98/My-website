@@ -58,9 +58,6 @@ const useStyles = makeStyles((theme) => ({
       margin: theme.spacing(1, 2),
     },
   },
-  menuButton: {
-    color: "#F7FCFC",
-  },
   title: {
     color: "#F7FCFC",
     // fontWeight: 525,
@@ -128,7 +125,7 @@ export default function DenseAppBar() {
         )}
         {!matches && (
           <Toolbar>
-            <Menu className={classes.menuButton} />
+            <Menu />
             <Typography variant="h6" className={classes.title}>
               Lim Zi Yang
             </Typography>
