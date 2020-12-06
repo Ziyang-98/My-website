@@ -35,13 +35,28 @@ const useStyles = makeStyles((theme) => ({
   cardGrid: {
     paddingTop: theme.spacing(8),
     paddingBottom: theme.spacing(8),
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  outerGrid: {
+    width: 813,
+    [theme.breakpoints.down("sm")]: {
+      width: 543,
+    },
+    [theme.breakpoints.down("xs")]: {
+      width: 300,
+    },
   },
   card: {
     height: "100%",
-    width: 282,
+    width: 255,
     display: "flex",
     flexDirection: "column",
     backgroundColor: theme.palette.background.paper,
+    [theme.breakpoints.down("xs")]: {
+      width: 290,
+    },
   },
   cardMedia: {
     //paddingTop: "56.25%", // 16:9
@@ -125,7 +140,7 @@ export default function Portfolio() {
       </Box>
       <Container className={classes.cardGrid} maxWidth="md">
         {/* End hero unit */}
-        <Grid container justify="center" spacing={4}>
+        <Grid container className={classes.outerGrid} spacing={2}>
           {projects.map((project) => (
             <Grid item key={project}>
               <Card className={classes.card}>

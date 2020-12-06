@@ -19,7 +19,7 @@ const Modplanner = {
   },
   displaySize: {
     width: "100%",
-    height: "90%",
+    height: "80%",
   },
   showcaseSize: {
     large: { width: 750, height: 180 },
