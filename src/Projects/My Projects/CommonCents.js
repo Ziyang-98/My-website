@@ -12,7 +12,7 @@ const CommonCents = {
     "An application for small business owners to manage financial transactions and earnings.",
   image: { logo: null, display: Logo, showcase: Ui },
   displaySize: {
-    width: "40%",
+    width: "30%",
     height: "100%",
   },
   showcaseSize: {

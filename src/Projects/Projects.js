@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
   },
   card: {
     height: "100%",
-    //width: 300,
+    width: 282,
     display: "flex",
     flexDirection: "column",
     backgroundColor: theme.palette.background.paper,
@@ -125,9 +125,9 @@ export default function Portfolio() {
       </Box>
       <Container className={classes.cardGrid} maxWidth="md">
         {/* End hero unit */}
-        <Grid container spacing={4}>
+        <Grid container justify="center" spacing={4}>
           {projects.map((project) => (
-            <Grid item key={project} xs={12} sm={6} md={4}>
+            <Grid item key={project}>
               <Card className={classes.card}>
                 <CardMedia className={classes.cardMedia} title="Image title">
                   <img

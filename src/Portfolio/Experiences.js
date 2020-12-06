@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: "35%",
     },
     [theme.breakpoints.down("lg")]: {
-      marginLeft: "25%",
+      marginLeft: "20%",
     },
 
     [theme.breakpoints.down("sm")]: {
@@ -53,6 +53,7 @@ const useStyles = makeStyles((theme) => ({
       width: 350,
     },
     [theme.breakpoints.down("sm")]: {
+      margin: theme.spacing(0, 5, 5, 5),
       width: 450,
     },
     [theme.breakpoints.down("xs")]: {

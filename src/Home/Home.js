@@ -91,9 +91,15 @@ const useStyles = makeStyles((theme) => ({
   },
 
   nameHolder: {
-    maxWidth: "500",
-    width: "100%",
-    zIndex: 1,
+    // maxWidth: "500",
+    // width: "100%",
+    // zIndex: 1,
+    [theme.breakpoints.down("sm")]: {
+      flexDirection: "column",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+    },
   },
 
   name: {
@@ -104,10 +110,16 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(2),
     display: "flex",
     alignItems: "center",
+    [theme.breakpoints.down("sm")]: {
+      justifyContent: "center",
+    },
   },
 
   emailHolder: {
-    marginLeft: theme.spacing(2),
+    marginLeft: theme.spacing(3),
+    [theme.breakpoints.down("sm")]: {
+      marginLeft: theme.spacing(4),
+    },
   },
 }));
 
@@ -121,7 +133,7 @@ export default function Home() {
       <Box className={classes.infoHolder}>
         <Box className={classes.textHolder}>
           <Chip label="Hi there, I'm" color="primary" />
-          <Box className="nameHolder">
+          <Box className={classes.nameHolder}>
             <Typography variant="h2" className={classes.name}>
               Lim Zi Yang
             </Typography>

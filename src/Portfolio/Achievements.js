@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     },
 
     [theme.breakpoints.down("lg")]: {
-      marginRight: "25%",
+      marginRight: "20%",
     },
 
     [theme.breakpoints.down("sm")]: {

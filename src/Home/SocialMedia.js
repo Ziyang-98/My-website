@@ -10,16 +10,16 @@ import Link from "@material-ui/core/Link";
 const useStyles = makeStyles((theme) => ({
   root: {
     marginTop: theme.spacing(3),
-    // [theme.breakpoints.down("xs")]: {
-    //   marginLeft: theme.spacing(3),
-    //   // display: "flex",
-    //   // alignItems: "center",
-    //   // justifyContent: "center",
+    // [theme.breakpoints.down("sm")]: {
+    // marginLeft: theme.spacing(3),
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
     // },
   },
 
   icon: {
-    marginLeft: theme.spacing(5),
+    margin: theme.spacing(0, 2),
     float: "left",
     marginTop: "0",
     marginBottom: "0",
