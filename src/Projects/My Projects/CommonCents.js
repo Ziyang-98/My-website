@@ -9,7 +9,7 @@ import GradleIcon from "../../Images/gradle.png";
 const CommonCents = {
   title: "Common Cents",
   shortDescription:
-    "An application for small business owners to manage financial transactions and earnings.",
+    "A Java app for small business owners to manage financial transactions and earnings.",
   image: { logo: null, display: Logo, showcase: Ui },
   displaySize: {
     width: "30%",
@@ -21,13 +21,13 @@ const CommonCents = {
     small: { width: 350, height: 230 },
   },
   description:
-    "Common Cents is a finance-managing application that targets small business owners. " +
-    "It allows small business owners to keep track of their expenses as well as revenues " +
-    "based on simple command-line inputs. This brownfield team project is based " +
+    "Common Cents is a command-line based app that aims to assist small business owners. " +
+    "It allows the small business owners to keep track of their expenses as well as revenues " +
+    "with simple command inputs. This brownfield team project is based " +
     "on a software engineering module, CS2103T, in NUS.",
   roles: [
     "Team Lead: Led the overall direction and development of the project",
-    "Designed and implemented the model and code structure of the project",
+    "Designed and implemented the model structure of the project",
     "Implemented the logic execution of features in the app",
     "Designed and implemented various features of the app",
   ],
