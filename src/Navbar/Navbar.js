@@ -6,9 +6,16 @@ import Toolbar from "@material-ui/core/Toolbar";
 // import Link from "@material-ui/core/Link";
 import { Link } from "react-scroll";
 import Button from "@material-ui/core/Button";
-import Menu from "./Menu";
+import IconButton from "@material-ui/core/IconButton";
+// import Menu from "./Menu";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
-import Typography from "@material-ui/core/Typography";
+// import Typography from "@material-ui/core/Typography";
+import HomeIcon from "@material-ui/icons/Home";
+import AboutIcon from "@material-ui/icons/Info";
+import PortfolioIcon from "@material-ui/icons/AccountBox";
+import ProjectsIcon from "@material-ui/icons/EmojiObjects";
+import Tooltip from "@material-ui/core/Tooltip";
+import Zoom from "@material-ui/core/Zoom";
 
 const useStyles = makeStyles((theme) => ({
   root: {},
@@ -77,60 +84,131 @@ export default function DenseAppBar() {
         elevation={0}
         className={classes.appBar}
       >
-        {matches && (
-          <Toolbar className={classes.toolbar}>
+        <Toolbar className={classes.toolbar}>
+          {matches && (
             <div className={classes.links}>
-              <Button size="large" className={classes.button}>
-                <Link
-                  className="toHome"
-                  to="Home"
-                  smooth={true}
-                  duration={1000}
-                >
+              <Link className="toHome" to="Home" smooth={true} duration={1000}>
+                <Button size="large" className={classes.button}>
                   Home
-                </Link>
-              </Button>
-              <Button size="large" className={classes.button}>
-                <Link
-                  className="toAbout"
-                  to="About"
-                  smooth={true}
-                  duration={1000}
-                >
+                </Button>
+              </Link>
+
+              <Link
+                className="toAbout"
+                to="About"
+                smooth={true}
+                duration={1000}
+              >
+                <Button size="large" className={classes.button}>
                   About
-                </Link>
-              </Button>
-              <Button size="large" className={classes.button}>
-                <Link
-                  className="toPortfolio"
-                  to="Portfolio"
-                  smooth={true}
-                  duration={1000}
-                >
+                </Button>
+              </Link>
+
+              <Link
+                className="toPortfolio"
+                to="Portfolio"
+                smooth={true}
+                duration={1000}
+              >
+                <Button size="large" className={classes.button}>
                   Portfolio
-                </Link>
-              </Button>
-              <Button size="large" className={classes.button}>
-                <Link
-                  className="toProjects"
-                  to="Projects"
-                  smooth={true}
-                  duration={1000}
-                >
+                </Button>
+              </Link>
+
+              <Link
+                className="toProjects"
+                to="Projects"
+                smooth={true}
+                duration={1000}
+              >
+                <Button size="large" className={classes.button}>
                   Projects
-                </Link>
-              </Button>
+                </Button>
+              </Link>
             </div>
-          </Toolbar>
-        )}
-        {!matches && (
+          )}
+          {!matches && (
+            <div className={classes.links}>
+              <Link className="toHome" to="Home" smooth={true} duration={1000}>
+                <Tooltip
+                  title="Home"
+                  TransitionComponent={Zoom}
+                  enterTouchDelay="50"
+                >
+                  <IconButton aria-label="toHome" className={classes.button}>
+                    <HomeIcon />
+                  </IconButton>
+                </Tooltip>
+              </Link>
+
+              <Link
+                className="toAbout"
+                to="About"
+                smooth={true}
+                duration={1000}
+              >
+                <Tooltip
+                  title="About"
+                  TransitionComponent={Zoom}
+                  enterTouchDelay="50"
+                >
+                  <IconButton aria-label="toAbout" className={classes.button}>
+                    <AboutIcon />
+                  </IconButton>
+                </Tooltip>
+              </Link>
+
+              <Link
+                className="toPortfolio"
+                to="Portfolio"
+                smooth={true}
+                duration={1000}
+              >
+                <Tooltip
+                  title="Portfolio"
+                  TransitionComponent={Zoom}
+                  enterTouchDelay="50"
+                >
+                  <IconButton
+                    aria-label="toPortfolio"
+                    className={classes.button}
+                  >
+                    <PortfolioIcon />
+                  </IconButton>
+                </Tooltip>
+              </Link>
+
+              <Link
+                className="toProjects"
+                to="Projects"
+                smooth={true}
+                duration={1000}
+              >
+                <Tooltip
+                  title="Projects"
+                  TransitionComponent={Zoom}
+                  enterTouchDelay="50"
+                >
+                  <IconButton
+                    aria-label="toProjects"
+                    className={classes.button}
+                  >
+                    <ProjectsIcon />
+                  </IconButton>
+                </Tooltip>
+              </Link>
+            </div>
+          )}
+        </Toolbar>
+
+        {/* {!matches && (
           <Toolbar>
             <Menu />
             <Typography variant="h6" className={classes.title}>
               Lim Zi Yang
             </Typography>
           </Toolbar>
-        )}
+        )} */}
       </AppBar>
     </div>
   );

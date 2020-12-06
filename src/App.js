@@ -7,14 +7,13 @@ import Projects from "./Projects/Projects";
 
 function App() {
   return (
-    <div className="container">
+    <React.Fragment>
       <Navbar />
-      {/* <Tabbar /> */}
       <Home />
       <About />
       <Portfolio />
       <Projects />
-    </div>
+    </React.Fragment>
   );
 }
 
