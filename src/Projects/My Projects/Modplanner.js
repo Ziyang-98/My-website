@@ -39,7 +39,8 @@ const Modplanner = {
   links: [
     {
       name: "Project Info",
-      link: "",
+      link:
+        "https://docs.google.com/document/d/1cFqpF2JK2G6i8kgYlLqNP0YzqufmyRjRfxee1blIGwQ/edit?usp=sharing",
     },
     {
       name: "Project Link",

@@ -1,7 +1,5 @@
 import Ui from "../../Images/commoncents.png";
-//import Display from "../../Images/commoncentsdisplay.png";
 import Logo from "../../Images/commoncentslogo.png";
-
 import JavaIcon from "../../Images/Java.png";
 import JavaFXIcon from "../../Images/javafx.PNG";
 import GradleIcon from "../../Images/gradle.png";
@@ -27,7 +25,7 @@ const CommonCents = {
     "on a software engineering module, CS2103T, in NUS.",
   roles: [
     "Team Lead: Led the overall direction and development of the project",
-    "Designed and implemented the model structure of the project",
+    "Designed and implemented the model structure of the app",
     "Implemented the logic execution of features in the app",
     "Designed and implemented various features of the app",
   ],
