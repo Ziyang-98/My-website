@@ -23,10 +23,10 @@ const CommonCents = {
   description:
     "Common Cents is a finance-managing application that targets small business owners. " +
     "It allows small business owners to keep track of their expenses as well as revenues " +
-    "based on simple command-line inputs. Common Cents is a complete team project based " +
-    "on a module, CS2103T, in NUS.",
+    "based on simple command-line inputs. This brownfield team project is based " +
+    "on a software engineering module, CS2103T, in NUS.",
   roles: [
-    "Team Lead: Led the overall Direction and development of the project",
+    "Team Lead: Led the overall direction and development of the project",
     "Designed and implemented the model and code structure of the project",
     "Implemented the logic execution of features in the app",
     "Designed and implemented various features of the app",

@@ -97,10 +97,10 @@ const experiences = [
     company: "Inland Revenue Authority of Singapore",
     duration: "Dec 2020 - Present",
     description:
-      "Working on a greenfield Chat Bot Project that aims to automate personalized interactions with tax payers",
+      "Work on a greenfield Chat Bot Project that aims to automate personalized interactions with tax payers",
     jobscope: [
-      "Integrating relevant data and responses into the Chat Bot for certain features",
-      "Implementing Web Hooks with the Chat Bot that push/get data to/from the main server",
+      "Integrate relevant training data and responses into the Chat Bot for certain features",
+      "Implement Web Hooks with the Chat Bot that push/get data to/from the main server",
     ],
   },
 ];

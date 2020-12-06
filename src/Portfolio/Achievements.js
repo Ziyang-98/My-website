@@ -71,7 +71,7 @@ const useStyles = makeStyles((theme) => ({
   },
   description: {
     // marginTop: theme.spacing(2),
-    fontStyle: "italic",
+    fontSize: 17,
   },
   listItem: {
     display: "flex",
@@ -99,7 +99,7 @@ const achievements = [
   },
 
   {
-    title: "NUS Orbital Apollo 11(Advanced) 2020",
+    title: "NUS Orbital Apollo 11 (Advanced) 2020",
     // level: "Apollo 11",
     // description:
     //   "A Summer Independent Project designed by NUS School Of Computing,\
@@ -135,7 +135,11 @@ export default function Achievements() {
                     <IndeterminateCheckBoxIcon />
                   </ListItemIcon>
                   <ListItemText>
-                    <Typography variant="subtitle1" component="h2">
+                    <Typography
+                      className={classes.description}
+                      variant="subtitle1"
+                      component="h2"
+                    >
                       {a.title}
                     </Typography>
                   </ListItemText>

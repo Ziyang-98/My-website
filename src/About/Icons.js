@@ -12,7 +12,6 @@ import NodejsIcon from "../Images/nodejs.png";
 import GitIcon from "../Images/git.png";
 import GitHubIcon from "../Images/github.png";
 import GradleIcon from "../Images/gradle.png";
-import IMovieIcon from "../Images/imovie.png";
 import MongoDbIcon from "../Images/mongodb.PNG";
 
 // import MuiIcon from "../Images/mui.png";
@@ -117,9 +116,6 @@ export default function Icons() {
           enterTouchDelay="50"
         >
           <img src={MongoDbIcon} className={classes.icon} alt="mongodb icon" />
-        </Tooltip>
-        <Tooltip title="iMovie" TransitionComponent={Zoom} enterTouchDelay="50">
-          <img src={IMovieIcon} className={classes.icon} alt="imovie icon" />
         </Tooltip>
       </div>
     </div>
