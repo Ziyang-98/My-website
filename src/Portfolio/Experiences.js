@@ -63,15 +63,27 @@ const useStyles = makeStyles((theme) => ({
   },
 
   duration: {
-    margin: theme.spacing(1, 0, 3, 0),
+    margin: theme.spacing(1, 0, 0, 0),
     fontStyle: "italic",
     //fontSize: 14,
+  },
+
+  description: {
+    fontStyle: "italic",
+    color: "#708090",
+    margin: theme.spacing(2, 0, 2.5, 0),
+    fontSize: 14,
+  },
+
+  jobscopeTitle: {
+    // color: "#696969",
   },
 
   jobscope: {
     marginTop: theme.spacing(1),
     marginBottom: theme.spacing(1),
     fontStyle: "italic",
+    // color: "#696969",
   },
 
   employer: {},
@@ -80,16 +92,16 @@ const useStyles = makeStyles((theme) => ({
 /*---- My Experiences (Update here, format: {jobTitle: , description: , duration: }) ----*/
 const experiences = [
   {
-    jobTitle: "CS2030S Teaching Assistant",
+    jobTitle: "NUS Teaching Assistant",
     company: "National University of Singapore",
     duration: "Aug 2020 - Nov 2020",
     description:
-      "Organize and conduct scheduled sessions to teach object-oriented programming " +
-      "and functional programming to students.",
+      "Taught object-oriented programming " +
+      "and functional programming to students in a programming module (CS2030).",
     jobscope: [
-      "Conduct scheduled sessions to facilitate learning of object-oriented/functional programming",
-      "Assess assignments and give feedback to students",
-      "Build students' proficiency in Java",
+      "Conducted scheduled sessions to facilitate learning of object-oriented/functional programming",
+      "Assessed assignments and gave feedback to students' code",
+      "Built students' proficiency in Java",
     ],
   },
   {
@@ -97,10 +109,23 @@ const experiences = [
     company: "Inland Revenue Authority of Singapore",
     duration: "Dec 2020 - Present",
     description:
-      "Work on a greenfield Chat Bot Project that aims to automate personalized interactions with tax payers",
+      "Work on a Chat Bot Project, powered by Google DialogFlow, that aims to automate personalized interactions with tax payers",
     jobscope: [
-      "Integrate relevant training data and responses into the Chat Bot for certain features",
-      "Implement Web Hooks with the Chat Bot that push/get data to/from the main server",
+      "Integrate training data and responses into the Chat Bot for tax filing feature",
+      "Implement Typescript Web Hooks with NodeJS to interact with the main server",
+    ],
+  },
+  {
+    jobTitle: "NUS Teaching Assistant",
+    company: "National University of Singapore",
+    duration: "Jan 2021 - Present",
+    description:
+      "Taught object-oriented programming " +
+      "and functional programming to students in a programming module (CS2030S).",
+    jobscope: [
+      "Conducted scheduled sessions to facilitate learning of object-oriented/functional programming",
+      "Assessed assignments and gave feedback to students' code",
+      "Built students' proficiency in Java",
     ],
   },
 ];
@@ -120,9 +145,11 @@ export default function Experiences() {
               <Typography variant="h5" component="h2">
                 {job.jobTitle}
               </Typography>
+
               <Typography variant="body1" component="p" color="primary">
                 {job.company}
               </Typography>
+
               <Typography
                 className={classes.duration}
                 variant="body1"
@@ -130,7 +157,19 @@ export default function Experiences() {
               >
                 {job.duration}
               </Typography>
-              <Typography variant="body1" component="p">
+              <Typography
+                className={classes.description}
+                variant="caption"
+                component="p"
+                color="primary"
+              >
+                {job.description}
+              </Typography>
+              <Typography
+                className={classes.jobscopeTitle}
+                variant="subtitle1"
+                component="p"
+              >
                 Job Scope:
               </Typography>
               {job.jobscope.map((s) => (

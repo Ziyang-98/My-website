@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "96353bb36f82cd52fba4977a4389c216",
+    "revision": "06d5aed862443f68f51452171d8764b6",
     "url": "/index.html"
   },
   {
-    "revision": "cae3af32647460f7dcba",
+    "revision": "6ea384e7ec1c1c9ae290",
     "url": "/static/css/main.69eda509.chunk.css"
   },
   {
-    "revision": "a8a02406393e06aae752",
-    "url": "/static/js/2.f9c9dcd0.chunk.js"
+    "revision": "ff936a9666df4a01753b",
+    "url": "/static/js/2.5bf70b09.chunk.js"
   },
   {
     "revision": "89b0379e7bcda1a468d8b0343aeb4e53",
-    "url": "/static/js/2.f9c9dcd0.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.5bf70b09.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "cae3af32647460f7dcba",
-    "url": "/static/js/main.8df65d13.chunk.js"
+    "revision": "6ea384e7ec1c1c9ae290",
+    "url": "/static/js/main.9f1bada4.chunk.js"
   },
   {
     "revision": "68a9665f6992de0c4239",
@@ -44,6 +44,18 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/c.f278be79.png"
   },
   {
+    "revision": "bda43d012a37a98bae0dbd05ca1abea3",
+    "url": "/static/media/coffeeberry.bda43d01.PNG"
+  },
+  {
+    "revision": "fde9ecf6b1fd3fae990c09ef9b3bdbf2",
+    "url": "/static/media/coffeeberrydisplay.fde9ecf6.PNG"
+  },
+  {
+    "revision": "b399172ff2b9fc1f349c0bd16f2c048b",
+    "url": "/static/media/coffeeberrylogo.b399172f.PNG"
+  },
+  {
     "revision": "75c767fa096c1b951611e9963484c361",
     "url": "/static/media/commoncents.75c767fa.png"
   },
@@ -54,6 +66,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "3f8e68f49f7dba3390a43f8fcc1a14f7",
     "url": "/static/media/css3.3f8e68f4.png"
+  },
+  {
+    "revision": "5cbcf66018ad02963584859e80a6f73d",
+    "url": "/static/media/dialogflow.5cbcf660.png"
   },
   {
     "revision": "e2ec5b8ae151ce2f18a7e4c5de8e807f",
@@ -90,5 +106,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "cb75cc0083b5ccedbb4541df0ea89439",
     "url": "/static/media/ruby.cb75cc00.png"
+  },
+  {
+    "revision": "ea7caf8dee69786bafe9d919b5034595",
+    "url": "/static/media/typescript.ea7caf8d.png"
   }
 ]);

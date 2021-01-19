@@ -1,25 +1,29 @@
 {
   "files": {
     "main.css": "/static/css/main.69eda509.chunk.css",
-    "main.js": "/static/js/main.8df65d13.chunk.js",
-    "main.js.map": "/static/js/main.8df65d13.chunk.js.map",
+    "main.js": "/static/js/main.9f1bada4.chunk.js",
+    "main.js.map": "/static/js/main.9f1bada4.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.fc75219d.js",
     "runtime-main.js.map": "/static/js/runtime-main.fc75219d.js.map",
-    "static/js/2.f9c9dcd0.chunk.js": "/static/js/2.f9c9dcd0.chunk.js",
-    "static/js/2.f9c9dcd0.chunk.js.map": "/static/js/2.f9c9dcd0.chunk.js.map",
+    "static/js/2.5bf70b09.chunk.js": "/static/js/2.5bf70b09.chunk.js",
+    "static/js/2.5bf70b09.chunk.js.map": "/static/js/2.5bf70b09.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.bbceacaea39954f2242d4df424bc2f30.js": "/precache-manifest.bbceacaea39954f2242d4df424bc2f30.js",
+    "precache-manifest.7e36d3df221d086fa8be29c2ac6ff019.js": "/precache-manifest.7e36d3df221d086fa8be29c2ac6ff019.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.69eda509.chunk.css.map": "/static/css/main.69eda509.chunk.css.map",
-    "static/js/2.f9c9dcd0.chunk.js.LICENSE.txt": "/static/js/2.f9c9dcd0.chunk.js.LICENSE.txt",
+    "static/js/2.5bf70b09.chunk.js.LICENSE.txt": "/static/js/2.5bf70b09.chunk.js.LICENSE.txt",
     "static/media/Java.png": "/static/media/Java.04dcc331.png",
     "static/media/avataaars.png": "/static/media/avataaars.5b84f71a.png",
     "static/media/bob.PNG": "/static/media/bob.4ff3b845.PNG",
     "static/media/boblogo.PNG": "/static/media/boblogo.df91c7d7.PNG",
     "static/media/c.png": "/static/media/c.f278be79.png",
+    "static/media/coffeeberry.PNG": "/static/media/coffeeberry.bda43d01.PNG",
+    "static/media/coffeeberrydisplay.PNG": "/static/media/coffeeberrydisplay.fde9ecf6.PNG",
+    "static/media/coffeeberrylogo.PNG": "/static/media/coffeeberrylogo.b399172f.PNG",
     "static/media/commoncents.png": "/static/media/commoncents.75c767fa.png",
     "static/media/commoncentslogo.png": "/static/media/commoncentslogo.88bf805c.png",
     "static/media/css3.png": "/static/media/css3.3f8e68f4.png",
+    "static/media/dialogflow.png": "/static/media/dialogflow.5cbcf660.png",
     "static/media/dp1.png": "/static/media/dp1.e2ec5b8a.png",
     "static/media/git.png": "/static/media/git.ee1369e9.png",
     "static/media/gradle.png": "/static/media/gradle.94b52b8c.png",
@@ -28,12 +32,13 @@
     "static/media/modplanner.png": "/static/media/modplanner.874cef54.png",
     "static/media/mongodb.PNG": "/static/media/mongodb.2ad2bafa.PNG",
     "static/media/nodejs.png": "/static/media/nodejs.069c411a.png",
-    "static/media/ruby.png": "/static/media/ruby.cb75cc00.png"
+    "static/media/ruby.png": "/static/media/ruby.cb75cc00.png",
+    "static/media/typescript.png": "/static/media/typescript.ea7caf8d.png"
   },
   "entrypoints": [
     "static/js/runtime-main.fc75219d.js",
-    "static/js/2.f9c9dcd0.chunk.js",
+    "static/js/2.5bf70b09.chunk.js",
     "static/css/main.69eda509.chunk.css",
-    "static/js/main.8df65d13.chunk.js"
+    "static/js/main.9f1bada4.chunk.js"
   ]
 }

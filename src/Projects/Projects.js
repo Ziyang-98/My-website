@@ -12,6 +12,7 @@ import Container from "@material-ui/core/Container";
 import ModPlanner from "./My Projects/Modplanner";
 import Bob from "./My Projects/Bob";
 import CommonCents from "./My Projects/CommonCents";
+import Coffeeberry from "./My Projects/Coffeeberry";
 import Dialog from "./Dialog";
 
 const useStyles = makeStyles((theme) => ({
@@ -21,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: theme.spacing(15),
     // zIndex: 1,
     [theme.breakpoints.down("sm")]: {
-      marginTop: theme.spacing(10),
+      marginTop: theme.spacing(35),
       //   paddingTop: theme.spacing(5),
       //paddingBottom: theme.spacing(50),
     },
@@ -93,9 +94,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-// const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-/*---- My Projects (Update here, format: {title: , shortDescription, description: , links: , techStack:   }) ----*/
-const projects = [ModPlanner, Bob, CommonCents];
+const projects = [ModPlanner, Bob, CommonCents, Coffeeberry];
 
 export default function Portfolio() {
   const classes = useStyles();

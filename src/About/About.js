@@ -93,10 +93,6 @@ const useStyles = makeStyles((theme) => ({
       width: "100%",
     },
   },
-
-  icons: {
-    marginTop: theme.spacing(2),
-  },
 }));
 
 export default function About() {
@@ -121,7 +117,9 @@ export default function About() {
               programming consist of the following:{" "}
             </Typography>
           </div>
-          <Icons />
+          <Box className={classes.iconHolder} flexWrap="noWrap">
+            <Icons />
+          </Box>
         </div>
       </Box>
     </div>
