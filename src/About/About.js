@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: theme.spacing(15),
     [theme.breakpoints.down("sm")]: {
       height: 700,
-      paddingTop: theme.spacing(10),
+      paddingTop: theme.spacing(8),
       paddingBottom: theme.spacing(30),
     },
   },
@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
     width: "50%",
     float: "right",
     [theme.breakpoints.down("sm")]: {
-      paddingTop: theme.spacing(20),
+      marginTop: theme.spacing(20),
       height: "50%",
       width: "100%",
     },
@@ -42,7 +42,6 @@ const useStyles = makeStyles((theme) => ({
     float: "left",
     [theme.breakpoints.down("sm")]: {
       height: "50%",
-
       width: "100%",
     },
   },
@@ -75,8 +74,8 @@ const useStyles = makeStyles((theme) => ({
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
-      paddingTop: theme.spacing(5),
-      paddingBottom: theme.spacing(5),
+      marginTop: theme.spacing(10),
+      marginBottom: theme.spacing(5),
     },
   },
 

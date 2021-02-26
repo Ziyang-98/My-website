@@ -9,7 +9,7 @@ import Achievements from "./Achievements";
 const useStyles = makeStyles((theme) => ({
   container: {
     height: theme.spacing(120),
-    paddingTop: theme.spacing(15),
+    marginTop: theme.spacing(18),
     paddingBottom: theme.spacing(50),
     zIndex: 1,
     [theme.breakpoints.down("sm")]: {
@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   infoHolder: {
-    paddingTop: theme.spacing(5),
+    paddingTop: theme.spacing(2),
   },
 
   expHolder: {
@@ -33,9 +33,8 @@ const useStyles = makeStyles((theme) => ({
     height: "100%",
 
     [theme.breakpoints.down("sm")]: {
-      paddingTop: theme.spacing(5),
+      paddingTop: theme.spacing(6),
       width: "100%",
-      //height: "100%",
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
@@ -48,9 +47,7 @@ const useStyles = makeStyles((theme) => ({
     height: "100%",
 
     [theme.breakpoints.down("sm")]: {
-      //padding: theme.spacing(5, 0),
       width: "100%",
-      //height: "100%",
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
