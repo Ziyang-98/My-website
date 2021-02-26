@@ -71,7 +71,6 @@ const useStyles = makeStyles((theme) => ({
   },
 
   title: {
-    // width: "50%",
     [theme.breakpoints.down("xs")]: {
       display: "flex",
       alignItems: "center",
