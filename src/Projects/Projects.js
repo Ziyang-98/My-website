@@ -18,11 +18,11 @@ import Dialog from "./Dialog";
 const useStyles = makeStyles((theme) => ({
   container: {
     height: 750,
-    paddingTop: theme.spacing(20),
+    paddingTop: theme.spacing(10),
     paddingBottom: theme.spacing(15),
     // zIndex: 1,
     [theme.breakpoints.down("sm")]: {
-      marginTop: theme.spacing(35),
+      //marginTop: theme.spacing(35),
       //   paddingTop: theme.spacing(5),
       //paddingBottom: theme.spacing(50),
     },

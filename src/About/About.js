@@ -8,32 +8,27 @@ import Icons from "./Icons";
 const useStyles = makeStyles((theme) => ({
   container: {
     zIndex: 1,
-    height: 700,
+    height: 800,
     display: "flex",
     justifyContent: "space-evenly",
     alignItems: "center",
     flexWrap: "wrap",
     // paddingTop: theme.spacing(25),
     // paddingBottom: theme.spacing(15),
-    // [theme.breakpoints.down("sm")]: {
-    //   height: 700,
-    //   // paddingTop: theme.spacing(8),
-    //   // paddingBottom: theme.spacing(30),
-    // },
+    [theme.breakpoints.down("sm")]: {
+      // height: 700,
+      paddingTop: theme.spacing(8),
+      paddingBottom: theme.spacing(40),
+    },
   },
 
   infoHolder: {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    // height: "100%",
     width: 600,
-    // float: "right",
-    [theme.breakpoints.down("sm")]: {
-      width: 360,
-      //   marginTop: theme.spacing(20),
-      //   height: "50%",
-      //   width: "100%",
+    [theme.breakpoints.down("md")]: {
+      width: 450,
     },
   },
 
@@ -42,41 +37,22 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     justifyContent: "center",
     width: 600,
-    // height: "100%",
-
-    // width: "50%",
-    // float: "left",
-    // [theme.breakpoints.down("sm")]: {
-    //   height: "50%",
-    //   width: "100%",
-    // },
+    [theme.breakpoints.down("md")]: {
+      width: 450,
+    },
   },
 
   image: {
     height: 350,
     width: 330,
-    // marginLeft: theme.spacing(20),
-    // [theme.breakpoints.down("lg")]: {
-    //   marginLeft: theme.spacing(15),
-    // },
-    // [theme.breakpoints.down("sm")]: {
-    //   marginLeft: theme.spacing(0),
-    // },
   },
 
   infoBox: {
-    // marginLeft: theme.spacing(15),
-    // [theme.breakpoints.down("lg")]: {
-    //   marginLeft: theme.spacing(10),
-    // },
-    // [theme.breakpoints.down("sm")]: {
-    //   width: "80%",
-    //   marginLeft: theme.spacing(0),
-    // },
+    width: "80%",
   },
 
   title: {
-    [theme.breakpoints.down("xs")]: {
+    [theme.breakpoints.down("sm")]: {
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
@@ -87,16 +63,9 @@ const useStyles = makeStyles((theme) => ({
 
   details: {
     marginTop: theme.spacing(2),
-    // width: "80%",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    // [theme.breakpoints.down("sm")]: {
-    //   width: "95%",
-    // },
-    // [theme.breakpoints.down("xs")]: {
-    //   width: "100%",
-    // },
   },
 }));
 

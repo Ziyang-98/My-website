@@ -9,8 +9,8 @@ import Achievements from "./Achievements";
 const useStyles = makeStyles((theme) => ({
   container: {
     // height: theme.spacing(120),
-    marginTop: theme.spacing(18),
-    paddingBottom: theme.spacing(50),
+    // paddingTop: theme.spacing(18),
+    // paddingBottom: theme.spacing(50),
     zIndex: 1,
     // [theme.breakpoints.down("sm")]: {
     //   height: theme.spacing(150),
