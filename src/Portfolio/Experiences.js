@@ -7,19 +7,19 @@ import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    float: "left",
-    [theme.breakpoints.down("xl")]: {
-      marginLeft: "35%",
-    },
-    [theme.breakpoints.down("lg")]: {
-      marginLeft: "20%",
-    },
+  // root: {
+  //   float: "left",
+  //   [theme.breakpoints.down("xl")]: {
+  //     marginLeft: "35%",
+  //   },
+  //   [theme.breakpoints.down("lg")]: {
+  //     marginLeft: "20%",
+  //   },
 
-    [theme.breakpoints.down("sm")]: {
-      marginLeft: "0%",
-    },
-  },
+  //   [theme.breakpoints.down("sm")]: {
+  //     marginLeft: "0%",
+  //   },
+  // },
 
   title: {
     // marginLeft: theme.spacing(20),

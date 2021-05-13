@@ -6,16 +6,13 @@ import Avatar from "@material-ui/core/Avatar";
 import Typography from "@material-ui/core/Typography";
 import Chip from "@material-ui/core/Chip";
 import EmailIcon from "@material-ui/icons/Email";
-// import ContactPhoneIcon from "@material-ui/icons/ContactPhone";
 import SocialMedia from "./SocialMedia";
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    // [theme.breakpoints.down("lg")]: {
     height: 350,
     paddingTop: theme.spacing(26),
     paddingBottom: theme.spacing(10),
-    // },
     [theme.breakpoints.down("sm")]: {
       height: 700,
       paddingTop: theme.spacing(10),
@@ -31,10 +28,8 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     float: "left",
     zIndex: 1,
-    // [theme.breakpoints.down("lg")]: {
     height: "100%",
     width: "50%",
-    // },
     [theme.breakpoints.down("sm")]: {
       height: "50%",
       width: "100%",
@@ -47,10 +42,8 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     float: "right",
     zIndex: 1,
-    // [theme.breakpoints.down("lg")]: {
     height: "100%",
     width: "50%",
-    // },
     [theme.breakpoints.down("sm")]: {
       float: "left",
 

@@ -4,15 +4,18 @@ import About from "./About/About";
 import Navbar from "./Navbar/Navbar";
 import Portfolio from "./Portfolio/Portfolio";
 import Projects from "./Projects/Projects";
+import Box from "@material-ui/core/Box";
 
 function App() {
   return (
     <React.Fragment>
-      <Navbar />
-      <Home />
-      <About />
-      <Portfolio />
-      <Projects />
+      <Box flexDirection="column">
+        <Navbar />
+        <Home />
+        <About />
+        <Portfolio />
+        <Projects />
+      </Box>
     </React.Fragment>
   );
 }

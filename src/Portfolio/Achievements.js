@@ -11,18 +11,16 @@ import IndeterminateCheckBoxIcon from "@material-ui/icons/IndeterminateCheckBox"
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    float: "right",
-    [theme.breakpoints.down("xl")]: {
-      marginRight: "35%",
-    },
-
-    [theme.breakpoints.down("lg")]: {
-      marginRight: "20%",
-    },
-
-    [theme.breakpoints.down("sm")]: {
-      marginRight: "0%",
-    },
+    // float: "right",
+    // [theme.breakpoints.down("xl")]: {
+    //   marginRight: "35%",
+    // },
+    // [theme.breakpoints.down("lg")]: {
+    //   marginRight: "20%",
+    // },
+    // [theme.breakpoints.down("sm")]: {
+    //   marginRight: "0%",
+    // },
   },
   title: {
     [theme.breakpoints.down("sm")]: {
