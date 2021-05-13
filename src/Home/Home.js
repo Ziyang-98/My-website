@@ -10,15 +10,13 @@ import SocialMedia from "./SocialMedia";
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    height: 350,
-    paddingTop: theme.spacing(26),
-    paddingBottom: theme.spacing(10),
-    [theme.breakpoints.down("sm")]: {
-      height: 700,
-      paddingTop: theme.spacing(10),
-      paddingBottom: theme.spacing(0),
-    },
-
+    display: "flex",
+    paddingTop: theme.spacing(8),
+    flexDirection: "row-reverse",
+    justifyContent: "space-evenly",
+    alignItems: "center",
+    flexWrap: "wrap",
+    height: 700,
     zIndex: 1,
   },
 
@@ -26,45 +24,26 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    float: "left",
+    padding: theme.spacing(5),
     zIndex: 1,
-    height: "100%",
-    width: "50%",
-    [theme.breakpoints.down("sm")]: {
-      height: "50%",
-      width: "100%",
-    },
   },
 
   imageHolder: {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    float: "right",
+    padding: theme.spacing(5),
     zIndex: 1,
-    height: "100%",
-    width: "50%",
-    [theme.breakpoints.down("sm")]: {
-      float: "left",
-
-      height: "50%",
-      width: "100%",
-    },
   },
 
   avatar: {
     [theme.breakpoints.down("xl")]: {
-      marginRight: theme.spacing(20),
       width: theme.spacing(45),
       height: theme.spacing(45),
     },
     [theme.breakpoints.down("lg")]: {
-      marginRight: theme.spacing(12),
       width: theme.spacing(40),
       height: theme.spacing(40),
-    },
-    [theme.breakpoints.down("sm")]: {
-      marginRight: theme.spacing(0),
     },
     [theme.breakpoints.down("xs")]: {
       width: theme.spacing(35),
@@ -74,19 +53,10 @@ const useStyles = makeStyles((theme) => ({
   },
 
   textHolder: {
-    // [theme.breakpoints.down("lg")]: {
-    marginLeft: theme.spacing(20),
-    // },
-    [theme.breakpoints.down("sm")]: {
-      marginLeft: theme.spacing(0),
-    },
     zIndex: 1,
   },
 
   nameHolder: {
-    // maxWidth: "500",
-    // width: "100%",
-    // zIndex: 1,
     [theme.breakpoints.down("sm")]: {
       flexDirection: "column",
       display: "flex",
@@ -119,7 +89,7 @@ const useStyles = makeStyles((theme) => ({
 export default function Home() {
   const classes = useStyles();
   return (
-    <div className={classes.container} id="Home">
+    <Box className={classes.container} id="Home">
       <Box className={classes.imageHolder}>
         <Avatar alt="Lim Zi Yang" src={ProfilePic} className={classes.avatar} />
       </Box>
@@ -139,15 +109,9 @@ export default function Home() {
               <Typography variant="subtitle2">limziyang8@gmail.com</Typography>
             </div>
           </Box>
-          {/* <Box className={classes.infoDescription}>
-            <ContactPhoneIcon />
-            <div className={classes.emailHolder}>
-              <Typography variant="subtitle2">+65 8168 9386</Typography>
-            </div>
-          </Box> */}
           <SocialMedia />
         </Box>
       </Box>
-    </div>
+    </Box>
   );
 }

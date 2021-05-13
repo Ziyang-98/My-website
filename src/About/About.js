@@ -8,27 +8,32 @@ import Icons from "./Icons";
 const useStyles = makeStyles((theme) => ({
   container: {
     zIndex: 1,
-    height: 350,
-    paddingTop: theme.spacing(25),
-    paddingBottom: theme.spacing(15),
-    [theme.breakpoints.down("sm")]: {
-      height: 700,
-      paddingTop: theme.spacing(8),
-      paddingBottom: theme.spacing(30),
-    },
+    height: 700,
+    display: "flex",
+    justifyContent: "space-evenly",
+    alignItems: "center",
+    flexWrap: "wrap",
+    // paddingTop: theme.spacing(25),
+    // paddingBottom: theme.spacing(15),
+    // [theme.breakpoints.down("sm")]: {
+    //   height: 700,
+    //   // paddingTop: theme.spacing(8),
+    //   // paddingBottom: theme.spacing(30),
+    // },
   },
 
   infoHolder: {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    height: "100%",
-    width: "50%",
-    float: "right",
+    // height: "100%",
+    width: 600,
+    // float: "right",
     [theme.breakpoints.down("sm")]: {
-      marginTop: theme.spacing(20),
-      height: "50%",
-      width: "100%",
+      width: 360,
+      //   marginTop: theme.spacing(20),
+      //   height: "50%",
+      //   width: "100%",
     },
   },
 
@@ -36,37 +41,38 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    height: "100%",
+    width: 600,
+    // height: "100%",
 
-    width: "50%",
-    float: "left",
-    [theme.breakpoints.down("sm")]: {
-      height: "50%",
-      width: "100%",
-    },
+    // width: "50%",
+    // float: "left",
+    // [theme.breakpoints.down("sm")]: {
+    //   height: "50%",
+    //   width: "100%",
+    // },
   },
 
   image: {
     height: 350,
     width: 330,
-    marginLeft: theme.spacing(20),
-    [theme.breakpoints.down("lg")]: {
-      marginLeft: theme.spacing(15),
-    },
-    [theme.breakpoints.down("sm")]: {
-      marginLeft: theme.spacing(0),
-    },
+    // marginLeft: theme.spacing(20),
+    // [theme.breakpoints.down("lg")]: {
+    //   marginLeft: theme.spacing(15),
+    // },
+    // [theme.breakpoints.down("sm")]: {
+    //   marginLeft: theme.spacing(0),
+    // },
   },
 
   infoBox: {
-    marginLeft: theme.spacing(15),
-    [theme.breakpoints.down("lg")]: {
-      marginLeft: theme.spacing(10),
-    },
-    [theme.breakpoints.down("sm")]: {
-      width: "80%",
-      marginLeft: theme.spacing(0),
-    },
+    // marginLeft: theme.spacing(15),
+    // [theme.breakpoints.down("lg")]: {
+    //   marginLeft: theme.spacing(10),
+    // },
+    // [theme.breakpoints.down("sm")]: {
+    //   width: "80%",
+    //   marginLeft: theme.spacing(0),
+    // },
   },
 
   title: {
@@ -81,23 +87,23 @@ const useStyles = makeStyles((theme) => ({
 
   details: {
     marginTop: theme.spacing(2),
-    width: "80%",
+    // width: "80%",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    [theme.breakpoints.down("sm")]: {
-      width: "95%",
-    },
-    [theme.breakpoints.down("xs")]: {
-      width: "100%",
-    },
+    // [theme.breakpoints.down("sm")]: {
+    //   width: "95%",
+    // },
+    // [theme.breakpoints.down("xs")]: {
+    //   width: "100%",
+    // },
   },
 }));
 
 export default function About() {
   const classes = useStyles();
   return (
-    <div className={classes.container} id="About">
+    <Box className={classes.container} id="About">
       <Box className={classes.imageHolder}>
         {/* <Typography variant="h4">About Me</Typography> */}
         <img src={Avatar} className={classes.image} alt="About Avatar" />
@@ -121,6 +127,6 @@ export default function About() {
           </Box>
         </div>
       </Box>
-    </div>
+    </Box>
   );
 }
