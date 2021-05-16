@@ -73,16 +73,17 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(2),
     display: "flex",
     alignItems: "center",
-    [theme.breakpoints.down("sm")]: {
-      justifyContent: "center",
-    },
+    justifyContent: "space-evenly",
+    // [theme.breakpoints.down("sm")]: {
+    //   justifyContent: "center",
+    // },
   },
 
   emailHolder: {
-    marginLeft: theme.spacing(3),
-    [theme.breakpoints.down("sm")]: {
-      marginLeft: theme.spacing(4),
-    },
+    // marginLeft: theme.spacing(3),
+    // [theme.breakpoints.down("sm")]: {
+    //   marginLeft: theme.spacing(4),
+    // },
   },
 }));
 
@@ -101,7 +102,6 @@ export default function Home() {
               Lim Zi Yang
             </Typography>
             <Typography variant="h5">Computer Science Student @ NUS</Typography>
-            <Typography variant="h6">Contact me @</Typography>
           </Box>
           <Box className={classes.infoDescription}>
             <EmailIcon />

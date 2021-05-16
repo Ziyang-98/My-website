@@ -20,12 +20,6 @@ const useStyles = makeStyles((theme) => ({
     height: 750,
     paddingTop: theme.spacing(10),
     paddingBottom: theme.spacing(15),
-    // zIndex: 1,
-    [theme.breakpoints.down("sm")]: {
-      //marginTop: theme.spacing(35),
-      //   paddingTop: theme.spacing(5),
-      //paddingBottom: theme.spacing(50),
-    },
   },
 
   titleHolder: {
@@ -63,14 +57,12 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   cardMedia: {
-    //paddingTop: "56.25%", // 16:9
     marginTop: "10%",
     marginBottom: "10%",
     height: 75,
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    // backgroundColor: "#f3f3f3",
   },
   image: {
     // height: "100%",
