@@ -8,13 +8,17 @@ import Icons from "./Icons";
 const useStyles = makeStyles((theme) => ({
   container: {
     zIndex: 1,
-    height: 350,
-    paddingTop: theme.spacing(25),
-    paddingBottom: theme.spacing(15),
+    height: 800,
+    display: "flex",
+    justifyContent: "space-evenly",
+    alignItems: "center",
+    flexWrap: "wrap",
+    // paddingTop: theme.spacing(25),
+    // paddingBottom: theme.spacing(15),
     [theme.breakpoints.down("sm")]: {
-      height: 700,
-      paddingTop: theme.spacing(10),
-      paddingBottom: theme.spacing(20),
+      // height: 700,
+      paddingTop: theme.spacing(8),
+      paddingBottom: theme.spacing(40),
     },
   },
 
@@ -22,13 +26,9 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    height: "100%",
-    width: "50%",
-    float: "right",
-    [theme.breakpoints.down("sm")]: {
-      paddingTop: theme.spacing(20),
-      height: "50%",
-      width: "100%",
+    width: 600,
+    [theme.breakpoints.down("md")]: {
+      width: 450,
     },
   },
 
@@ -36,67 +36,43 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    height: "100%",
-
-    width: "50%",
-    float: "left",
-    [theme.breakpoints.down("sm")]: {
-      height: "50%",
-
-      width: "100%",
+    width: 600,
+    [theme.breakpoints.down("md")]: {
+      width: 450,
     },
   },
 
   image: {
     height: 350,
     width: 330,
-    marginLeft: theme.spacing(20),
-    [theme.breakpoints.down("sm")]: {
-      marginLeft: theme.spacing(0),
-    },
   },
 
   infoBox: {
-    marginLeft: theme.spacing(15),
-    [theme.breakpoints.down("sm")]: {
-      width: "80%",
-      marginLeft: theme.spacing(0),
-    },
+    width: "80%",
   },
 
   title: {
-    // width: "50%",
-    [theme.breakpoints.down("xs")]: {
+    [theme.breakpoints.down("sm")]: {
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
+      marginTop: theme.spacing(10),
       marginBottom: theme.spacing(5),
     },
   },
 
   details: {
     marginTop: theme.spacing(2),
-    width: "80%",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    [theme.breakpoints.down("sm")]: {
-      width: "95%",
-    },
-    [theme.breakpoints.down("xs")]: {
-      width: "100%",
-    },
-  },
-
-  icons: {
-    marginTop: theme.spacing(2),
   },
 }));
 
 export default function About() {
   const classes = useStyles();
   return (
-    <div className={classes.container} id="About">
+    <Box className={classes.container} id="About">
       <Box className={classes.imageHolder}>
         {/* <Typography variant="h4">About Me</Typography> */}
         <img src={Avatar} className={classes.image} alt="About Avatar" />
@@ -115,9 +91,11 @@ export default function About() {
               programming consist of the following:{" "}
             </Typography>
           </div>
-          <Icons />
+          <Box className={classes.iconHolder} flexWrap="noWrap">
+            <Icons />
+          </Box>
         </div>
       </Box>
-    </div>
+    </Box>
   );
 }

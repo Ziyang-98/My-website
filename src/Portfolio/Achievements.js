@@ -4,21 +4,23 @@ import Box from "@material-ui/core/Box";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
+import List from "@material-ui/core/List";
+import ListItemIcon from "@material-ui/core/ListItemIcon";
+import ListItemText from "@material-ui/core/ListItemText";
+import IndeterminateCheckBoxIcon from "@material-ui/icons/IndeterminateCheckBox";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    float: "right",
-    [theme.breakpoints.down("xl")]: {
-      marginRight: "35%",
-    },
-
-    [theme.breakpoints.down("lg")]: {
-      marginRight: "25%",
-    },
-
-    [theme.breakpoints.down("sm")]: {
-      marginRight: "0%",
-    },
+    // float: "right",
+    // [theme.breakpoints.down("xl")]: {
+    //   marginRight: "35%",
+    // },
+    // [theme.breakpoints.down("lg")]: {
+    //   marginRight: "20%",
+    // },
+    // [theme.breakpoints.down("sm")]: {
+    //   marginRight: "0%",
+    // },
   },
   title: {
     [theme.breakpoints.down("sm")]: {
@@ -62,37 +64,54 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#e8eaf6",
   },
 
-  levelHolder: {
-    // marginTop: theme.spacing(2),
-    marginBottom: theme.spacing(3),
-  },
-
   level: {
     fontStyle: "italic",
   },
   description: {
     // marginTop: theme.spacing(2),
-    fontStyle: "italic",
+    fontSize: 17,
+  },
+  listItem: {
+    display: "flex",
+    alignItems: "center",
+    flexWrap: "nowrap",
+    // fontStyle: "italic",
   },
 }));
 
 /*---- My Achievement (Update here, format: {title:  , level , description:}) ----*/
 const achievements = [
   {
-    title: "Orbital Project",
-    level: "Apollo 11",
-    description:
-      "A Summer Independent Project designed by NUS School Of Computing,\
-       where Year 1 Computing students work together in pairs to develop \
-       software applications in an independent learning environment.",
+    title: "Edusave Certificate of Academic Award 2015",
+    // level: "",
+    // description:
+    //   "Achieved top 25% in terms of academic performance in level and course\
+    //    and good conduct in the academic institute.",
   },
+
   {
-    title: "Shopee Code League 2020",
-    level: "Certificate of Participation",
-    description:
-      "Led a team of 4 to participate in data analytics, \
-    data science and algorithm competitions and applied various skills \
-    such as machine learning, analyzing data and algorithm knowledge.",
+    title: "CDC - CCC Education Merit Award 2016",
+    // level: "",
+    // description:
+    //   "Identified by MOE and was awarded by Mr Victor Lye who was the advisor of .",
+  },
+
+  {
+    title: "NUS Orbital Apollo 11 (Advanced) 2020",
+    // level: "Apollo 11",
+    // description:
+    //   "A Summer Independent Project designed by NUS School Of Computing,\
+    //    where Year 1 Computing students work together in pairs to develop \
+    //    software applications in an independent learning environment.",
+  },
+
+  {
+    title: "Shopee Code League Certificate of Participation 2020",
+    // level: "Certificate of Participation",
+    // description:
+    //   "Led a team of 4 to participate in data analytics, \
+    // data science and algorithm competitions and applied various skills \
+    // such as machine learning, analyzing data and algorithm knowledge.",
   },
 ];
 
@@ -104,42 +123,29 @@ export default function Achievements() {
       <div className={classes.title}>
         <Typography variant="h4">Achievements</Typography>
       </div>
-
       <Box className={classes.container}>
-        {achievements.map((a) => (
-          <div className={classes.cardHolder}>
-            <Card className={classes.card} key={a.title}>
-              <CardContent>
-                <Typography variant="h5" component="h2">
-                  {a.title}
-                </Typography>
-                <div className={classes.levelHolder}>
-                  <Typography variant="body1" component="span">
-                    Achievement Level:{" "}
-                  </Typography>
-                  <Typography
-                    className={classes.level}
-                    variant="body1"
-                    component="span"
-                    color="primary"
-                  >
-                    {" "}
-                    {a.level}
-                  </Typography>
+        <Card className={classes.card} key="Achievements">
+          <CardContent>
+            <List dense={false}>
+              {achievements.map((a) => (
+                <div className={classes.listItem}>
+                  <ListItemIcon>
+                    <IndeterminateCheckBoxIcon />
+                  </ListItemIcon>
+                  <ListItemText>
+                    <Typography
+                      className={classes.description}
+                      variant="subtitle1"
+                      component="h2"
+                    >
+                      {a.title}
+                    </Typography>
+                  </ListItemText>
                 </div>
-                <Typography
-                  className={classes.description}
-                  variant="body2"
-                  component="p"
-                >
-                  {a.description}
-                  {/* <br />
-              {'"a benevolent smile"'} */}
-                </Typography>
-              </CardContent>
-            </Card>
-          </div>
-        ))}
+              ))}
+            </List>
+          </CardContent>
+        </Card>
       </Box>
     </div>
   );

@@ -1,5 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
+import Box from "@material-ui/core/Box";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
@@ -10,32 +11,33 @@ import Link from "@material-ui/core/Link";
 const useStyles = makeStyles((theme) => ({
   root: {
     marginTop: theme.spacing(3),
-    // [theme.breakpoints.down("xs")]: {
-    //   marginLeft: theme.spacing(3),
-    //   // display: "flex",
-    //   // alignItems: "center",
-    //   // justifyContent: "center",
+    // [theme.breakpoints.down("sm")]: {
+    // marginLeft: theme.spacing(3),
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-evenly",
     // },
   },
 
-  icon: {
-    marginLeft: theme.spacing(5),
-    float: "left",
-    marginTop: "0",
-    marginBottom: "0",
-    padding: "0",
-  },
+  // icon: {
+  //   margin: theme.spacing(0, 2),
+  //   float: "left",
+  //   marginTop: "0",
+  //   marginBottom: "0",
+  //   padding: "0",
+  // },
 
-  toolTip: {
-    margin: theme.spacing(0),
-  },
+  // toolTip: {
+  //   margin: theme.spacing(0),
+  // },
 }));
 
 const SocialMedia = () => {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    <Box className={classes.root}>
       <div className={classes.icon}>
         <Tooltip title="Facebook" className={classes.toolTip}>
           <Link
@@ -80,7 +82,7 @@ const SocialMedia = () => {
           </Link>
         </Tooltip>
       </div>
-    </div>
+    </Box>
   );
 };
 
