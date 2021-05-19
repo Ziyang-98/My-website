@@ -10,18 +10,16 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
 import ModPlanner from "./My Projects/Modplanner";
+import Bob from "./My Projects/Bob";
+import CommonCents from "./My Projects/CommonCents";
+import Coffeeberry from "./My Projects/Coffeeberry";
 import Dialog from "./Dialog";
 
 const useStyles = makeStyles((theme) => ({
   container: {
     height: 750,
-    paddingTop: theme.spacing(20),
+    paddingTop: theme.spacing(10),
     paddingBottom: theme.spacing(15),
-    zIndex: 1,
-    [theme.breakpoints.down("sm")]: {
-      //   paddingTop: theme.spacing(5),
-      paddingBottom: theme.spacing(50),
-    },
   },
 
   titleHolder: {
@@ -32,22 +30,43 @@ const useStyles = makeStyles((theme) => ({
   cardGrid: {
     paddingTop: theme.spacing(8),
     paddingBottom: theme.spacing(8),
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  outerGrid: {
+    width: 903,
+    [theme.breakpoints.down("sm")]: {
+      width: 543,
+    },
+    [theme.breakpoints.down("xs")]: {
+      width: 300,
+    },
   },
   card: {
     height: "100%",
+    width: 285,
     display: "flex",
     flexDirection: "column",
     backgroundColor: theme.palette.background.paper,
+    [theme.breakpoints.down("sm")]: {
+      width: 255,
+    },
+    [theme.breakpoints.down("xs")]: {
+      width: 290,
+    },
   },
   cardMedia: {
-    //paddingTop: "56.25%", // 16:9
     marginTop: "10%",
     marginBottom: "10%",
-    // backgroundColor: "#f3f3f3",
+    height: 75,
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   },
   image: {
-    height: "100%",
-    width: "100%",
+    // height: "100%",
+    // width: "100%",
   },
   logo: {
     marginLeft: theme.spacing(1),
@@ -67,28 +86,40 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-// const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-/*---- My Projects (Update here, format: {title: , shortDescription, description: , links: , techStack:   }) ----*/
-const projects = [ModPlanner];
+const projects = [ModPlanner, Bob, CommonCents, Coffeeberry];
 
 export default function Portfolio() {
   const classes = useStyles();
+  const showcaseStub = {
+    large: { width: 0, height: 0 },
+    medium: { width: 0, height: 0 },
+    small: { width: 0, height: 0 },
+  };
 
   const [open, setOpen] = React.useState(false);
   const [title, setTitle] = React.useState("");
+  const [showcaseSize, setShowcaseSize] = React.useState(showcaseStub);
   const [image, setImage] = React.useState(null);
   const [description, setDescription] = React.useState("");
   const [roles, setRoles] = React.useState([]);
   const [links, setLinks] = React.useState([]);
   const [techStack, setTechStack] = React.useState([]);
 
-  const handleClick = (title, image, description, roles, links, techStack) => {
+  const handleClick = (
+    title,
+    image,
+    showcaseSize,
+    description,
+    roles,
+    links,
+    techStack
+  ) => {
     setOpen(true);
     setTitle(title);
+    setShowcaseSize(showcaseSize);
     setImage(image);
     setDescription(description);
     setRoles(roles);
-
     setLinks(links);
     setTechStack(techStack);
   };
@@ -103,26 +134,30 @@ export default function Portfolio() {
       </Box>
       <Container className={classes.cardGrid} maxWidth="md">
         {/* End hero unit */}
-        <Grid container spacing={4}>
+        <Grid container className={classes.outerGrid} spacing={2}>
           {projects.map((project) => (
-            <Grid item key={project} xs={12} sm={6} md={4}>
+            <Grid item key={project}>
               <Card className={classes.card}>
                 <CardMedia className={classes.cardMedia} title="Image title">
                   <img
                     className={classes.image}
-                    src={project.image.showcase}
+                    src={project.image.display}
                     alt="showcase"
+                    width={project.displaySize.width}
+                    height={project.displaySize.height}
                   />
                 </CardMedia>
                 <CardContent className={classes.cardContent}>
                   <div className={classes.cardTitleHolder}>
                     <Typography gutterBottom variant="h5" component="span">
                       {project.title}
-                      <img
-                        className={classes.logo}
-                        src={project.image.logo}
-                        alt="logo"
-                      />
+                      {project.image.logo && (
+                        <img
+                          className={classes.logo}
+                          src={project.image.logo}
+                          alt="logo"
+                        />
+                      )}
                     </Typography>
                   </div>
                   <Typography component="p">
@@ -137,6 +172,7 @@ export default function Portfolio() {
                       handleClick(
                         project.title,
                         project.image,
+                        project.showcaseSize,
                         project.description,
                         project.roles,
                         project.links,
@@ -157,6 +193,7 @@ export default function Portfolio() {
         open={open}
         title={title}
         image={image}
+        showcaseSize={showcaseSize}
         description={description}
         roles={roles}
         links={links}

@@ -8,13 +8,13 @@ import Achievements from "./Achievements";
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    height: 350,
-    paddingTop: theme.spacing(15),
-    paddingBottom: theme.spacing(50),
+    // height: theme.spacing(120),
+    // paddingTop: theme.spacing(18),
+    // paddingBottom: theme.spacing(50),
     zIndex: 1,
-    [theme.breakpoints.down("sm")]: {
-      height: 750,
-    },
+    // [theme.breakpoints.down("sm")]: {
+    //   height: theme.spacing(150),
+    // },
   },
 
   titleHolder: {
@@ -25,36 +25,19 @@ const useStyles = makeStyles((theme) => ({
 
   infoHolder: {
     paddingTop: theme.spacing(5),
+    display: "flex",
+    justifyContent: "space-evenly",
+    flexWrap: "wrap",
   },
 
   expHolder: {
-    width: "50%",
     float: "left",
     height: "100%",
-
-    [theme.breakpoints.down("sm")]: {
-      paddingTop: theme.spacing(5),
-      width: "100%",
-      height: "50%",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-    },
   },
 
   achievementHolder: {
-    width: "50%",
     float: "right",
     height: "100%",
-
-    [theme.breakpoints.down("sm")]: {
-      paddingTop: theme.spacing(5),
-      width: "100%",
-      height: "50%",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-    },
   },
 }));
 
