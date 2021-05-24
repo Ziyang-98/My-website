@@ -1,43 +1,23 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-// import Avatar from "../Images/avataaars.png";
 import Box from "@material-ui/core/Box";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles((theme) => ({
-  // root: {
-  //   float: "left",
-  //   [theme.breakpoints.down("xl")]: {
-  //     marginLeft: "35%",
-  //   },
-  //   [theme.breakpoints.down("lg")]: {
-  //     marginLeft: "20%",
-  //   },
-
-  //   [theme.breakpoints.down("sm")]: {
-  //     marginLeft: "0%",
-  //   },
-  // },
+  root: {},
 
   title: {
-    // marginLeft: theme.spacing(20),
-    [theme.breakpoints.down("sm")]: {
-      marginLeft: theme.spacing(0),
-
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-    },
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
   },
 
   container: {
     marginTop: theme.spacing(5),
     marginBottom: theme.spacing(5),
-    // marginLeft: theme.spacing(20),
     [theme.breakpoints.down("sm")]: {
-      marginLeft: theme.spacing(0),
       flexWrap: "wrap",
       display: "flex",
       alignItems: "center",
@@ -46,8 +26,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   card: {
-    width: 450,
-    //marginBottom: theme.spacing(5),
+    width: 700,
     margin: theme.spacing(0, 0, 5, 0),
     [theme.breakpoints.down("md")]: {
       width: 350,
@@ -75,15 +54,12 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 14,
   },
 
-  jobscopeTitle: {
-    // color: "#696969",
-  },
+  jobscopeTitle: {},
 
   jobscope: {
     marginTop: theme.spacing(1),
     marginBottom: theme.spacing(1),
     fontStyle: "italic",
-    // color: "#696969",
   },
 
   employer: {},
@@ -109,7 +85,7 @@ const experiences = [
     company: "Inland Revenue Authority of Singapore",
     duration: "Dec 2020 - Present",
     description:
-      "Work on a Chat Bot Project, powered by Google DialogFlow, that aims to automate personalized interactions with tax payers",
+      "Worked on a Chat Bot Project, powered by Google DialogFlow, that aims to automate personalized interactions with tax payers",
     jobscope: [
       "Integrate training data and responses into the Chat Bot for tax filing feature",
       "Implement Typescript Web Hooks with NodeJS to interact with the main server",
@@ -118,7 +94,7 @@ const experiences = [
   {
     jobTitle: "NUS Teaching Assistant",
     company: "National University of Singapore",
-    duration: "Jan 2021 - Present",
+    duration: "Jan 2021 - April 2021",
     description:
       "Taught object-oriented programming " +
       "and functional programming to students in a programming module (CS2030S).",
@@ -127,6 +103,14 @@ const experiences = [
       "Assessed assignments and gave feedback to students' code",
       "Built students' proficiency in Java",
     ],
+  },
+  {
+    jobTitle: "Software Engineer Intern",
+    company: "OCBC Bank",
+    duration: "May 2021 - Present",
+    description: "Under the OCBC@STEM Programme.",
+    // "Working on an investment project on the FRANK application as a backend developer",
+    jobscope: [],
   },
 ];
 
@@ -165,13 +149,15 @@ export default function Experiences() {
               >
                 {job.description}
               </Typography>
-              <Typography
-                className={classes.jobscopeTitle}
-                variant="subtitle1"
-                component="p"
-              >
-                Job Scope:
-              </Typography>
+              {job.jobscope.length > 0 && (
+                <Typography
+                  className={classes.jobscopeTitle}
+                  variant="subtitle1"
+                  component="p"
+                >
+                  Job Scope:
+                </Typography>
+              )}
               {job.jobscope.map((s) => (
                 <Typography
                   className={classes.jobscope}

@@ -13,10 +13,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-evenly",
     alignItems: "center",
     flexWrap: "wrap",
-    // paddingTop: theme.spacing(25),
-    // paddingBottom: theme.spacing(15),
     [theme.breakpoints.down("sm")]: {
-      // height: 700,
       paddingTop: theme.spacing(8),
       paddingBottom: theme.spacing(40),
     },
