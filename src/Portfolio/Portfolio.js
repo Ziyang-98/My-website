@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 // import Experiences from "./Experiences";
-import Exp from "./Exp";
+import Exp from "./ExpTimeLine";
 // import Achievements from "./Achievements";
 // import Icons from "./Icons";
 
@@ -21,21 +21,15 @@ const useStyles = makeStyles((theme) => ({
   },
 
   infoHolder: {
-    paddingTop: theme.spacing(5),
+    paddingTop: theme.spacing(8),
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
   },
 
-  expHolder: {
-    float: "left",
-    height: "100%",
-  },
-
-  achievementHolder: {
-    float: "right",
-    height: "100%",
+  description: {
+    color: "#bbbbbf",
   },
 }));
 
@@ -48,7 +42,7 @@ export default function Portfolio() {
         <Typography variant="h3">My Portfolio</Typography>
       </Box>
       <Box className={classes.infoHolder}>
-        <Typography variant="body1">
+        <Typography variant="body1" className={classes.description}>
           Click on the icons to find out more
         </Typography>
         <Box className={classes.expHolder} id="Experiences">
