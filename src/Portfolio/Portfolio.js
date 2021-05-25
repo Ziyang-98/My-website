@@ -2,10 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
-// import Experiences from "./Experiences";
 import Exp from "./ExpTimeLine";
-// import Achievements from "./Achievements";
-// import Icons from "./Icons";
 
 const useStyles = makeStyles((theme) => ({
   container: {

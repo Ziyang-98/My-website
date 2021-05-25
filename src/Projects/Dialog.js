@@ -8,7 +8,7 @@ import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import Tooltip from "@material-ui/core/Tooltip";
 import IconButton from "@material-ui/core/IconButton";
-import CancelIcon from "@material-ui/icons/Cancel";
+import CancelIcon from "@material-ui/icons/Close";
 import Zoom from "@material-ui/core/Zoom";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 
@@ -24,11 +24,10 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: theme.spacing(2),
   },
   cancel: {
-    cursor: "pointer",
     position: "absolute",
-    float: "right",
-    top: "0",
-    right: "0",
+    right: theme.spacing(0.1),
+    top: theme.spacing(0.1),
+    color: theme.palette.grey[500],
   },
   title: {
     fontSize: 50,
