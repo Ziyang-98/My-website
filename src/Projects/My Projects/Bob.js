@@ -34,7 +34,7 @@ const Bob = {
       link: "https://github.com/Ziyang-98/ip/releases/tag/A-Release",
     },
     {
-      name: "Github Repository",
+      name: "Repository",
       link: "https://github.com/Ziyang-98/ip/",
     },
   ],

@@ -74,17 +74,9 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "space-evenly",
-    // [theme.breakpoints.down("sm")]: {
-    //   justifyContent: "center",
-    // },
   },
 
-  emailHolder: {
-    // marginLeft: theme.spacing(3),
-    // [theme.breakpoints.down("sm")]: {
-    //   marginLeft: theme.spacing(4),
-    // },
-  },
+  emailHolder: {},
 }));
 
 export default function Home() {
