@@ -14,6 +14,7 @@ import TimelineDot from "@material-ui/lab/TimelineDot";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
+import Dialog from "./Dialog";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -49,6 +50,26 @@ export default function ExpTimeline() {
   // Last item (Assumes that experiences already has items)
   const lastItem = experiences[experiences.length - 1];
 
+  const [open, setOpen] = React.useState(false);
+  const [jobTitle, setJobTitle] = React.useState("");
+  const [company, setCompany] = React.useState("");
+  const [duration, setDuration] = React.useState("");
+  const [description, setDescription] = React.useState("");
+  const [jobscope, setJobscope] = React.useState("");
+
+  const handleClick = (jobTitle, company, duration, description, jobscope) => {
+    setJobTitle(jobTitle);
+    setCompany(company);
+    setDuration(duration);
+    setDescription(description);
+    setJobscope(jobscope);
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   return (
     <Timeline align="alternate">
       {experiences.map((exp) => {
@@ -62,7 +83,18 @@ export default function ExpTimeline() {
             </TimelineOppositeContent>
             <TimelineSeparator>
               <TimelineDot color="primary">
-                <IconButton className={classes.icon}>
+                <IconButton
+                  className={classes.icon}
+                  onClick={() =>
+                    handleClick(
+                      exp.jobTitle,
+                      exp.company,
+                      exp.duration,
+                      exp.description,
+                      exp.jobscope
+                    )
+                  }
+                >
                   <Icon />
                 </IconButton>
               </TimelineDot>
@@ -90,6 +122,15 @@ export default function ExpTimeline() {
           </TimelineItem>
         );
       })}
+      <Dialog
+        open={open}
+        jobTitle={jobTitle}
+        company={company}
+        duration={duration}
+        description={description}
+        jobscope={jobscope}
+        handleClose={handleClose}
+      />
     </Timeline>
   );
 }

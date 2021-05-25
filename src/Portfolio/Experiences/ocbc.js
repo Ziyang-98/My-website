@@ -6,7 +6,7 @@ const OCBC = {
   duration: "May 2021 - Today",
   description: "Under the OCBC@STEM Programme",
   jobscope: [
-    "Contribute as a backend developer in a project team to build the digital bank's FRANK by OCBC app",
+    "Work as a backend developer in a project team to build investing features in the digital bank's FRANK by OCBC app",
     "Involve in the full cycle of project phase, from scoping of project, gathering requirements, design, coding & implementation, UAT and documentation",
   ],
   icon: AccountBalanceIcon,

@@ -2,8 +2,6 @@ import CoffeeberryImg from "../../Images/coffeeberry.PNG";
 import CoffeeberryDisplay from "../../Images/coffeeberrydisplay.PNG";
 import CoffeeberryIcon from "../../Images/coffeeberrylogo.PNG";
 import JavascriptIcon from "../../Images/Javascript.png";
-import HtmlIcon from "../../Images/html5.png";
-import CssIcon from "../../Images/css3.png";
 import ReactIcon from "../../Images/React.png";
 import NodejsIcon from "../../Images/nodejs.png";
 
