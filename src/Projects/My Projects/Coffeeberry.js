@@ -2,8 +2,6 @@ import CoffeeberryImg from "../../Images/coffeeberry.PNG";
 import CoffeeberryDisplay from "../../Images/coffeeberrydisplay.PNG";
 import CoffeeberryIcon from "../../Images/coffeeberrylogo.PNG";
 import JavascriptIcon from "../../Images/Javascript.png";
-import HtmlIcon from "../../Images/html5.png";
-import CssIcon from "../../Images/css3.png";
 import ReactIcon from "../../Images/React.png";
 import NodejsIcon from "../../Images/nodejs.png";
 
@@ -41,14 +39,12 @@ const Coffeeberry = {
       link: "https://devpost.com/software/afasf/",
     },
     {
-      name: "Github Repository",
+      name: "Repository",
       link: "https://github.com/Ziyang-98/coffeeberry",
     },
   ],
   techStack: [
     { name: "Javascript", img: JavascriptIcon },
-    { name: "HTLM5", img: HtmlIcon },
-    { name: "CSS3", img: CssIcon },
     { name: "ReactJS", img: ReactIcon },
     { name: "NodeJS", img: NodejsIcon },
   ],

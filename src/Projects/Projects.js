@@ -81,9 +81,7 @@ const useStyles = makeStyles((theme) => ({
   cardContent: {
     flexGrow: 1,
   },
-  cardButton: {
-    // fontWeight: 800,
-  },
+  cardButton: {},
 }));
 
 const projects = [ModPlanner, Bob, CommonCents, Coffeeberry];
@@ -136,7 +134,7 @@ export default function Portfolio() {
         {/* End hero unit */}
         <Grid container className={classes.outerGrid} spacing={2}>
           {projects.map((project) => (
-            <Grid item key={project}>
+            <Grid item>
               <Card className={classes.card}>
                 <CardMedia className={classes.cardMedia} title="Image title">
                   <img

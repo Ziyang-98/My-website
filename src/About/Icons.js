@@ -15,7 +15,6 @@ import GitHubIcon from "../Images/github.png";
 import GradleIcon from "../Images/gradle.png";
 import MongoDbIcon from "../Images/mongodb.PNG";
 import GoogleDialogFlowIcon from "../Images/dialogflow.png";
-// import MuiIcon from "../Images/mui.png";
 import Tooltip from "@material-ui/core/Tooltip";
 import Typography from "@material-ui/core/Typography";
 import Zoom from "@material-ui/core/Zoom";
@@ -40,23 +39,12 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(2),
     marginBottom: theme.spacing(2),
     flexWrap: "wrap",
-
-    [theme.breakpoints.down("sm")]: {
-      // display: "flex",
-      // justifyContent: "center",
-      // alignItems: "center",
-      // marginTop: theme.spacing(4),
-      // marginBottom: theme.spacing(4),
-    },
   },
 
   icon: {
     height: 40,
     width: 40,
     margin: theme.spacing(1),
-    [theme.breakpoints.down("xs")]: {
-      margin: theme.spacing(0.8),
-    },
   },
 }));
 

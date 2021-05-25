@@ -2,19 +2,13 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
-import Experiences from "./Experiences";
-import Achievements from "./Achievements";
-// import Icons from "./Icons";
+import Exp from "./ExpTimeLine";
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    // height: theme.spacing(120),
-    // paddingTop: theme.spacing(18),
-    // paddingBottom: theme.spacing(50),
+    paddingTop: theme.spacing(18),
+    paddingBottom: theme.spacing(18),
     zIndex: 1,
-    // [theme.breakpoints.down("sm")]: {
-    //   height: theme.spacing(150),
-    // },
   },
 
   titleHolder: {
@@ -24,20 +18,15 @@ const useStyles = makeStyles((theme) => ({
   },
 
   infoHolder: {
-    paddingTop: theme.spacing(5),
+    paddingTop: theme.spacing(8),
     display: "flex",
-    justifyContent: "space-evenly",
-    flexWrap: "wrap",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
   },
 
-  expHolder: {
-    float: "left",
-    height: "100%",
-  },
-
-  achievementHolder: {
-    float: "right",
-    height: "100%",
+  description: {
+    color: "#bbbbbf",
   },
 }));
 
@@ -50,11 +39,11 @@ export default function Portfolio() {
         <Typography variant="h3">My Portfolio</Typography>
       </Box>
       <Box className={classes.infoHolder}>
+        <Typography variant="body1" className={classes.description}>
+          Click on the icons to find out more
+        </Typography>
         <Box className={classes.expHolder} id="Experiences">
-          <Experiences />
-        </Box>
-        <Box className={classes.achievementHolder} id="Achievements">
-          <Achievements />
+          <Exp />
         </Box>
       </Box>
     </div>
