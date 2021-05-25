@@ -3,7 +3,7 @@ import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
 const IRAS = {
   jobTitle: "Part-time Software Developer",
   company: "National University of Singapore",
-  duration: "Aug 2020 - Nov 2020",
+  duration: "December 2020 - January 2021",
   description:
     "Worked on a Chatbot Project to automate personalizedinteractions with tax payers",
   jobscope: [

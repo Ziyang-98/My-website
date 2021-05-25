@@ -41,14 +41,12 @@ const Coffeeberry = {
       link: "https://devpost.com/software/afasf/",
     },
     {
-      name: "Github Repository",
+      name: "Repository",
       link: "https://github.com/Ziyang-98/coffeeberry",
     },
   ],
   techStack: [
     { name: "Javascript", img: JavascriptIcon },
-    { name: "HTLM5", img: HtmlIcon },
-    { name: "CSS3", img: CssIcon },
     { name: "ReactJS", img: ReactIcon },
     { name: "NodeJS", img: NodejsIcon },
   ],

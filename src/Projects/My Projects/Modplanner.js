@@ -27,7 +27,7 @@ const Modplanner = {
     small: { width: 400, height: 100 },
   },
   description:
-    "The Mod Planner is an app that allow NUS students to " +
+    "The Mod Planner is an app that is designed using the MERN stack. The app allows NUS students to " +
     "plan their university modules, share their planners as guides, " +
     "and participate in an online forum to discuss about relevant topics. " +
     "The project, handled by a team of two, aims to ease the process " +
@@ -39,22 +39,19 @@ const Modplanner = {
   links: [
     {
       name: "Project Info",
-      link:
-        "https://docs.google.com/document/d/1cFqpF2JK2G6i8kgYlLqNP0YzqufmyRjRfxee1blIGwQ/edit?usp=sharing",
+      link: "https://docs.google.com/document/d/1cFqpF2JK2G6i8kgYlLqNP0YzqufmyRjRfxee1blIGwQ/edit?usp=sharing",
     },
     {
       name: "Project Link",
       link: "https://mod-planner.herokuapp.com",
     },
     {
-      name: "Github Repository",
+      name: "Repository",
       link: "https://github.com/Ziyang-98/NUS-University-Path-Planner",
     },
   ],
   techStack: [
     { name: "Javascript", img: JavascriptIcon },
-    { name: "HTLM5", img: HtmlIcon },
-    { name: "CSS3", img: CssIcon },
     { name: "ReactJS", img: ReactIcon },
     { name: "NodeJS", img: NodejsIcon },
     { name: "mongoDB", img: MongoDbicon },

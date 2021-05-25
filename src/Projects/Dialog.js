@@ -20,36 +20,17 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: theme.spacing(8),
     marginBottom: theme.spacing(5),
   },
-
-  // image: {
-  //   width: 750,
-  //   height: 180,
-  //   [theme.breakpoints.down("sm")]: {
-  //     width: 550,
-  //     height: 140,
-  //   },
-  //   [theme.breakpoints.down("xs")]: {
-  //     width: 400,
-  //     height: 100,
-  //   },
-  // },
   dialogTitle: {
     paddingTop: theme.spacing(2),
-    // display: "flex",
-    // alignItems: "center",
-    // justifyContent: "center",
   },
   cancel: {
     cursor: "pointer",
     position: "absolute",
     float: "right",
     top: "0",
-    // marginRight: "95%",
     right: "0",
   },
   title: {
-    // fontWeight: 550,
-    // fontStyle: "italic",
     fontSize: 50,
     [theme.breakpoints.down("xs")]: {
       fontSize: 30,
@@ -66,13 +47,20 @@ const useStyles = makeStyles((theme) => ({
   techstack: {
     marginBottom: theme.spacing(2),
   },
+  iconsHolder: {
+    display: "flex",
+    flexWrap: "wrap",
+  },
   icons: {
     height: 40,
     width: 40,
-    marginRight: theme.spacing(2),
+    margin: theme.spacing(1),
   },
   linkHolder: {
     marginTop: theme.spacing(5),
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "center",
   },
   linkButtons: {
     margin: theme.spacing(1),
@@ -108,8 +96,6 @@ export default function ScrollDialog({
   const classes = useStyles();
   return (
     <div>
-      {/* <Button onClick={handleClickOpen("paper")}>scroll=paper</Button> */}
-      {/* <Button onClick={handleClickOpen}>scroll=body</Button> */}
       <Dialog
         open={open}
         onClose={handleClose}
@@ -173,7 +159,7 @@ export default function ScrollDialog({
             {description}
           </DialogContentText>
 
-          {/*---------- My Role ----------*/}
+          {/*---------- My Roles ----------*/}
           <div className={classes.rolesHolder}>
             <DialogContentText
               id="scroll-dialog-roles"
@@ -214,15 +200,17 @@ export default function ScrollDialog({
             >
               Tech Stack:
             </Typography>
-            {techStack.map((icon) => (
-              <Tooltip
-                title={icon.name}
-                TransitionComponent={Zoom}
-                enterTouchDelay="50"
-              >
-                <img src={icon.img} className={classes.icons} alt="icon" />
-              </Tooltip>
-            ))}
+            <div className={classes.iconsHolder}>
+              {techStack.map((icon) => (
+                <Tooltip
+                  title={icon.name}
+                  TransitionComponent={Zoom}
+                  enterTouchDelay="50"
+                >
+                  <img src={icon.img} className={classes.icons} alt="icon" />
+                </Tooltip>
+              ))}
+            </div>
           </DialogContentText>
 
           {/*---------- Links ----------*/}

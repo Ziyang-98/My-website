@@ -27,7 +27,7 @@ const CommonCents = {
     "Team Lead: Led the overall direction and development of the project",
     "Designed and implemented the model structure of the app",
     "Implemented the logic execution of features in the app",
-    "Designed and implemented various features of the app",
+    'Designed and implemented various features of the app (More information can be found under "Contributions" link below)',
   ],
   links: [
     {
@@ -39,11 +39,11 @@ const CommonCents = {
       link: "https://github.com/AY2021S1-CS2103T-T13-4/tp/releases/tag/v1.4",
     },
     {
-      name: "Github Repository",
+      name: "Repository",
       link: "https://github.com/AY2021S1-CS2103T-T13-4/tp",
     },
     {
-      name: "Project Portfolio",
+      name: "Contributions",
       link: "https://ay2021s1-cs2103t-t13-4.github.io/tp/team/ziyang-98.html",
     },
   ],
