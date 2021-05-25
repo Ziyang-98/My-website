@@ -1,5 +1,5 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Timeline from "@material-ui/lab/Timeline";
 import OCBC from "./Experiences/OCBC";
 import CS2030STA from "./Experiences/CS2030STA";
@@ -15,6 +15,7 @@ import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
 import Dialog from "./Dialog";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -22,6 +23,9 @@ const useStyles = makeStyles((theme) => ({
   },
   duration: {
     marginTop: theme.spacing(2),
+    [theme.breakpoints.down("xs")]: {
+      flex: 0.3,
+    },
   },
   icon: {
     color: "#FFFFFF",
@@ -70,67 +74,138 @@ export default function ExpTimeline() {
     setOpen(false);
   };
 
-  return (
-    <Timeline align="alternate">
-      {experiences.map((exp) => {
-        const Icon = exp.icon;
-        return (
-          <TimelineItem>
-            <TimelineOppositeContent className={classes.duration}>
-              <Typography variant="body2" color="textSecondary">
-                {exp.duration}
-              </Typography>
-            </TimelineOppositeContent>
-            <TimelineSeparator>
-              <TimelineDot color="primary">
-                <IconButton
-                  className={classes.icon}
-                  onClick={() =>
-                    handleClick(
-                      exp.jobTitle,
-                      exp.company,
-                      exp.duration,
-                      exp.description,
-                      exp.jobscope
-                    )
-                  }
-                >
-                  <Icon />
-                </IconButton>
-              </TimelineDot>
-              {lastItem !== exp && <TimelineConnector />}
-            </TimelineSeparator>
-            <TimelineContent>
-              <Paper elevation={3} className={classes.paper}>
-                <Typography variant="h6" component="h2">
-                  {exp.jobTitle}
-                </Typography>
+  const theme = useTheme();
+  const small = useMediaQuery(theme.breakpoints.down("xs"));
 
-                <Typography variant="body1" component="p" color="primary">
-                  {exp.company}
-                </Typography>
-                <Typography
-                  className={classes.description}
-                  variant="caption"
-                  component="p"
-                  color="primary"
-                >
-                  {exp.description}
-                </Typography>
-              </Paper>
-            </TimelineContent>
-          </TimelineItem>
-        );
-      })}
-      <Dialog
-        open={open}
-        jobTitle={jobTitle}
-        company={company}
-        duration={duration}
-        description={description}
-        jobscope={jobscope}
-        handleClose={handleClose}
-      />
-    </Timeline>
+  return (
+    <div>
+      {small ? (
+        // Timeline content aligns left if window is small
+        <Timeline align="left" className={classes.timeline}>
+          {experiences.map((exp) => {
+            const Icon = exp.icon;
+            return (
+              <TimelineItem>
+                <TimelineOppositeContent className={classes.duration}>
+                  <Typography variant="body2" color="textSecondary">
+                    {exp.duration}
+                  </Typography>
+                </TimelineOppositeContent>
+                <TimelineSeparator>
+                  <TimelineDot color="primary">
+                    <IconButton
+                      className={classes.icon}
+                      onClick={() =>
+                        handleClick(
+                          exp.jobTitle,
+                          exp.company,
+                          exp.duration,
+                          exp.description,
+                          exp.jobscope
+                        )
+                      }
+                    >
+                      <Icon />
+                    </IconButton>
+                  </TimelineDot>
+                  {lastItem !== exp && <TimelineConnector />}
+                </TimelineSeparator>
+                <TimelineContent>
+                  <Paper elevation={3} className={classes.paper}>
+                    <Typography variant="h6" component="h2">
+                      {exp.jobTitle}
+                    </Typography>
+
+                    <Typography variant="body1" component="p" color="primary">
+                      {exp.company}
+                    </Typography>
+                    <Typography
+                      className={classes.description}
+                      variant="caption"
+                      component="p"
+                      color="primary"
+                    >
+                      {exp.description}
+                    </Typography>
+                  </Paper>
+                </TimelineContent>
+              </TimelineItem>
+            );
+          })}
+          <Dialog
+            open={open}
+            jobTitle={jobTitle}
+            company={company}
+            duration={duration}
+            description={description}
+            jobscope={jobscope}
+            handleClose={handleClose}
+          />
+        </Timeline>
+      ) : (
+        // Timeline content alternates by default
+        <Timeline align="alternate" className={classes.timeline}>
+          {experiences.map((exp) => {
+            const Icon = exp.icon;
+            return (
+              <TimelineItem>
+                <TimelineOppositeContent className={classes.duration}>
+                  <Typography variant="body2" color="textSecondary">
+                    {exp.duration}
+                  </Typography>
+                </TimelineOppositeContent>
+                <TimelineSeparator>
+                  <TimelineDot color="primary">
+                    <IconButton
+                      className={classes.icon}
+                      onClick={() =>
+                        handleClick(
+                          exp.jobTitle,
+                          exp.company,
+                          exp.duration,
+                          exp.description,
+                          exp.jobscope
+                        )
+                      }
+                    >
+                      <Icon />
+                    </IconButton>
+                  </TimelineDot>
+                  {lastItem !== exp && <TimelineConnector />}
+                </TimelineSeparator>
+                <TimelineContent>
+                  <Paper elevation={3} className={classes.paper}>
+                    <Typography variant="h6" component="h2">
+                      {exp.jobTitle}
+                    </Typography>
+
+                    <Typography variant="body1" component="p" color="primary">
+                      {exp.company}
+                    </Typography>
+                    <Typography
+                      className={classes.description}
+                      variant="caption"
+                      component="p"
+                      color="primary"
+                    >
+                      {exp.description}
+                    </Typography>
+                  </Paper>
+                </TimelineContent>
+              </TimelineItem>
+            );
+          })}
+          <Dialog
+            open={open}
+            jobTitle={jobTitle}
+            company={company}
+            duration={duration}
+            description={description}
+            jobscope={jobscope}
+            handleClose={handleClose}
+          />
+        </Timeline>
+      )}
+    </div>
   );
 }
