@@ -1,10 +1,10 @@
 import React from "react";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Timeline from "@material-ui/lab/Timeline";
-import OCBC from "./Experiences/OCBC";
-import CS2030STA from "./Experiences/CS2030STA";
-import IRAS from "./Experiences/IRAS";
-import CS2030TA from "./Experiences/CS2030TA";
+import OCBC from "./Experiences/ocbc";
+import CS2030STA from "./Experiences/cs2030sTA";
+import IRAS from "./Experiences/iras";
+import CS2030TA from "./Experiences/cs2030TA";
 import TimelineItem from "@material-ui/lab/TimelineItem";
 import TimelineSeparator from "@material-ui/lab/TimelineSeparator";
 import TimelineConnector from "@material-ui/lab/TimelineConnector";

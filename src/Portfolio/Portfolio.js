@@ -3,6 +3,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 import Exp from "./ExpTimeLine";
+import ScrollAnimation from "react-animate-on-scroll";
+import "animate.css/animate.compat.css";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -36,15 +38,21 @@ export default function Portfolio() {
   return (
     <div className={classes.container} id="Portfolio">
       <Box className={classes.titleHolder}>
-        <Typography variant="h3">My Portfolio</Typography>
+        <ScrollAnimation animateIn="fadeIn" delay={200} animateOnce={true}>
+          <Typography variant="h3">My Experiences</Typography>
+        </ScrollAnimation>
       </Box>
       <Box className={classes.infoHolder}>
-        <Typography variant="body1" className={classes.description}>
-          Click on the icons to find out more
-        </Typography>
-        <Box className={classes.expHolder} id="Experiences">
-          <Exp />
-        </Box>
+        <ScrollAnimation animateIn="fadeIn" delay={1000} animateOnce={true}>
+          <Typography variant="body1" className={classes.description}>
+            Click on the icons to find out more
+          </Typography>
+        </ScrollAnimation>
+        <ScrollAnimation animateIn="fadeIn" delay={600} animateOnce={true}>
+          <Box className={classes.expHolder} id="Experiences">
+            <Exp />
+          </Box>
+        </ScrollAnimation>
       </Box>
     </div>
   );
