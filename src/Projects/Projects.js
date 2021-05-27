@@ -14,6 +14,8 @@ import Bob from "./My Projects/Bob";
 import CommonCents from "./My Projects/CommonCents";
 import Coffeeberry from "./My Projects/Coffeeberry";
 import Dialog from "./Dialog";
+import ScrollAnimation from "react-animate-on-scroll";
+import "animate.css/animate.compat.css";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -125,67 +127,83 @@ export default function Portfolio() {
   const handleClose = () => {
     setOpen(false);
   };
+
+  // Card animation delay
+  let delay = 100;
+  const addOnDelay = 100;
+
   return (
     <div className={classes.container} id="Projects">
       <Box className={classes.titleHolder}>
-        <Typography variant="h3">My Projects</Typography>
+        <ScrollAnimation animateIn="fadeIn" delay={200} animateOnce={true}>
+          <Typography variant="h3">My Projects</Typography>
+        </ScrollAnimation>
       </Box>
       <Container className={classes.cardGrid} maxWidth="md">
         {/* End hero unit */}
+        {/* <ScrollAnimation animateIn="fadeIn" delay={400} animateOnce={true}> */}
         <Grid container className={classes.outerGrid} spacing={2}>
           {projects.map((project) => (
             <Grid item>
-              <Card className={classes.card}>
-                <CardMedia className={classes.cardMedia} title="Image title">
-                  <img
-                    className={classes.image}
-                    src={project.image.display}
-                    alt="showcase"
-                    width={project.displaySize.width}
-                    height={project.displaySize.height}
-                  />
-                </CardMedia>
-                <CardContent className={classes.cardContent}>
-                  <div className={classes.cardTitleHolder}>
-                    <Typography gutterBottom variant="h5" component="span">
-                      {project.title}
-                      {project.image.logo && (
-                        <img
-                          className={classes.logo}
-                          src={project.image.logo}
-                          alt="logo"
-                        />
-                      )}
+              <ScrollAnimation
+                animateIn="fadeIn"
+                delay={(delay += addOnDelay)}
+                animateOnce={true}
+                className={classes.card}
+              >
+                <Card className={classes.card}>
+                  <CardMedia className={classes.cardMedia} title="Image title">
+                    <img
+                      className={classes.image}
+                      src={project.image.display}
+                      alt="showcase"
+                      width={project.displaySize.width}
+                      height={project.displaySize.height}
+                    />
+                  </CardMedia>
+                  <CardContent className={classes.cardContent}>
+                    <div className={classes.cardTitleHolder}>
+                      <Typography gutterBottom variant="h5" component="span">
+                        {project.title}
+                        {project.image.logo && (
+                          <img
+                            className={classes.logo}
+                            src={project.image.logo}
+                            alt="logo"
+                          />
+                        )}
+                      </Typography>
+                    </div>
+                    <Typography component="p">
+                      {project.shortDescription}
                     </Typography>
-                  </div>
-                  <Typography component="p">
-                    {project.shortDescription}
-                  </Typography>
-                </CardContent>
-                <CardActions>
-                  <Button
-                    size="small"
-                    color="primary"
-                    onClick={() =>
-                      handleClick(
-                        project.title,
-                        project.image,
-                        project.showcaseSize,
-                        project.description,
-                        project.roles,
-                        project.links,
-                        project.techStack
-                      )
-                    }
-                    className={classes.cardButton}
-                  >
-                    More Info
-                  </Button>
-                </CardActions>
-              </Card>
+                  </CardContent>
+                  <CardActions>
+                    <Button
+                      size="small"
+                      color="primary"
+                      onClick={() =>
+                        handleClick(
+                          project.title,
+                          project.image,
+                          project.showcaseSize,
+                          project.description,
+                          project.roles,
+                          project.links,
+                          project.techStack
+                        )
+                      }
+                      className={classes.cardButton}
+                    >
+                      More Info
+                    </Button>
+                  </CardActions>
+                </Card>
+              </ScrollAnimation>
             </Grid>
           ))}
         </Grid>
+        {/* </ScrollAnimation> */}
       </Container>
       <Dialog
         open={open}
