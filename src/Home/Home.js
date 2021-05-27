@@ -7,11 +7,13 @@ import Typography from "@material-ui/core/Typography";
 import Chip from "@material-ui/core/Chip";
 import EmailIcon from "@material-ui/icons/Email";
 import SocialMedia from "./SocialMedia";
+import ScrollAnimation from "react-animate-on-scroll";
+import "animate.css/animate.compat.css";
 
 const useStyles = makeStyles((theme) => ({
   container: {
     display: "flex",
-    paddingTop: theme.spacing(8),
+    paddingTop: theme.spacing(15),
     flexDirection: "row-reverse",
     justifyContent: "space-evenly",
     alignItems: "center",
@@ -83,27 +85,39 @@ export default function Home() {
   const classes = useStyles();
   return (
     <Box className={classes.container} id="Home">
-      <Box className={classes.imageHolder}>
-        <Avatar alt="Lim Zi Yang" src={ProfilePic} className={classes.avatar} />
-      </Box>
-      <Box className={classes.infoHolder}>
-        <Box className={classes.textHolder}>
-          <Chip label="Hi there, I'm" color="primary" />
-          <Box className={classes.nameHolder}>
-            <Typography variant="h2" className={classes.name}>
-              Lim Zi Yang
-            </Typography>
-            <Typography variant="h5">Computer Science Student @ NUS</Typography>
-          </Box>
-          <Box className={classes.infoDescription}>
-            <EmailIcon />
-            <div className={classes.emailHolder}>
-              <Typography variant="subtitle2">limziyang8@gmail.com</Typography>
-            </div>
-          </Box>
-          <SocialMedia />
+      <ScrollAnimation animateIn="fadeIn" animateOnce={true} delay={200}>
+        <Box className={classes.imageHolder}>
+          <Avatar
+            alt="Lim Zi Yang"
+            src={ProfilePic}
+            className={classes.avatar}
+          />
         </Box>
-      </Box>
+      </ScrollAnimation>
+      <ScrollAnimation animateIn="fadeIn" delay={200} animateOnce={true}>
+        <Box className={classes.infoHolder}>
+          <Box className={classes.textHolder}>
+            <Chip label="Hi there, I'm" color="primary" />
+            <Box className={classes.nameHolder}>
+              <Typography variant="h2" className={classes.name}>
+                Lim Zi Yang
+              </Typography>
+              <Typography variant="h5">
+                Computer Science Student @ NUS
+              </Typography>
+            </Box>
+            <Box className={classes.infoDescription}>
+              <EmailIcon />
+              <div className={classes.emailHolder}>
+                <Typography variant="subtitle2">
+                  limziyang8@gmail.com
+                </Typography>
+              </div>
+            </Box>
+            <SocialMedia />
+          </Box>
+        </Box>
+      </ScrollAnimation>
     </Box>
   );
 }
