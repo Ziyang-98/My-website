@@ -43,12 +43,12 @@ export default function Portfolio() {
         </ScrollAnimation>
       </Box>
       <Box className={classes.infoHolder}>
-        <ScrollAnimation animateIn="fadeIn" delay={1000} animateOnce={true}>
+        <ScrollAnimation animateIn="fadeIn" delay={800} animateOnce={true}>
           <Typography variant="body1" className={classes.description}>
             Click on the icons to find out more
           </Typography>
         </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeIn" delay={600} animateOnce={true}>
+        <ScrollAnimation animateIn="fadeIn" delay={450} animateOnce={true}>
           <Box className={classes.expHolder} id="Experiences">
             <Exp />
           </Box>

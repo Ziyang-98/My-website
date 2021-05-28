@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import ProfilePic from "../Images/dp1.png";
+import ProfilePic from "./dp1Edit.png";
 import Box from "@material-ui/core/Box";
 import Avatar from "@material-ui/core/Avatar";
 import Typography from "@material-ui/core/Typography";
@@ -85,7 +85,7 @@ export default function Home() {
   const classes = useStyles();
   return (
     <Box className={classes.container} id="Home">
-      <ScrollAnimation animateIn="fadeIn" animateOnce={true} delay={200}>
+      <ScrollAnimation animateIn="fadeIn" animateOnce={true} delay={700}>
         <Box className={classes.imageHolder}>
           <Avatar
             alt="Lim Zi Yang"
@@ -94,7 +94,7 @@ export default function Home() {
           />
         </Box>
       </ScrollAnimation>
-      <ScrollAnimation animateIn="fadeIn" delay={200} animateOnce={true}>
+      <ScrollAnimation animateIn="fadeIn" delay={400} animateOnce={true}>
         <Box className={classes.infoHolder}>
           <Box className={classes.textHolder}>
             <Chip label="Hi there, I'm" color="primary" />
