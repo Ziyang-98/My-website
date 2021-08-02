@@ -1,5 +1,6 @@
 {
   "projects": {
-    "staging": "limziyang-24f60"
+    "staging": "limziyang-24f60",
+    "default": "limziyang-24f60"
   }
 }
