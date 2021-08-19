@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Avatar from "../Images/avataaars.png";
+import Avatar from "../Images/Profile/avataaars.png";
 import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 import Icons from "./Icons";

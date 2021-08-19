@@ -1,20 +1,20 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import PythonIcon from "../Images/Python.png";
-import JavascriptIcon from "../Images/Javascript.png";
-import TypescriptIcon from "../Images/typescript.png";
-import JavaIcon from "../Images/Java.png";
-import HtmlIcon from "../Images/html5.png";
-import CssIcon from "../Images/css3.png";
-import CIcon from "../Images/c.png";
-import RubyIcon from "../Images/ruby.png";
-import ReactIcon from "../Images/React.png";
-import NodejsIcon from "../Images/nodejs.png";
-import GitIcon from "../Images/git.png";
-import GitHubIcon from "../Images/github.png";
-import GradleIcon from "../Images/gradle.png";
-import MongoDbIcon from "../Images/mongodb.PNG";
-import GoogleDialogFlowIcon from "../Images/dialogflow.png";
+import PythonIcon from "../Images/Logos/Language/python.png";
+import JavascriptIcon from "../Images/Logos/Language/javascript.png";
+import TypescriptIcon from "../Images/Logos/Language/typescript.png";
+import JavaIcon from "../Images/Logos/Language/java.png";
+import HtmlIcon from "../Images/Logos/Language/html5.png";
+import CssIcon from "../Images/Logos/Language/css3.png";
+import CIcon from "../Images/Logos/Language/c.png";
+import RubyIcon from "../Images/Logos/Language/ruby.png";
+import ReactIcon from "../Images/Logos/Framework/react.png";
+import NodejsIcon from "../Images/Logos/Framework/nodejs.png";
+import GitIcon from "../Images/Logos/Framework/git.png";
+import GitHubIcon from "../Images/Logos/Framework/github.png";
+import GradleIcon from "../Images/Logos/Framework/gradle.png";
+import MongoDbIcon from "../Images/Logos/Framework/mongodb.PNG";
+import GoogleDialogFlowIcon from "../Images/Logos/Framework/dialogflow.png";
 import Tooltip from "@material-ui/core/Tooltip";
 import Typography from "@material-ui/core/Typography";
 import Zoom from "@material-ui/core/Zoom";
@@ -145,14 +145,14 @@ export default function Icons() {
             <img src={GradleIcon} className={classes.icon} alt="gradle icon" />
           </Tooltip>
           <Tooltip
-            title="mongoDB"
+            title="MongoDB"
             TransitionComponent={Zoom}
             enterTouchDelay="50"
           >
             <img
               src={MongoDbIcon}
               className={classes.icon}
-              alt="mongodb icon"
+              alt="Mongodb icon"
             />
           </Tooltip>
           <Tooltip

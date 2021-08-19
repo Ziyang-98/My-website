@@ -11,26 +11,11 @@ import Link from "@material-ui/core/Link";
 const useStyles = makeStyles((theme) => ({
   root: {
     marginTop: theme.spacing(3),
-    // [theme.breakpoints.down("sm")]: {
-    // marginLeft: theme.spacing(3),
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-evenly",
-    // },
   },
-
-  // icon: {
-  //   margin: theme.spacing(0, 2),
-  //   float: "left",
-  //   marginTop: "0",
-  //   marginBottom: "0",
-  //   padding: "0",
-  // },
-
-  // toolTip: {
-  //   margin: theme.spacing(0),
-  // },
 }));
 
 const SocialMedia = () => {

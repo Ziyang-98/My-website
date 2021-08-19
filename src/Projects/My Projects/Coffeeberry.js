@@ -1,9 +1,9 @@
-import CoffeeberryImg from "../../Images/coffeeberry.PNG";
-import CoffeeberryDisplay from "../../Images/coffeeberrydisplay.PNG";
-import CoffeeberryIcon from "../../Images/coffeeberrylogo.PNG";
-import JavascriptIcon from "../../Images/Javascript.png";
-import ReactIcon from "../../Images/React.png";
-import NodejsIcon from "../../Images/nodejs.png";
+import CoffeeberryImg from "../../Images/Projects/coffeeberry.PNG";
+import CoffeeberryDisplay from "../../Images/Projects/coffeeberrydisplay.PNG";
+import CoffeeberryIcon from "../../Images/Projects/coffeeberrylogo.PNG";
+import JavascriptIcon from "../../Images/Logos/Language/javascript.png";
+import ReactIcon from "../../Images/Logos/Framework/react.png";
+import NodejsIcon from "../../Images/Logos/Framework/nodejs.png";
 
 const Coffeeberry = {
   title: "Coffeeberry",

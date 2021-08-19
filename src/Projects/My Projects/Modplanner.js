@@ -1,9 +1,9 @@
-import ModPlannerImg from "../../Images/modplanner.png";
-import ModPlannerLogo from "../../Images/modplannerlogo.png";
-import JavascriptIcon from "../../Images/Javascript.png";
-import ReactIcon from "../../Images/React.png";
-import NodejsIcon from "../../Images/nodejs.png";
-import MongoDbicon from "../../Images/mongodb.PNG";
+import ModPlannerImg from "../../Images/Projects/modplanner.png";
+import ModPlannerLogo from "../../Images/Projects/modplannerlogo.png";
+import JavascriptIcon from "../../Images/Logos/Language/javascript.png";
+import ReactIcon from "../../Images/Logos/Framework/react.png";
+import NodejsIcon from "../../Images/Logos/Framework/nodejs.png";
+import MongoDbicon from "../../Images/Logos/Framework/mongodb.PNG";
 
 const Modplanner = {
   title: "The Mod Planner",
@@ -52,7 +52,7 @@ const Modplanner = {
     { name: "Javascript", img: JavascriptIcon },
     { name: "ReactJS", img: ReactIcon },
     { name: "NodeJS", img: NodejsIcon },
-    { name: "mongoDB", img: MongoDbicon },
+    { name: "MongoDB", img: MongoDbicon },
   ],
 };
 
