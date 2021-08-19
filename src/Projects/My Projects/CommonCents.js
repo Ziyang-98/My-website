@@ -1,5 +1,5 @@
-import Ui from "../../Images/Projects/commoncents.png";
-import Logo from "../../Images/Projects/commoncentslogo.png";
+import CommonCentsPreview from "../../Images/Projects/commoncentspreview.png";
+import CommonCentsShowcase from "../../Images/Projects/commoncentsshowcase.png";
 import JavaIcon from "../../Images/Logos/Language/java.png";
 import JavaFXIcon from "../../Images/Logos/Framework/javafx.PNG";
 import GradleIcon from "../../Images/Logos/Framework/gradle.png";
@@ -8,8 +8,12 @@ const CommonCents = {
   title: "Common Cents",
   shortDescription:
     "A Java app for small business owners to manage financial transactions and earnings.",
-  image: { logo: null, display: Logo, showcase: Ui },
-  displaySize: {
+  image: {
+    logo: null,
+    preview: CommonCentsPreview,
+    showcase: CommonCentsShowcase,
+  },
+  previewSize: {
     width: "30%",
     height: "100%",
   },

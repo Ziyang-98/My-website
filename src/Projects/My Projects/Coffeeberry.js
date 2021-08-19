@@ -1,6 +1,6 @@
-import CoffeeberryImg from "../../Images/Projects/coffeeberry.PNG";
-import CoffeeberryDisplay from "../../Images/Projects/coffeeberrydisplay.PNG";
-import CoffeeberryIcon from "../../Images/Projects/coffeeberrylogo.PNG";
+import CoffeeberryLogo from "../../Images/Projects/coffeeberrylogo.PNG";
+import CoffeeberryPreview from "../../Images/Projects/coffeeberrypreview.PNG";
+import CoffeeberryShowcase from "../../Images/Projects/coffeeberryshowcase.PNG";
 import JavascriptIcon from "../../Images/Logos/Language/javascript.png";
 import ReactIcon from "../../Images/Logos/Framework/react.png";
 import NodejsIcon from "../../Images/Logos/Framework/nodejs.png";
@@ -10,11 +10,11 @@ const Coffeeberry = {
   shortDescription:
     "A web e-commerce app that connects coffee bean suppliers and coffee bean buyers",
   image: {
-    logo: CoffeeberryIcon,
-    display: CoffeeberryDisplay,
-    showcase: CoffeeberryImg,
+    logo: CoffeeberryLogo,
+    preview: CoffeeberryPreview,
+    showcase: CoffeeberryShowcase,
   },
-  displaySize: {
+  previewSize: {
     width: "80%",
     height: "70%",
   },

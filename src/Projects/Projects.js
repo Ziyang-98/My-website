@@ -162,10 +162,10 @@ export default function Portfolio() {
                   <CardMedia className={classes.cardMedia} title="Image title">
                     <img
                       className={classes.image}
-                      src={project.image.display}
+                      src={project.image.preview}
                       alt="showcase"
-                      width={project.displaySize.width}
-                      height={project.displaySize.height}
+                      width={project.previewSize.width}
+                      height={project.previewSize.height}
                     />
                   </CardMedia>
                   <CardContent className={classes.cardContent}>

@@ -1,5 +1,5 @@
-import CoralReefDisplay from "../../Images/Projects/coralreefdisplay.PNG";
-import CoralReefUI from "../../Images/Projects/coralreefui.PNG";
+import CoralReefPreview from "../../Images/Projects/coralreefpreview.PNG";
+import CoralReefShowcase from "../../Images/Projects/coralreefshowcase.PNG";
 import JavascriptIcon from "../../Images/Logos/Language/javascript.png";
 import ReactIcon from "../../Images/Logos/Framework/react.png";
 import FirebaseIcon from "../../Images/Logos/Framework/firebase.png";
@@ -9,10 +9,11 @@ const CoralReefConservation = {
   shortDescription:
     "A Coral Reef species library with filtering and priorization for Coral Transplantation.",
   image: {
-    display: CoralReefDisplay,
-    showcase: CoralReefUI,
+    logo: null,
+    preview: CoralReefPreview,
+    showcase: CoralReefShowcase,
   },
-  displaySize: {
+  previewSize: {
     width: "90%",
     height: "60%",
   },

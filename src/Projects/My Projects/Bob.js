@@ -1,5 +1,5 @@
-import BobImage from "../../Images/Projects/bob.PNG";
-import Boblogo from "../../Images/Projects/boblogo.PNG";
+import BobPreview from "../../Images/Projects/bobpreview.PNG";
+import BobShowcase from "../../Images/Projects/bobshowcase.PNG";
 import JavaIcon from "../../Images/Logos/Language/java.png";
 import JavaFXIcon from "../../Images/Logos/Framework/javafx.PNG";
 import GradleIcon from "../../Images/Logos/Framework/gradle.png";
@@ -8,8 +8,8 @@ const Bob = {
   title: "Bob",
   shortDescription:
     "A Java bot app that allows users to manages tasks, events and deadlines.",
-  image: { logo: null, display: Boblogo, showcase: BobImage },
-  displaySize: {
+  image: { logo: null, preview: BobPreview, showcase: BobShowcase },
+  previewSize: {
     width: "70%",
     height: "90%",
   },
