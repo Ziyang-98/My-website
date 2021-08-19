@@ -13,6 +13,7 @@ import ModPlanner from "./My Projects/Modplanner";
 import Bob from "./My Projects/Bob";
 import CommonCents from "./My Projects/CommonCents";
 import Coffeeberry from "./My Projects/Coffeeberry";
+import CoralReefConservation from "./My Projects/CoralReefConservation";
 import Dialog from "./Dialog";
 import ScrollAnimation from "react-animate-on-scroll";
 import "animate.css/animate.compat.css";
@@ -86,7 +87,13 @@ const useStyles = makeStyles((theme) => ({
   cardButton: {},
 }));
 
-const projects = [ModPlanner, Bob, CommonCents, Coffeeberry];
+const projects = [
+  ModPlanner,
+  Bob,
+  CommonCents,
+  Coffeeberry,
+  CoralReefConservation,
+];
 
 export default function Portfolio() {
   const classes = useStyles();
