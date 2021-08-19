@@ -10,10 +10,15 @@ import CIcon from "../Images/Logos/Language/c.png";
 import RubyIcon from "../Images/Logos/Language/ruby.png";
 import ReactIcon from "../Images/Logos/Framework/react.png";
 import NodejsIcon from "../Images/Logos/Framework/nodejs.png";
+import GraphQLIcon from "../Images/Logos/Framework/graphql.png";
 import GitIcon from "../Images/Logos/Framework/git.png";
 import GitHubIcon from "../Images/Logos/Framework/github.png";
+import BitBucketIcon from "../Images/Logos/Framework/bitbucket.PNG";
 import GradleIcon from "../Images/Logos/Framework/gradle.png";
+import MavenIcon from "../Images/Logos/Framework/maven.png";
+import SpringBootIcon from "../Images/Logos/Framework/springboot.png";
 import MongoDbIcon from "../Images/Logos/Framework/mongodb.PNG";
+import FirebaseIcon from "../Images/Logos/Framework/firebase.png";
 import GoogleDialogFlowIcon from "../Images/Logos/Framework/dialogflow.png";
 import Tooltip from "@material-ui/core/Tooltip";
 import Typography from "@material-ui/core/Typography";
@@ -127,6 +132,17 @@ export default function Icons() {
           >
             <img src={NodejsIcon} className={classes.icon} alt="nodejs icon" />
           </Tooltip>
+          <Tooltip
+            title="GraplQL"
+            TransitionComponent={Zoom}
+            enterTouchDelay="50"
+          >
+            <img
+              src={GraphQLIcon}
+              className={classes.icon}
+              alt="graphql icon"
+            />
+          </Tooltip>
           <Tooltip title="Git" TransitionComponent={Zoom} enterTouchDelay="50">
             <img src={GitIcon} className={classes.icon} alt="git icon" />
           </Tooltip>
@@ -138,11 +154,40 @@ export default function Icons() {
             <img src={GitHubIcon} className={classes.icon} alt="github icon" />
           </Tooltip>
           <Tooltip
+            title="Bit Bucket"
+            TransitionComponent={Zoom}
+            enterTouchDelay="50"
+          >
+            <img
+              src={BitBucketIcon}
+              className={classes.icon}
+              alt="bitbucket icon"
+            />
+          </Tooltip>
+          <Tooltip
             title="Gradle"
             TransitionComponent={Zoom}
             enterTouchDelay="50"
           >
             <img src={GradleIcon} className={classes.icon} alt="gradle icon" />
+          </Tooltip>
+          <Tooltip
+            title="Apache Maven"
+            TransitionComponent={Zoom}
+            enterTouchDelay="50"
+          >
+            <img src={MavenIcon} className={classes.icon} alt="maven icon" />
+          </Tooltip>
+          <Tooltip
+            title="Spring Boot"
+            TransitionComponent={Zoom}
+            enterTouchDelay="50"
+          >
+            <img
+              src={SpringBootIcon}
+              className={classes.icon}
+              alt="springboot icon"
+            />
           </Tooltip>
           <Tooltip
             title="MongoDB"
@@ -153,6 +198,17 @@ export default function Icons() {
               src={MongoDbIcon}
               className={classes.icon}
               alt="Mongodb icon"
+            />
+          </Tooltip>
+          <Tooltip
+            title="Firebase"
+            TransitionComponent={Zoom}
+            enterTouchDelay="50"
+          >
+            <img
+              src={FirebaseIcon}
+              className={classes.icon}
+              alt="firebase icon"
             />
           </Tooltip>
           <Tooltip
