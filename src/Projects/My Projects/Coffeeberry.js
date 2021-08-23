@@ -12,17 +12,19 @@ const Coffeeberry = {
   image: {
     logo: CoffeeberryLogo,
     preview: CoffeeberryPreview,
-    showcase: CoffeeberryShowcase,
+    showcases: [CoffeeberryShowcase],
   },
   previewSize: {
     width: "80%",
     height: "70%",
   },
-  showcaseSize: {
-    large: { width: 750, height: 500 },
-    medium: { width: 550, height: 400 },
-    small: { width: 400, height: 300 },
-  },
+  showcaseSizes: [
+    {
+      large: { width: 750, height: 500 },
+      medium: { width: 550, height: 400 },
+      small: { width: 400, height: 300 },
+    },
+  ],
   description:
     "Coffeeberry is an online market for coffee bean suppliers to post their goods for sale, " +
     "and for buyers to search for the type of coffee beans they want. It serves as a an E-commerce " +

@@ -11,17 +11,19 @@ const CoralReefConservation = {
   image: {
     logo: null,
     preview: CoralReefPreview,
-    showcase: CoralReefShowcase,
+    showcases: [CoralReefShowcase],
   },
   previewSize: {
     width: "90%",
     height: "60%",
   },
-  showcaseSize: {
-    large: { width: 650, height: 580 },
-    medium: { width: 550, height: 490 },
-    small: { width: 400, height: 360 },
-  },
+  showcaseSizes: [
+    {
+      large: { width: 650, height: 580 },
+      medium: { width: 550, height: 490 },
+      small: { width: 400, height: 360 },
+    },
+  ],
   description:
     "Coral Reef Conservation is an app that is designed using ReactJS as its front-end framework and Firebase for the database and user authentication / authorization. " +
     "The app aims to ease the transplantation process of corals by guiding users using appropriate criterias produced by the Reef Ecology Lab, NUS. " +

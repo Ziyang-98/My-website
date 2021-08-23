@@ -97,15 +97,17 @@ const projects = [
 
 export default function Portfolio() {
   const classes = useStyles();
-  const showcaseStub = {
-    large: { width: 0, height: 0 },
-    medium: { width: 0, height: 0 },
-    small: { width: 0, height: 0 },
-  };
+  const showcaseStub = [
+    {
+      large: { width: 0, height: 0 },
+      medium: { width: 0, height: 0 },
+      small: { width: 0, height: 0 },
+    },
+  ];
 
   const [open, setOpen] = React.useState(false);
   const [title, setTitle] = React.useState("");
-  const [showcaseSize, setShowcaseSize] = React.useState(showcaseStub);
+  const [showcaseSizes, setShowcaseSizes] = React.useState(showcaseStub);
   const [image, setImage] = React.useState(null);
   const [description, setDescription] = React.useState("");
   const [roles, setRoles] = React.useState([]);
@@ -115,7 +117,7 @@ export default function Portfolio() {
   const handleClick = (
     title,
     image,
-    showcaseSize,
+    showcaseSizes,
     description,
     roles,
     links,
@@ -123,7 +125,7 @@ export default function Portfolio() {
   ) => {
     setOpen(true);
     setTitle(title);
-    setShowcaseSize(showcaseSize);
+    setShowcaseSizes(showcaseSizes);
     setImage(image);
     setDescription(description);
     setRoles(roles);
@@ -193,7 +195,7 @@ export default function Portfolio() {
                         handleClick(
                           project.title,
                           project.image,
-                          project.showcaseSize,
+                          project.showcaseSizes,
                           project.description,
                           project.roles,
                           project.links,
@@ -216,7 +218,7 @@ export default function Portfolio() {
         open={open}
         title={title}
         image={image}
-        showcaseSize={showcaseSize}
+        showcaseSizes={showcaseSizes}
         description={description}
         roles={roles}
         links={links}

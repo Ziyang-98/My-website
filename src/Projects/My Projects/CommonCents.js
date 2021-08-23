@@ -11,17 +11,19 @@ const CommonCents = {
   image: {
     logo: null,
     preview: CommonCentsPreview,
-    showcase: CommonCentsShowcase,
+    showcases: [CommonCentsShowcase],
   },
   previewSize: {
     width: "30%",
     height: "100%",
   },
-  showcaseSize: {
-    large: { width: 600, height: 400 },
-    medium: { width: 500, height: 350 },
-    small: { width: 350, height: 230 },
-  },
+  showcaseSizes: [
+    {
+      large: { width: 600, height: 400 },
+      medium: { width: 500, height: 350 },
+      small: { width: 350, height: 230 },
+    },
+  ],
   description:
     "Common Cents is a command-line based app that aims to assist small business owners. " +
     "It allows the small business owners to keep track of their expenses as well as revenues " +
