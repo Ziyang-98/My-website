@@ -35,32 +35,32 @@ const Coffeeberry = {
     {
       large: { width: 900, height: 470 },
       medium: { width: 500, height: 270 },
-      small: { width: 400, height: 210 },
+      small: { width: 350, height: 190 },
     },
     {
       large: { width: 900, height: 470 },
       medium: { width: 500, height: 270 },
-      small: { width: 400, height: 210 },
+      small: { width: 350, height: 190 },
     },
     {
       large: { width: 900, height: 470 },
       medium: { width: 500, height: 270 },
-      small: { width: 400, height: 210 },
+      small: { width: 350, height: 190 },
     },
     {
       large: { width: 900, height: 470 },
       medium: { width: 500, height: 270 },
-      small: { width: 400, height: 210 },
+      small: { width: 350, height: 190 },
     },
     {
       large: { width: 900, height: 470 },
       medium: { width: 500, height: 270 },
-      small: { width: 400, height: 210 },
+      small: { width: 350, height: 190 },
     },
     {
       large: { width: 900, height: 470 },
       medium: { width: 500, height: 270 },
-      small: { width: 400, height: 210 },
+      small: { width: 350, height: 190 },
     },
   ],
   description:
