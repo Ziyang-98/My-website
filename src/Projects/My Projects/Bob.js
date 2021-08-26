@@ -1,5 +1,5 @@
-import BobPreview from "../../Images/Projects/bobpreview.PNG";
-import BobShowcase from "../../Images/Projects/bobshowcase.PNG";
+import BobPreview from "../../Images/Projects/bob/bobpreview.PNG";
+import BobShowcase from "../../Images/Projects/bob/bobshowcase.PNG";
 import JavaIcon from "../../Images/Logos/Language/java.png";
 import JavaFXIcon from "../../Images/Logos/Framework/javafx.PNG";
 import GradleIcon from "../../Images/Logos/Framework/gradle.png";

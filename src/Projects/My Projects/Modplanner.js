@@ -1,6 +1,6 @@
-import ModPlannerLogo from "../../Images/Projects/modplannerlogo.png";
-import ModPlannerPreview from "../../Images/Projects/modplannerpreview.png";
-import ModPlannerShowcase from "../../Images/Projects/modplannershowcase.PNG";
+import ModPlannerLogo from "../../Images/Projects/modplanner/modplannerlogo.png";
+import ModPlannerPreview from "../../Images/Projects/modplanner/modplannerpreview.png";
+import ModPlannerShowcase from "../../Images/Projects/modplanner/modplannershowcase.PNG";
 import JavascriptIcon from "../../Images/Logos/Language/javascript.png";
 import ReactIcon from "../../Images/Logos/Framework/react.png";
 import NodejsIcon from "../../Images/Logos/Framework/nodejs.png";
@@ -14,23 +14,13 @@ const Modplanner = {
   image: {
     logo: ModPlannerLogo,
     preview: ModPlannerPreview,
-    showcases: [ModPlannerShowcase, ModPlannerShowcase, ModPlannerShowcase],
+    showcases: [ModPlannerShowcase],
   },
   previewSize: {
     width: "100%",
     height: "80%",
   },
   showcaseSizes: [
-    {
-      large: { width: 700, height: 500 },
-      medium: { width: 550, height: 390 },
-      small: { width: 400, height: 285 },
-    },
-    {
-      large: { width: 700, height: 500 },
-      medium: { width: 550, height: 390 },
-      small: { width: 400, height: 285 },
-    },
     {
       large: { width: 700, height: 500 },
       medium: { width: 550, height: 390 },

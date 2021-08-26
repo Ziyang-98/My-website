@@ -1,5 +1,5 @@
-import CoralReefPreview from "../../Images/Projects/coralreefpreview.PNG";
-import CoralReefShowcase from "../../Images/Projects/coralreefshowcase.PNG";
+import CoralReefPreview from "../../Images/Projects/coralreef/coralreefpreview.PNG";
+import CoralReefShowcase from "../../Images/Projects/coralreef/coralreefshowcase.PNG";
 import JavascriptIcon from "../../Images/Logos/Language/javascript.png";
 import ReactIcon from "../../Images/Logos/Framework/react.png";
 import FirebaseIcon from "../../Images/Logos/Framework/firebase.png";

@@ -1,5 +1,5 @@
-import CommonCentsPreview from "../../Images/Projects/commoncentspreview.png";
-import CommonCentsShowcase from "../../Images/Projects/commoncentsshowcase.png";
+import CommonCentsPreview from "../../Images/Projects/commoncents/commoncentspreview.png";
+import CommonCentsShowcase from "../../Images/Projects/commoncents/commoncentsshowcase.png";
 import JavaIcon from "../../Images/Logos/Language/java.png";
 import JavaFXIcon from "../../Images/Logos/Framework/javafx.PNG";
 import GradleIcon from "../../Images/Logos/Framework/gradle.png";

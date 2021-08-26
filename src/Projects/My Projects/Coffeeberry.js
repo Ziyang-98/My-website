@@ -1,6 +1,12 @@
-import CoffeeberryLogo from "../../Images/Projects/coffeeberrylogo.PNG";
-import CoffeeberryPreview from "../../Images/Projects/coffeeberrypreview.PNG";
-import CoffeeberryShowcase from "../../Images/Projects/coffeeberryshowcase.PNG";
+import CoffeeberryLogo from "../../Images/Projects/coffeeberry/coffeeberrylogo.PNG";
+import CoffeeberryPreview from "../../Images/Projects/coffeeberry/coffeeberrypreview.PNG";
+import HomePageImg from "../../Images/Projects/coffeeberry/homepage.PNG";
+import MarketImg from "../../Images/Projects/coffeeberry/marketpage.PNG";
+import SampleProductImg from "../../Images/Projects/coffeeberry/sampleproductpage.PNG";
+import ManagePostingImg from "../../Images/Projects/coffeeberry/managepostingpage.PNG";
+import CreatePostingImg from "../../Images/Projects/coffeeberry/createpostingpage.PNG";
+
+import OrdersImg from "../../Images/Projects/coffeeberry/orderspage.PNG";
 import JavascriptIcon from "../../Images/Logos/Language/javascript.png";
 import ReactIcon from "../../Images/Logos/Framework/react.png";
 import NodejsIcon from "../../Images/Logos/Framework/nodejs.png";
@@ -12,7 +18,14 @@ const Coffeeberry = {
   image: {
     logo: CoffeeberryLogo,
     preview: CoffeeberryPreview,
-    showcases: [CoffeeberryShowcase],
+    showcases: [
+      HomePageImg,
+      MarketImg,
+      SampleProductImg,
+      ManagePostingImg,
+      CreatePostingImg,
+      OrdersImg,
+    ],
   },
   previewSize: {
     width: "80%",
@@ -20,9 +33,34 @@ const Coffeeberry = {
   },
   showcaseSizes: [
     {
-      large: { width: 750, height: 500 },
-      medium: { width: 550, height: 400 },
-      small: { width: 400, height: 300 },
+      large: { width: 900, height: 470 },
+      medium: { width: 500, height: 270 },
+      small: { width: 400, height: 210 },
+    },
+    {
+      large: { width: 900, height: 470 },
+      medium: { width: 500, height: 270 },
+      small: { width: 400, height: 210 },
+    },
+    {
+      large: { width: 900, height: 470 },
+      medium: { width: 500, height: 270 },
+      small: { width: 400, height: 210 },
+    },
+    {
+      large: { width: 900, height: 470 },
+      medium: { width: 500, height: 270 },
+      small: { width: 400, height: 210 },
+    },
+    {
+      large: { width: 900, height: 470 },
+      medium: { width: 500, height: 270 },
+      small: { width: 400, height: 210 },
+    },
+    {
+      large: { width: 900, height: 470 },
+      medium: { width: 500, height: 270 },
+      small: { width: 400, height: 210 },
     },
   ],
   description:
