@@ -34,43 +34,11 @@ const Modplanner = {
     width: "100%",
     height: "80%",
   },
-  showcaseSizes: [
-    {
-      large: { width: 800, height: 570 },
-      medium: { width: 500, height: 360 },
-      small: { width: 350, height: 250 },
-    },
-    {
-      large: { width: 800, height: 570 },
-      medium: { width: 500, height: 360 },
-      small: { width: 350, height: 250 },
-    },
-    {
-      large: { width: 800, height: 570 },
-      medium: { width: 500, height: 360 },
-      small: { width: 350, height: 250 },
-    },
-    {
-      large: { width: 800, height: 570 },
-      medium: { width: 500, height: 360 },
-      small: { width: 350, height: 250 },
-    },
-    {
-      large: { width: 800, height: 570 },
-      medium: { width: 500, height: 360 },
-      small: { width: 350, height: 250 },
-    },
-    {
-      large: { width: 800, height: 570 },
-      medium: { width: 500, height: 360 },
-      small: { width: 350, height: 250 },
-    },
-    {
-      large: { width: 800, height: 570 },
-      medium: { width: 500, height: 360 },
-      small: { width: 350, height: 250 },
-    },
-  ],
+  showcaseSizes: {
+    large: { width: 800, height: 570 },
+    medium: { width: 500, height: 360 },
+    small: { width: 350, height: 250 },
+  },
   description:
     "The Mod Planner is an app that is designed using the MERN stack. The app allows NUS students to " +
     "plan their university modules, share their planners as guides, " +

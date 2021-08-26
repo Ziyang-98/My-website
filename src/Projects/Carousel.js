@@ -24,22 +24,22 @@ function ShowcaseCarousel({ showcases, showcaseSizes }) {
           <img
             src={item}
             alt={"showcase" + i}
-            width={showcaseSizes[i].small.width}
-            height={showcaseSizes[i].small.height}
+            width={showcaseSizes.small.width}
+            height={showcaseSizes.small.height}
           />
         ) : medium ? (
           <img
             src={item}
             alt={"showcase" + i}
-            width={showcaseSizes[i].medium.width}
-            height={showcaseSizes[i].medium.height}
+            width={showcaseSizes.medium.width}
+            height={showcaseSizes.medium.height}
           />
         ) : (
           <img
             src={item}
             alt={"showcase" + i}
-            width={showcaseSizes[i].large.width}
-            height={showcaseSizes[i].large.height}
+            width={showcaseSizes.large.width}
+            height={showcaseSizes.large.height}
           />
         );
       })}

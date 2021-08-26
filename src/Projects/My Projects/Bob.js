@@ -13,13 +13,11 @@ const Bob = {
     width: "70%",
     height: "90%",
   },
-  showcaseSizes: [
-    {
-      large: { width: 400, height: 600 },
-      medium: { width: 400, height: 600 },
-      small: { width: 300, height: 500 },
-    },
-  ],
+  showcaseSizes: {
+    large: { width: 400, height: 600 },
+    medium: { width: 400, height: 600 },
+    small: { width: 300, height: 500 },
+  },
   description:
     "Bob is a command-line based bot that keeps track of the user's tasks, events " +
     "and deadlines through conversations. Features include a variety of commands that " +

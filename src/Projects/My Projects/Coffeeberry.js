@@ -2,7 +2,7 @@ import CoffeeberryLogo from "../../Images/Projects/coffeeberry/coffeeberrylogo.P
 import CoffeeberryPreview from "../../Images/Projects/coffeeberry/coffeeberrypreview.PNG";
 import HomePageImg from "../../Images/Projects/coffeeberry/homepage.PNG";
 import MarketImg from "../../Images/Projects/coffeeberry/marketpage.PNG";
-import SampleProductImg from "../../Images/Projects/coffeeberry/sampleproductpage.PNG";
+import ProductImg from "../../Images/Projects/coffeeberry/productpage.PNG";
 import ManagePostingImg from "../../Images/Projects/coffeeberry/managepostingpage.PNG";
 import CreatePostingImg from "../../Images/Projects/coffeeberry/createpostingpage.PNG";
 
@@ -21,48 +21,22 @@ const Coffeeberry = {
     showcases: [
       HomePageImg,
       MarketImg,
-      SampleProductImg,
+      ProductImg,
+      OrdersImg,
       ManagePostingImg,
       CreatePostingImg,
-      OrdersImg,
     ],
   },
   previewSize: {
     width: "80%",
     height: "70%",
   },
-  showcaseSizes: [
-    {
-      large: { width: 900, height: 470 },
-      medium: { width: 500, height: 270 },
-      small: { width: 350, height: 190 },
-    },
-    {
-      large: { width: 900, height: 470 },
-      medium: { width: 500, height: 270 },
-      small: { width: 350, height: 190 },
-    },
-    {
-      large: { width: 900, height: 470 },
-      medium: { width: 500, height: 270 },
-      small: { width: 350, height: 190 },
-    },
-    {
-      large: { width: 900, height: 470 },
-      medium: { width: 500, height: 270 },
-      small: { width: 350, height: 190 },
-    },
-    {
-      large: { width: 900, height: 470 },
-      medium: { width: 500, height: 270 },
-      small: { width: 350, height: 190 },
-    },
-    {
-      large: { width: 900, height: 470 },
-      medium: { width: 500, height: 270 },
-      small: { width: 350, height: 190 },
-    },
-  ],
+  showcaseSizes: {
+    large: { width: 630, height: 470 },
+    medium: { width: 500, height: 370 },
+    small: { width: 320, height: 240 },
+  },
+
   description:
     "Coffeeberry is an online market for coffee bean suppliers to post their goods for sale, " +
     "and for buyers to search for the type of coffee beans they want. It serves as a an E-commerce " +
