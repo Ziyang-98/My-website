@@ -1,5 +1,5 @@
-import CommonCentsPreview from "../../Images/Projects/commoncentspreview.png";
-import CommonCentsShowcase from "../../Images/Projects/commoncentsshowcase.png";
+import CommonCentsPreview from "../../Images/Projects/commoncents/commoncentspreview.png";
+import CommonCentsShowcase from "../../Images/Projects/commoncents/commoncentsshowcase.png";
 import JavaIcon from "../../Images/Logos/Language/java.png";
 import JavaFXIcon from "../../Images/Logos/Framework/javafx.PNG";
 import GradleIcon from "../../Images/Logos/Framework/gradle.png";
@@ -11,17 +11,18 @@ const CommonCents = {
   image: {
     logo: null,
     preview: CommonCentsPreview,
-    showcase: CommonCentsShowcase,
+    showcases: [CommonCentsShowcase],
   },
   previewSize: {
     width: "30%",
     height: "100%",
   },
-  showcaseSize: {
+  showcaseSizes: {
     large: { width: 600, height: 400 },
     medium: { width: 500, height: 350 },
-    small: { width: 350, height: 230 },
+    small: { width: 320, height: 210 },
   },
+
   description:
     "Common Cents is a command-line based app that aims to assist small business owners. " +
     "It allows the small business owners to keep track of their expenses as well as revenues " +

@@ -1,5 +1,5 @@
-import BobPreview from "../../Images/Projects/bobpreview.PNG";
-import BobShowcase from "../../Images/Projects/bobshowcase.PNG";
+import BobPreview from "../../Images/Projects/bob/bobpreview.PNG";
+import BobShowcase from "../../Images/Projects/bob/bobshowcase.PNG";
 import JavaIcon from "../../Images/Logos/Language/java.png";
 import JavaFXIcon from "../../Images/Logos/Framework/javafx.PNG";
 import GradleIcon from "../../Images/Logos/Framework/gradle.png";
@@ -8,12 +8,12 @@ const Bob = {
   title: "Bob",
   shortDescription:
     "A Java bot app that allows users to manages tasks, events and deadlines.",
-  image: { logo: null, preview: BobPreview, showcase: BobShowcase },
+  image: { logo: null, preview: BobPreview, showcases: [BobShowcase] },
   previewSize: {
     width: "70%",
     height: "90%",
   },
-  showcaseSize: {
+  showcaseSizes: {
     large: { width: 400, height: 600 },
     medium: { width: 400, height: 600 },
     small: { width: 300, height: 500 },

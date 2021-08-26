@@ -1,6 +1,12 @@
-import CoffeeberryLogo from "../../Images/Projects/coffeeberrylogo.PNG";
-import CoffeeberryPreview from "../../Images/Projects/coffeeberrypreview.PNG";
-import CoffeeberryShowcase from "../../Images/Projects/coffeeberryshowcase.PNG";
+import CoffeeberryLogo from "../../Images/Projects/coffeeberry/coffeeberrylogo.PNG";
+import CoffeeberryPreview from "../../Images/Projects/coffeeberry/coffeeberrypreview.PNG";
+import HomePageImg from "../../Images/Projects/coffeeberry/homepage.PNG";
+import MarketImg from "../../Images/Projects/coffeeberry/marketpage.PNG";
+import ProductImg from "../../Images/Projects/coffeeberry/productpage.PNG";
+import ManagePostingImg from "../../Images/Projects/coffeeberry/managepostingpage.PNG";
+import CreatePostingImg from "../../Images/Projects/coffeeberry/createpostingpage.PNG";
+
+import OrdersImg from "../../Images/Projects/coffeeberry/orderspage.PNG";
 import JavascriptIcon from "../../Images/Logos/Language/javascript.png";
 import ReactIcon from "../../Images/Logos/Framework/react.png";
 import NodejsIcon from "../../Images/Logos/Framework/nodejs.png";
@@ -12,17 +18,25 @@ const Coffeeberry = {
   image: {
     logo: CoffeeberryLogo,
     preview: CoffeeberryPreview,
-    showcase: CoffeeberryShowcase,
+    showcases: [
+      HomePageImg,
+      MarketImg,
+      ProductImg,
+      OrdersImg,
+      ManagePostingImg,
+      CreatePostingImg,
+    ],
   },
   previewSize: {
     width: "80%",
     height: "70%",
   },
-  showcaseSize: {
-    large: { width: 750, height: 500 },
-    medium: { width: 550, height: 400 },
-    small: { width: 400, height: 300 },
+  showcaseSizes: {
+    large: { width: 630, height: 470 },
+    medium: { width: 500, height: 370 },
+    small: { width: 320, height: 240 },
   },
+
   description:
     "Coffeeberry is an online market for coffee bean suppliers to post their goods for sale, " +
     "and for buyers to search for the type of coffee beans they want. It serves as a an E-commerce " +
