@@ -1,5 +1,14 @@
-import CoralReefPreview from "../../Images/Projects/coralreefpreview.PNG";
-import CoralReefShowcase from "../../Images/Projects/coralreefshowcase.PNG";
+import CoralReefPreview from "../../Images/Projects/coralreef/coralreefpreview.PNG";
+// import CoralReefShowcase from "../../Images/Projects/coralreef/coralreefshowcase.PNG";
+import LandingPageImg from "../../Images/Projects/coralreef/landingpage.PNG";
+import OptionsImg from "../../Images/Projects/coralreef/optionspage.PNG";
+import SelectionPageImg from "../../Images/Projects/coralreef/selectionpage.PNG";
+import ResultPageImg from "../../Images/Projects/coralreef/resultpage.PNG";
+import ProfilePageImg from "../../Images/Projects/coralreef/profilepage.PNG";
+import LoginPageImg from "../../Images/Projects/coralreef/loginpage.PNG";
+import AdminPageImg from "../../Images/Projects/coralreef/adminpage.PNG";
+import EditSpeciesImg from "../../Images/Projects/coralreef/editspeciespage.PNG";
+
 import JavascriptIcon from "../../Images/Logos/Language/javascript.png";
 import ReactIcon from "../../Images/Logos/Framework/react.png";
 import FirebaseIcon from "../../Images/Logos/Framework/firebase.png";
@@ -11,17 +20,27 @@ const CoralReefConservation = {
   image: {
     logo: null,
     preview: CoralReefPreview,
-    showcase: CoralReefShowcase,
+    showcases: [
+      LandingPageImg,
+      OptionsImg,
+      SelectionPageImg,
+      ResultPageImg,
+      ProfilePageImg,
+      LoginPageImg,
+      AdminPageImg,
+      EditSpeciesImg,
+    ],
   },
   previewSize: {
     width: "90%",
     height: "60%",
   },
-  showcaseSize: {
-    large: { width: 650, height: 580 },
-    medium: { width: 550, height: 490 },
-    small: { width: 400, height: 360 },
+  showcaseSizes: {
+    large: { width: 650, height: 470 },
+    medium: { width: 500, height: 360 },
+    small: { width: 320, height: 230 },
   },
+
   description:
     "Coral Reef Conservation is an app that is designed using ReactJS as its front-end framework and Firebase for the database and user authentication / authorization. " +
     "The app aims to ease the transplantation process of corals by guiding users using appropriate criterias produced by the Reef Ecology Lab, NUS. " +

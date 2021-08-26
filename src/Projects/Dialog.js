@@ -1,5 +1,5 @@
 import React from "react";
-import { makeStyles, useTheme } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import Dialog from "@material-ui/core/Dialog";
@@ -10,7 +10,7 @@ import Tooltip from "@material-ui/core/Tooltip";
 import IconButton from "@material-ui/core/IconButton";
 import CancelIcon from "@material-ui/icons/Close";
 import Zoom from "@material-ui/core/Zoom";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
+import Carousel from "./Carousel";
 
 const useStyles = makeStyles((theme) => ({
   imageHolder: {
@@ -70,19 +70,13 @@ export default function ScrollDialog({
   open,
   title,
   image,
-  showcaseSize,
+  showcaseSizes,
   description,
   roles,
   links,
   techStack,
   handleClose,
 }) {
-  // Breakpoints to resize showcase
-  const theme = useTheme();
-  const large = useMediaQuery(theme.breakpoints.up("md"));
-  const medium = useMediaQuery(theme.breakpoints.only("sm"));
-  const small = useMediaQuery(theme.breakpoints.only("xs"));
-
   const descriptionElementRef = React.useRef(null);
   React.useEffect(() => {
     if (open) {
@@ -113,7 +107,11 @@ export default function ScrollDialog({
 
         {/*---------- Showcase Image ----------*/}
         <div className={classes.imageHolder}>
-          {large && (
+          <Carousel
+            showcases={image !== null ? image.showcases : null}
+            showcaseSizes={showcaseSizes}
+          />
+          {/* {large && (
             <img
               src={image !== null ? image.showcase : null}
               className={classes.image}
@@ -139,7 +137,7 @@ export default function ScrollDialog({
               width={showcaseSize.small.width}
               height={showcaseSize.small.height}
             />
-          )}
+          )} */}
         </div>
 
         {/*---------- Title ----------*/}

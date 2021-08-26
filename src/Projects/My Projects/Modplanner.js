@@ -1,6 +1,12 @@
-import ModPlannerLogo from "../../Images/Projects/modplannerlogo.png";
-import ModPlannerPreview from "../../Images/Projects/modplannerpreview.png";
-import ModPlannerShowcase from "../../Images/Projects/modplannershowcase.PNG";
+import ModPlannerLogo from "../../Images/Projects/modplanner/modplannerlogo.png";
+import ModPlannerPreview from "../../Images/Projects/modplanner/modplannerpreview.png";
+import HomePageImg from "../../Images/Projects/modplanner/homepage.PNG";
+import PlannerPageImg from "../../Images/Projects/modplanner/plannerpage.PNG";
+import ExportGuideImg from "../../Images/Projects/modplanner/exportguidepage.PNG";
+import ReviewsPageImg from "../../Images/Projects/modplanner/reviewspage.PNG";
+import GuidePageImg from "../../Images/Projects/modplanner/guidepage.PNG";
+import ForumPageImg from "../../Images/Projects/modplanner/forumpage.PNG";
+import CreateQuestionImg from "../../Images/Projects/modplanner/createquestionpage.PNG";
 import JavascriptIcon from "../../Images/Logos/Language/javascript.png";
 import ReactIcon from "../../Images/Logos/Framework/react.png";
 import NodejsIcon from "../../Images/Logos/Framework/nodejs.png";
@@ -14,16 +20,24 @@ const Modplanner = {
   image: {
     logo: ModPlannerLogo,
     preview: ModPlannerPreview,
-    showcase: ModPlannerShowcase,
+    showcases: [
+      HomePageImg,
+      PlannerPageImg,
+      ExportGuideImg,
+      ReviewsPageImg,
+      GuidePageImg,
+      ForumPageImg,
+      CreateQuestionImg,
+    ],
   },
   previewSize: {
     width: "100%",
     height: "80%",
   },
-  showcaseSize: {
-    large: { width: 700, height: 500 },
-    medium: { width: 550, height: 390 },
-    small: { width: 400, height: 285 },
+  showcaseSizes: {
+    large: { width: 800, height: 570 },
+    medium: { width: 500, height: 360 },
+    small: { width: 350, height: 250 },
   },
   description:
     "The Mod Planner is an app that is designed using the MERN stack. The app allows NUS students to " +
