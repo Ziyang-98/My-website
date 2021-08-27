@@ -19,12 +19,12 @@ const Coffeeberry = {
     logo: CoffeeberryLogo,
     preview: CoffeeberryPreview,
     showcases: [
-      HomePageImg,
-      MarketImg,
-      ProductImg,
-      OrdersImg,
-      ManagePostingImg,
-      CreatePostingImg,
+      { image: HomePageImg, title: "Home Page" },
+      { image: MarketImg, title: "Market Page" },
+      { image: ProductImg, title: "Product Page" },
+      { image: OrdersImg, title: "User's Orders Page" },
+      { image: ManagePostingImg, title: "Manage Posting Page" },
+      { image: CreatePostingImg, title: "Create Posting Page" },
     ],
   },
   previewSize: {

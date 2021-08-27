@@ -8,7 +8,11 @@ const Bob = {
   title: "Bob",
   shortDescription:
     "A Java bot app that allows users to manages tasks, events and deadlines.",
-  image: { logo: null, preview: BobPreview, showcases: [BobShowcase] },
+  image: {
+    logo: null,
+    preview: BobPreview,
+    showcases: [{ image: BobShowcase, title: "Bob's UI" }],
+  },
   previewSize: {
     width: "70%",
     height: "90%",

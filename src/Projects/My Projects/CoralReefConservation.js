@@ -21,14 +21,14 @@ const CoralReefConservation = {
     logo: null,
     preview: CoralReefPreview,
     showcases: [
-      LandingPageImg,
-      OptionsImg,
-      SelectionPageImg,
-      ResultPageImg,
-      ProfilePageImg,
-      LoginPageImg,
-      AdminPageImg,
-      EditSpeciesImg,
+      { image: LandingPageImg, title: "Landing Page" },
+      { image: OptionsImg, title: "Preset Options" },
+      { image: SelectionPageImg, title: "Custom Selection Page" },
+      { image: ResultPageImg, title: "Results Page" },
+      { image: ProfilePageImg, title: "Species Profile Page" },
+      { image: LoginPageImg, title: "Admin Login Page" },
+      { image: AdminPageImg, title: "Admin Main Page" },
+      { image: EditSpeciesImg, title: "Admin Update Specimen Page" },
     ],
   },
   previewSize: {
@@ -43,7 +43,7 @@ const CoralReefConservation = {
 
   description:
     "Coral Reef Conservation is an app that is designed using ReactJS as its front-end framework and Firebase for the database and user authentication / authorization. " +
-    "The app aims to ease the transplantation process of corals by guiding users using appropriate criterias produced by the Reef Ecology Lab, NUS. " +
+    "The app is designed to ease the transplantation process of corals by guiding users using appropriate criterias produced by the Reef Ecology Lab, NUS. " +
     "The app also comes with an administrative system for the marine biologists in Reef Ecology Lab to upload data easily to the library available.",
   roles: [
     "Idealize the design of the User Interface and the structure of database",

@@ -11,7 +11,7 @@ const CommonCents = {
   image: {
     logo: null,
     preview: CommonCentsPreview,
-    showcases: [CommonCentsShowcase],
+    showcases: [{ image: CommonCentsShowcase, title: "Common Cent's UI" }],
   },
   previewSize: {
     width: "30%",
