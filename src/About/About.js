@@ -87,7 +87,7 @@ export default function About() {
             </div>
             <div className={classes.details}>
               <Typography variant="subtitle1">
-                Hello, I'm a Year 2 Computer Science Student who is studying in
+                Hello, I'm a Year 3 Computer Science Student who is studying in
                 NUS. I am passionate about various fields of computing such as
                 Artificial Intelligence (A.I.) and Software Engineering, and I
                 intend to specialize in these fields as well. My experience in
