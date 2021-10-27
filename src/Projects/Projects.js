@@ -88,11 +88,11 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const projects = [
-  ModPlanner,
-  Bob,
-  CommonCents,
-  Coffeeberry,
   CoralReefConservation,
+  Coffeeberry,
+  CommonCents,
+  Bob,
+  ModPlanner,
 ];
 
 export default function Portfolio() {
