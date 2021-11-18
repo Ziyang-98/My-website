@@ -20,7 +20,7 @@ import "animate.css/animate.compat.css";
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    height: 750,
+    // height: 750,
     paddingTop: theme.spacing(10),
     paddingBottom: theme.spacing(15),
   },

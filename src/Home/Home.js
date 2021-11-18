@@ -13,13 +13,16 @@ import "animate.css/animate.compat.css";
 const useStyles = makeStyles((theme) => ({
   container: {
     display: "flex",
-    paddingTop: theme.spacing(15),
+    padding: theme.spacing(20, 0),
     flexDirection: "row-reverse",
     justifyContent: "space-evenly",
     alignItems: "center",
     flexWrap: "wrap",
-    height: 700,
+    flexGrow: 1,
     zIndex: 1,
+    [theme.breakpoints.down("sm")]: {
+      paddingBottom: theme.spacing(10),
+    },
   },
 
   infoHolder: {

@@ -10,11 +10,11 @@ import "animate.css/animate.compat.css";
 const useStyles = makeStyles((theme) => ({
   container: {
     zIndex: 1,
-    height: 800,
     display: "flex",
     justifyContent: "space-evenly",
     alignItems: "center",
     flexWrap: "wrap",
+    padding: theme.spacing(20, 0),
     [theme.breakpoints.down("sm")]: {
       paddingTop: theme.spacing(10),
       paddingBottom: theme.spacing(40),
