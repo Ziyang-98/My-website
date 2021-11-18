@@ -44,12 +44,17 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(2),
     marginBottom: theme.spacing(2),
     flexWrap: "wrap",
+    [theme.breakpoints.down("sm")]: {
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+    },
   },
 
   icon: {
     height: 40,
     width: 40,
-    margin: theme.spacing(1),
+    padding: theme.spacing(1),
   },
 }));
 
