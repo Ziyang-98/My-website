@@ -1,7 +1,9 @@
 import React from "react";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Timeline from "@material-ui/lab/Timeline";
-import OCBC from "./Experiences/ocbc";
+import SHOPEE from "./Experiences/shopee";
+import RDC from "./Experiences/rdc";
+import FRANK from "./Experiences/frank";
 import CS2030STA from "./Experiences/cs2030sTA";
 import IRAS from "./Experiences/iras";
 import CS2030TA from "./Experiences/cs2030TA";
@@ -46,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const experiences = [OCBC, CS2030STA, IRAS, CS2030TA];
+const experiences = [SHOPEE, RDC, FRANK, CS2030STA, IRAS, CS2030TA];
 
 export default function ExpTimeline() {
   const classes = useStyles();

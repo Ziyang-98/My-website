@@ -69,8 +69,6 @@ export default function CustomizedDialogs({
         </Typography>
       </DialogTitle>
       <DialogContent>
-        <Typography gutterBottom>{description}</Typography>
-        <br />
         {jobscope
           ? jobscope.map((role) => (
               <div>

@@ -89,9 +89,10 @@ export default function About() {
               <Typography variant="subtitle1">
                 Hello, I'm a Year 3 Computer Science Student who is studying in
                 NUS. I am passionate about various fields of computing such as
-                Artificial Intelligence (A.I.) and Software Engineering, and I
-                intend to specialize in these fields as well. My experience in
-                programming consist of the following:{" "}
+                Artificial Intelligence (A.I.) and Software Engineering. My
+                specialization lies in full-stack engineering. Personally, I
+                enjoy developing web applications and services. Here's a list of
+                languanges and frameworks that I am familiar with:{" "}
               </Typography>
             </div>
           </ScrollAnimation>
