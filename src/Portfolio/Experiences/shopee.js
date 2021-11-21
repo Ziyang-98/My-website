@@ -6,7 +6,7 @@ const Shopee = {
   duration: "Summer 2022",
   description: "Upcoming Summer Internship",
   jobscope: [
-    "I will be working with the Product Verification team to build application for data visualisation",
+    "I will be working with the Product Verification team to build applications for data visualisation",
   ],
   icon: AddShoppingCart,
 };
