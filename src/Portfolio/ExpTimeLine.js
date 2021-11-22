@@ -48,7 +48,14 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const experiences = [SHOPEE, RDC, FRANK, CS2030STA, IRAS, CS2030TA];
+const experiences = [
+  // SHOPEE,
+  RDC,
+  FRANK,
+  CS2030STA,
+  IRAS,
+  CS2030TA,
+];
 
 export default function ExpTimeline() {
   const classes = useStyles();
