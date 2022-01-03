@@ -6,7 +6,7 @@ const RDC = {
   duration: "Aug 2021 - Nov 2021",
   description: "Worked on frontend development under the OCBC@STEM Programme",
   jobscope: [
-    "Developed micro-frontend applications to revamp the existing Consumer and Corporate Web UI using qiankun framework",
+    "Developed micro-frontend applications using qiankun framework to revamp the existing Consumer and Corporate Web UI",
     "Utilized ReactJS and Material UI in development",
   ],
   icon: BusinessIcon,

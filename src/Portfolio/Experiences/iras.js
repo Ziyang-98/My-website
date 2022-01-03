@@ -7,8 +7,8 @@ const IRAS = {
   description:
     "Worked on a Chatbot Project to automate personalized interactions with tax payers",
   jobscope: [
-    "Integrated training data and responses into the Chat Bot for tax filing feature",
-    "Implemented Typescript Web Hooks with NodeJS to interact with the main server",
+    "Integrated training data and responses into Google DialogFlow for tax filing feature",
+    "Implemented Typescript web hooks with NodeJS to interact with backend",
   ],
   icon: AttachMoneyIcon,
 };
