@@ -150,7 +150,6 @@ export default function Portfolio() {
       </Box>
       <Container className={classes.cardGrid} maxWidth="md">
         {/* End hero unit */}
-        {/* <ScrollAnimation animateIn="fadeIn" delay={400} animateOnce={true}> */}
         <Grid container className={classes.outerGrid} spacing={2}>
           {projects.map((project) => (
             <Grid item>
@@ -212,7 +211,7 @@ export default function Portfolio() {
             </Grid>
           ))}
         </Grid>
-        {/* </ScrollAnimation> */}
+        ]{" "}
       </Container>
       <Dialog
         open={open}
