@@ -42,8 +42,12 @@ const useStyles = makeStyles((theme) => ({
   },
 
   image: {
-    height: 350,
-    width: 330,
+    height: 400,
+    width: 400,
+    [theme.breakpoints.down("md")]: {
+      height: 350,
+      width: 350,
+    },
   },
 
   infoBox: {

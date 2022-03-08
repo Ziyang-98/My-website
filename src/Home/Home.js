@@ -74,6 +74,14 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 400,
   },
 
+  occupation: {
+    [theme.breakpoints.down("sm")]: {
+      flexDirection: "column",
+      display: "flex",
+      alignText: "center",
+    },
+  },
+
   infoDescription: {
     marginTop: theme.spacing(2),
     display: "flex",
@@ -88,7 +96,7 @@ export default function Home() {
   const classes = useStyles();
   return (
     <Box className={classes.container} id="Home">
-      <ScrollAnimation animateIn="fadeIn" animateOnce={true} delay={700}>
+      <ScrollAnimation animateIn="fadeIn" animateOnce={true} delay={1000}>
         <Box className={classes.imageHolder}>
           <Avatar
             alt="Lim Zi Yang"
@@ -97,15 +105,18 @@ export default function Home() {
           />
         </Box>
       </ScrollAnimation>
-      <ScrollAnimation animateIn="fadeIn" delay={400} animateOnce={true}>
+      <ScrollAnimation animateIn="fadeIn" delay={500} animateOnce={true}>
         <Box className={classes.infoHolder}>
           <Box className={classes.textHolder}>
-            <Chip label="Hi there, I'm" color="primary" />
+            <Chip
+              label={<Typography variant="h6">Hello, I am</Typography>}
+              color="primary"
+            />
             <Box className={classes.nameHolder}>
               <Typography variant="h2" className={classes.name}>
                 Lim Zi Yang
               </Typography>
-              <Typography variant="h5">
+              <Typography variant="h5" className={classes.occupation}>
                 Computer Science Student @ NUS
               </Typography>
             </Box>
@@ -117,6 +128,7 @@ export default function Home() {
                 </Typography>
               </div>
             </Box>
+
             <SocialMedia />
           </Box>
         </Box>
