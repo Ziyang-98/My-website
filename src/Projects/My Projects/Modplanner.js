@@ -15,8 +15,8 @@ import MongoDbIcon from "../../Images/Logos/Framework/mongodb.PNG";
 const Modplanner = {
   title: "The Mod Planner",
   shortDescription:
-    "A web app that allows NUS students to plan their modules " +
-    "ahead of time with access to module information, guides and a Q&A platform.",
+    "A web app that allows NUS students to plan all their modules " +
+    "ahead of time.",
   image: {
     logo: ModPlannerLogo,
     preview: ModPlannerPreview,
@@ -44,7 +44,7 @@ const Modplanner = {
     "plan their university modules, share their planners as guides, " +
     "and participate in an online forum to discuss about relevant topics. " +
     "The project, handled by a team of two, aims to ease the process " +
-    "of module planning for NUS students. (*Note*: Give the website some time to load due to inactivity on heruko servers)",
+    "of module planning for NUS students. (Note: Give the website some time to load due to inactivity on heruko servers)",
   roles: [
     "Designed and built the frontend with ReactJS",
     "Added web hooks in the backend API to push or get data from the database, MongoDB",

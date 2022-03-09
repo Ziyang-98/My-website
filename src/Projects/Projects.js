@@ -2,11 +2,10 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
-import Button from "@material-ui/core/Button";
 import Card from "@material-ui/core/Card";
-import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
+import CardActionArea from "@material-ui/core/CardActionArea";
 import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
 import ModPlanner from "./My Projects/Modplanner";
@@ -24,14 +23,22 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: theme.spacing(10),
     paddingBottom: theme.spacing(15),
   },
-
   titleHolder: {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
   },
+  descriptionHolder: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    paddingTop: theme.spacing(4),
+  },
+  description: {
+    color: "#bbbbbf",
+  },
   cardGrid: {
-    paddingTop: theme.spacing(8),
+    paddingTop: theme.spacing(2),
     paddingBottom: theme.spacing(8),
     display: "flex",
     justifyContent: "center",
@@ -140,6 +147,7 @@ export default function Portfolio() {
   // Card animation delay
   let delay = 100;
   const addOnDelay = 100;
+  const descriptionDelay = delay + addOnDelay * projects.length + delay;
 
   return (
     <div className={classes.container} id="Projects">
@@ -148,8 +156,18 @@ export default function Portfolio() {
           <Typography variant="h3">My Projects</Typography>
         </ScrollAnimation>
       </Box>
+      <Box className={classes.descriptionHolder}>
+        <ScrollAnimation
+          animateIn="fadeIn"
+          delay={descriptionDelay}
+          animateOnce={true}
+        >
+          <Typography variant="body1" className={classes.description}>
+            Click on each card to find out more
+          </Typography>
+        </ScrollAnimation>
+      </Box>
       <Container className={classes.cardGrid} maxWidth="md">
-        {/* End hero unit */}
         <Grid container className={classes.outerGrid} spacing={2}>
           {projects.map((project) => (
             <Grid item>
@@ -160,58 +178,54 @@ export default function Portfolio() {
                 className={classes.card}
               >
                 <Card className={classes.card}>
-                  <CardMedia className={classes.cardMedia} title="Image title">
-                    <img
-                      className={classes.image}
-                      src={project.image.preview}
-                      alt="showcase"
-                      width={project.previewSize.width}
-                      height={project.previewSize.height}
-                    />
-                  </CardMedia>
-                  <CardContent className={classes.cardContent}>
-                    <div className={classes.cardTitleHolder}>
-                      <Typography gutterBottom variant="h5" component="span">
-                        {project.title}
-                        {project.image.logo && (
-                          <img
-                            className={classes.logo}
-                            src={project.image.logo}
-                            alt="logo"
-                          />
-                        )}
-                      </Typography>
-                    </div>
-                    <Typography component="p">
-                      {project.shortDescription}
-                    </Typography>
-                  </CardContent>
-                  <CardActions>
-                    <Button
-                      size="small"
-                      color="primary"
-                      onClick={() =>
-                        handleClick(
-                          project.title,
-                          project.image,
-                          project.showcaseSizes,
-                          project.description,
-                          project.roles,
-                          project.links,
-                          project.techStack
-                        )
-                      }
-                      className={classes.cardButton}
+                  <CardActionArea
+                    onClick={() =>
+                      handleClick(
+                        project.title,
+                        project.image,
+                        project.showcaseSizes,
+                        project.description,
+                        project.roles,
+                        project.links,
+                        project.techStack
+                      )
+                    }
+                  >
+                    <CardMedia
+                      className={classes.cardMedia}
+                      title="Image title"
                     >
-                      More Info
-                    </Button>
-                  </CardActions>
+                      <img
+                        className={classes.image}
+                        src={project.image.preview}
+                        alt="showcase"
+                        width={project.previewSize.width}
+                        height={project.previewSize.height}
+                      />
+                    </CardMedia>
+                    <CardContent className={classes.cardContent}>
+                      <div className={classes.cardTitleHolder}>
+                        <Typography gutterBottom variant="h5" component="span">
+                          {project.title}
+                          {project.image.logo && (
+                            <img
+                              className={classes.logo}
+                              src={project.image.logo}
+                              alt="logo"
+                            />
+                          )}
+                        </Typography>
+                      </div>
+                      <Typography component="p">
+                        {project.shortDescription}
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
                 </Card>
               </ScrollAnimation>
             </Grid>
           ))}
-        </Grid>
-        ]{" "}
+        </Grid>{" "}
       </Container>
       <Dialog
         open={open}

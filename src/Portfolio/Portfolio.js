@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   infoHolder: {
-    paddingTop: theme.spacing(8),
+    paddingTop: theme.spacing(4),
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
@@ -45,7 +45,7 @@ export default function Portfolio() {
       <Box className={classes.infoHolder}>
         <ScrollAnimation animateIn="fadeIn" delay={800} animateOnce={true}>
           <Typography variant="body1" className={classes.description}>
-            Click on the icons to find out more
+            Click on each icon to find out more
           </Typography>
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeIn" delay={450} animateOnce={true}>
