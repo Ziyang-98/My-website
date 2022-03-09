@@ -12,19 +12,17 @@ import PortfolioIcon from "@material-ui/icons/AccountBox";
 import ProjectsIcon from "@material-ui/icons/EmojiObjects";
 import Tooltip from "@material-ui/core/Tooltip";
 import Zoom from "@material-ui/core/Zoom";
+import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles((theme) => ({
   root: {},
   appBar: {
     borderBottom: `1px solid ${theme.palette.divider}`,
-    backgroundColor: "#3f51b5",
+    backgroundColor: theme.palette.primary.main,
   },
   toolbar: {
     flexWrap: "wrap",
     justifyContent: "center",
-  },
-  toolbarTitle: {
-    color: "#F7FCFC",
   },
   links: {},
   button: {
@@ -58,12 +56,16 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down("xs")]: {
       // minWidth: 100,
-      margin: theme.spacing(1, 2),
+      margin: theme.spacing(1, 1),
     },
   },
   title: {
-    color: "#F7FCFC",
+    color: theme.palette.whiteColor.main,
+    // "#F7FCFC",
     // fontWeight: 525,
+  },
+  icon: {
+    color: theme.palette.whiteColor.main,
   },
 }));
 
@@ -85,7 +87,9 @@ export default function DenseAppBar() {
             <div className={classes.links}>
               <Link className="toHome" to="Home" smooth={true} duration={1000}>
                 <Button size="large" className={classes.button}>
-                  Home
+                  <Typography className={classes.title} variant="button">
+                    Home
+                  </Typography>
                 </Button>
               </Link>
 
@@ -96,7 +100,9 @@ export default function DenseAppBar() {
                 duration={1000}
               >
                 <Button size="large" className={classes.button}>
-                  About
+                  <Typography className={classes.title} variant="button">
+                    About
+                  </Typography>
                 </Button>
               </Link>
 
@@ -107,7 +113,9 @@ export default function DenseAppBar() {
                 duration={1000}
               >
                 <Button size="large" className={classes.button}>
-                  Portfolio
+                  <Typography className={classes.title} variant="button">
+                    Portfolio
+                  </Typography>
                 </Button>
               </Link>
 
@@ -118,7 +126,9 @@ export default function DenseAppBar() {
                 duration={1000}
               >
                 <Button size="large" className={classes.button}>
-                  Projects
+                  <Typography className={classes.title} variant="button">
+                    Projects
+                  </Typography>
                 </Button>
               </Link>
             </div>
@@ -132,7 +142,7 @@ export default function DenseAppBar() {
                   enterTouchDelay="50"
                 >
                   <IconButton aria-label="toHome" className={classes.button}>
-                    <HomeIcon />
+                    <HomeIcon className={classes.icon} />
                   </IconButton>
                 </Tooltip>
               </Link>
@@ -149,7 +159,7 @@ export default function DenseAppBar() {
                   enterTouchDelay="50"
                 >
                   <IconButton aria-label="toAbout" className={classes.button}>
-                    <AboutIcon />
+                    <AboutIcon className={classes.icon} />
                   </IconButton>
                 </Tooltip>
               </Link>
@@ -169,7 +179,7 @@ export default function DenseAppBar() {
                     aria-label="toPortfolio"
                     className={classes.button}
                   >
-                    <PortfolioIcon />
+                    <PortfolioIcon className={classes.icon} />
                   </IconButton>
                 </Tooltip>
               </Link>
@@ -189,22 +199,13 @@ export default function DenseAppBar() {
                     aria-label="toProjects"
                     className={classes.button}
                   >
-                    <ProjectsIcon />
+                    <ProjectsIcon className={classes.icon} />
                   </IconButton>
                 </Tooltip>
               </Link>
             </div>
           )}
         </Toolbar>
-
-        {/* {!matches && (
-          <Toolbar>
-            <Menu />
-            <Typography variant="h6" className={classes.title}>
-              Lim Zi Yang
-            </Typography>
-          </Toolbar>
-        )} */}
       </AppBar>
     </div>
   );

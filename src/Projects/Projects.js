@@ -59,6 +59,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     backgroundColor: theme.palette.background.paper,
+
     [theme.breakpoints.down("sm")]: {
       width: 255,
     },
@@ -177,7 +178,7 @@ export default function Portfolio() {
                 animateOnce={true}
                 className={classes.card}
               >
-                <Card className={classes.card}>
+                <Card className={classes.card} elevation={2}>
                   <CardActionArea
                     onClick={() =>
                       handleClick(

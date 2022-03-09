@@ -48,6 +48,10 @@ const useStyles = makeStyles((theme) => ({
       height: 350,
       width: 350,
     },
+    [theme.breakpoints.down("xs")]: {
+      height: 200,
+      width: 200,
+    },
   },
 
   infoBox: {
@@ -78,7 +82,6 @@ export default function About() {
     <Box className={classes.container} id="About">
       <ScrollAnimation animateIn="fadeIn" delay={100} animateOnce={true}>
         <Box className={classes.imageHolder}>
-          {/* <Typography variant="h4">About Me</Typography> */}
           <img src={Avatar} className={classes.image} alt="About Avatar" />
         </Box>
       </ScrollAnimation>

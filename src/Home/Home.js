@@ -60,6 +60,9 @@ const useStyles = makeStyles((theme) => ({
   textHolder: {
     zIndex: 1,
   },
+  introduction: {
+    color: theme.palette.whiteColor.main,
+  },
 
   nameHolder: {
     [theme.breakpoints.down("sm")]: {
@@ -90,7 +93,7 @@ const useStyles = makeStyles((theme) => ({
   emailHolder: {},
 }));
 
-export default function Home() {
+export default function Home({ handleToggle }) {
   const classes = useStyles();
   return (
     <Box className={classes.container} id="Home">
@@ -107,8 +110,16 @@ export default function Home() {
         <Box className={classes.infoHolder}>
           <Box className={classes.textHolder}>
             <Chip
-              label={<Typography variant="subtitle1">Hello, I'm</Typography>}
+              label={
+                <Typography
+                  variant="subtitle1"
+                  className={classes.introduction}
+                >
+                  Hello, I'm
+                </Typography>
+              }
               color="primary"
+              onClick={handleToggle}
             />
             <Box className={classes.nameHolder}>
               <Typography variant="h2" className={classes.name}>
