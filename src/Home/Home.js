@@ -76,9 +76,7 @@ const useStyles = makeStyles((theme) => ({
 
   occupation: {
     [theme.breakpoints.down("sm")]: {
-      flexDirection: "column",
-      display: "flex",
-      alignText: "center",
+      textAlign: "center",
     },
   },
 
@@ -109,7 +107,7 @@ export default function Home() {
         <Box className={classes.infoHolder}>
           <Box className={classes.textHolder}>
             <Chip
-              label={<Typography variant="h6">Hello, I am</Typography>}
+              label={<Typography variant="subtitle1">Hello, I'm</Typography>}
               color="primary"
             />
             <Box className={classes.nameHolder}>
