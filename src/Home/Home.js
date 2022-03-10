@@ -1,5 +1,5 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
 import ProfilePic from "../Images/Profile/dp1resized.png";
 import Box from "@material-ui/core/Box";
 import Avatar from "@material-ui/core/Avatar";
@@ -8,6 +8,8 @@ import Chip from "@material-ui/core/Chip";
 import EmailIcon from "@material-ui/icons/Email";
 import SocialMedia from "./SocialMedia";
 import ScrollAnimation from "react-animate-on-scroll";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
+
 import "animate.css/animate.compat.css";
 
 const useStyles = makeStyles((theme) => ({
@@ -95,9 +97,12 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Home({ handleToggle }) {
   const classes = useStyles();
+  const theme = useTheme();
+  const mobileVP = useMediaQuery(theme.breakpoints.down("xs"));
+
   return (
     <Box className={classes.container} id="Home">
-      <ScrollAnimation animateIn="fadeIn" animateOnce={true} delay={1000}>
+      <ScrollAnimation animateIn="fadeIn" animateOnce={true} delay={750}>
         <Box className={classes.imageHolder}>
           <Avatar
             alt="Lim Zi Yang"
@@ -122,7 +127,10 @@ export default function Home({ handleToggle }) {
               onClick={handleToggle}
             />
             <Box className={classes.nameHolder}>
-              <Typography variant="h2" className={classes.name}>
+              <Typography
+                variant={mobileVP ? "h3" : "h2"}
+                className={classes.name}
+              >
                 Lim Zi Yang
               </Typography>
               <Typography variant="h5" className={classes.occupation}>

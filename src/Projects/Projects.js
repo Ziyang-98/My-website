@@ -1,5 +1,5 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 import Card from "@material-ui/core/Card";
@@ -15,11 +15,11 @@ import Coffeeberry from "./My Projects/Coffeeberry";
 import CoralReefConservation from "./My Projects/CoralReefConservation";
 import Dialog from "./Dialog";
 import ScrollAnimation from "react-animate-on-scroll";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 import "animate.css/animate.compat.css";
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    // height: 750,
     paddingTop: theme.spacing(10),
     paddingBottom: theme.spacing(15),
   },
@@ -105,6 +105,9 @@ const projects = [
 
 export default function Portfolio() {
   const classes = useStyles();
+  const theme = useTheme();
+  const mobileVP = useMediaQuery(theme.breakpoints.down("xs"));
+
   const showcaseStub = [
     {
       large: { width: 0, height: 0 },
@@ -154,7 +157,7 @@ export default function Portfolio() {
     <div className={classes.container} id="Projects">
       <Box className={classes.titleHolder}>
         <ScrollAnimation animateIn="fadeIn" delay={200} animateOnce={true}>
-          <Typography variant="h3">My Projects</Typography>
+          <Typography variant={mobileVP ? "h4" : "h3"}>My Projects</Typography>
         </ScrollAnimation>
       </Box>
       <Box className={classes.descriptionHolder}>

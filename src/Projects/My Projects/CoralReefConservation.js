@@ -46,7 +46,7 @@ const CoralReefConservation = {
     "The app is designed to ease the transplantation process of corals by guiding users using appropriate criterias produced by the Reef Ecology Lab, NUS. " +
     "The app also comes with an administrative system for the marine biologists in Reef Ecology Lab to upload data easily to the library available.",
   roles: [
-    "Idealize the design of the User Interface and the structure of database",
+    "Idealized the design of the User Interface and the structure of database",
     "Designed and built the User Interface (mainly the results page) with ReactJS",
     "Implemented a multi-criteria priority sorting algorithm for the results",
   ],

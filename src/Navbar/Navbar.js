@@ -56,7 +56,7 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down("xs")]: {
       // minWidth: 100,
-      margin: theme.spacing(1, 1),
+      margin: theme.spacing(1, 1.5),
     },
   },
   title: {
@@ -72,7 +72,7 @@ const useStyles = makeStyles((theme) => ({
 export default function DenseAppBar() {
   const classes = useStyles();
   const theme = useTheme();
-  const matches = useMediaQuery(theme.breakpoints.up("sm"));
+  const desktopVP = useMediaQuery(theme.breakpoints.up("sm"));
 
   return (
     <div className={classes.root}>
@@ -83,7 +83,7 @@ export default function DenseAppBar() {
         className={classes.appBar}
       >
         <Toolbar className={classes.toolbar}>
-          {matches && (
+          {desktopVP && (
             <div className={classes.links}>
               <Link className="toHome" to="Home" smooth={true} duration={1000}>
                 <Button size="large" className={classes.button}>
@@ -133,7 +133,7 @@ export default function DenseAppBar() {
               </Link>
             </div>
           )}
-          {!matches && (
+          {!desktopVP && (
             <div className={classes.links}>
               <Link className="toHome" to="Home" smooth={true} duration={1000}>
                 <Tooltip

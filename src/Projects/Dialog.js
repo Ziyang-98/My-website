@@ -170,16 +170,20 @@ export default function ScrollDialog({
               >
                 My Role:{" "}
               </Typography>
-              {roles.map((role) => (
-                <Typography
-                  className={classes.techstack}
-                  variant="body1"
-                  component="p"
-                  color="default"
-                >
-                  - {role}
-                </Typography>
-              ))}
+              <ul>
+                {roles.map((role) => (
+                  <li>
+                    <Typography
+                      className={classes.techstack}
+                      variant="body1"
+                      component="p"
+                      color="default"
+                    >
+                      {role}
+                    </Typography>
+                  </li>
+                ))}
+              </ul>
             </DialogContentText>
           </div>
 
