@@ -110,8 +110,8 @@ export default function Icons() {
           <Tooltip title="CSS3" TransitionComponent={Zoom} enterTouchDelay="50">
             <img src={CssIcon} className={classes.icon} alt="css3 icon" />
           </Tooltip>
-          <Tooltip title="C" TransitionComponent={Zoom} enterTouchDelay="50">
-            <img src={CIcon} className={classes.icon} alt="c icon" />
+          <Tooltip title="C++" TransitionComponent={Zoom} enterTouchDelay="50">
+            <img src={CIcon} className={classes.icon} alt="c++ icon" />
           </Tooltip>
           <Tooltip title="Ruby" TransitionComponent={Zoom} enterTouchDelay="50">
             <img src={RubyIcon} className={classes.icon} alt="ruby icon" />
