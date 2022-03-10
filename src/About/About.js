@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(20, 0),
     [theme.breakpoints.down("sm")]: {
       paddingTop: theme.spacing(10),
-      paddingBottom: theme.spacing(40),
+      paddingBottom: theme.spacing(15),
     },
   },
 
@@ -47,6 +47,10 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("md")]: {
       height: 350,
       width: 350,
+    },
+    [theme.breakpoints.down("xs")]: {
+      height: 200,
+      width: 200,
     },
   },
 
@@ -78,7 +82,6 @@ export default function About() {
     <Box className={classes.container} id="About">
       <ScrollAnimation animateIn="fadeIn" delay={100} animateOnce={true}>
         <Box className={classes.imageHolder}>
-          {/* <Typography variant="h4">About Me</Typography> */}
           <img src={Avatar} className={classes.image} alt="About Avatar" />
         </Box>
       </ScrollAnimation>

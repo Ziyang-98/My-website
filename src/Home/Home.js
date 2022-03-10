@@ -1,5 +1,5 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
 import ProfilePic from "../Images/Profile/dp1resized.png";
 import Box from "@material-ui/core/Box";
 import Avatar from "@material-ui/core/Avatar";
@@ -8,6 +8,8 @@ import Chip from "@material-ui/core/Chip";
 import EmailIcon from "@material-ui/icons/Email";
 import SocialMedia from "./SocialMedia";
 import ScrollAnimation from "react-animate-on-scroll";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
+
 import "animate.css/animate.compat.css";
 
 const useStyles = makeStyles((theme) => ({
@@ -60,6 +62,9 @@ const useStyles = makeStyles((theme) => ({
   textHolder: {
     zIndex: 1,
   },
+  introduction: {
+    color: theme.palette.whiteColor.main,
+  },
 
   nameHolder: {
     [theme.breakpoints.down("sm")]: {
@@ -76,9 +81,7 @@ const useStyles = makeStyles((theme) => ({
 
   occupation: {
     [theme.breakpoints.down("sm")]: {
-      flexDirection: "column",
-      display: "flex",
-      alignText: "center",
+      textAlign: "center",
     },
   },
 
@@ -92,11 +95,14 @@ const useStyles = makeStyles((theme) => ({
   emailHolder: {},
 }));
 
-export default function Home() {
+export default function Home({ handleToggle }) {
   const classes = useStyles();
+  const theme = useTheme();
+  const mobileVP = useMediaQuery(theme.breakpoints.down("xs"));
+
   return (
     <Box className={classes.container} id="Home">
-      <ScrollAnimation animateIn="fadeIn" animateOnce={true} delay={1000}>
+      <ScrollAnimation animateIn="fadeIn" animateOnce={true} delay={750}>
         <Box className={classes.imageHolder}>
           <Avatar
             alt="Lim Zi Yang"
@@ -109,11 +115,22 @@ export default function Home() {
         <Box className={classes.infoHolder}>
           <Box className={classes.textHolder}>
             <Chip
-              label={<Typography variant="h6">Hello, I am</Typography>}
+              label={
+                <Typography
+                  variant="subtitle1"
+                  className={classes.introduction}
+                >
+                  Hello, I'm
+                </Typography>
+              }
               color="primary"
+              onClick={handleToggle}
             />
             <Box className={classes.nameHolder}>
-              <Typography variant="h2" className={classes.name}>
+              <Typography
+                variant={mobileVP ? "h3" : "h2"}
+                className={classes.name}
+              >
                 Lim Zi Yang
               </Typography>
               <Typography variant="h5" className={classes.occupation}>

@@ -49,7 +49,6 @@ export default function CustomizedDialogs({
   jobTitle,
   company,
   duration,
-  description,
   jobscope,
   handleClose,
 }) {
