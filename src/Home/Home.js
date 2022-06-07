@@ -20,10 +20,11 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-evenly",
     alignItems: "center",
     flexWrap: "wrap",
-    flexGrow: 1,
     zIndex: 1,
     height: "100vh",
+    // overflowY: "visible",
     [theme.breakpoints.down("sm")]: {
+      height: "100%",
       padding: theme.spacing(10, 0),
     },
   },
