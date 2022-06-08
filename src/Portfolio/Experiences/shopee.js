@@ -3,10 +3,11 @@ import ShoppingCart from "@material-ui/icons/ShoppingCart";
 const Shopee = {
   jobTitle: "Frontend Engineer Intern",
   company: "Shopee",
-  duration: "",
-  description: "Upcoming Summer 2022 Internship",
+  duration: "May 2022 - Present",
+  description:
+    "Developing web solutions in the Identity Verification Team as a Front-End Engineer",
   jobscope: [
-    "I will be working with the Product Verification team to build web applications for data visualisation",
+    "Create a web application that simulates an info manager for employees",
   ],
   icon: ShoppingCart,
 };
