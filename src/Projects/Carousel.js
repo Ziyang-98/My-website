@@ -50,7 +50,6 @@ function ShowcaseCarousel({ showcases, showcaseSizes }) {
     <Carousel
       NextIcon={<NavigateNextIcon />}
       PrevIcon={<NavigateBeforeIcon />}
-      //   navButtonsAlwaysVisible={showcases.length > 1}
       navButtonsAlwaysInvisible={showcases.length <= 1}
       indicators={showcases.length > 1}
       autoPlay={true}
@@ -78,28 +77,6 @@ function ShowcaseCarousel({ showcases, showcaseSizes }) {
             height={showcaseSizes.large.height}
           />
         );
-        // return small ? (
-        //   <img
-        //     src={item}
-        //     alt={"showcase" + i}
-        //     width={showcaseSizes.small.width}
-        //     height={showcaseSizes.small.height}
-        //   />
-        // ) : medium ? (
-        //   <img
-        //     src={item}
-        //     alt={"showcase" + i}
-        //     width={showcaseSizes.medium.width}
-        //     height={showcaseSizes.medium.height}
-        //   />
-        // ) : (
-        //   <img
-        //     src={item}
-        //     alt={"showcase" + i}
-        //     width={showcaseSizes.large.width}
-        //     height={showcaseSizes.large.height}
-        //   />
-        // );
       })}
     </Carousel>
   );

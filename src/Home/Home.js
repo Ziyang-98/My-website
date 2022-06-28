@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
-import ProfilePic from "../Images/Profile/dp1resized.png";
+import ProfilePic from "../Images/Profile/dp.jpeg";
 import Box from "@material-ui/core/Box";
 import Avatar from "@material-ui/core/Avatar";
 import Typography from "@material-ui/core/Typography";
@@ -15,14 +15,12 @@ import "animate.css/animate.compat.css";
 const useStyles = makeStyles((theme) => ({
   container: {
     display: "flex",
-    // padding: theme.spacing(20, 0),
     flexDirection: "row-reverse",
     justifyContent: "space-evenly",
     alignItems: "center",
     flexWrap: "wrap",
     zIndex: 1,
     height: "100vh",
-    // overflowY: "visible",
     [theme.breakpoints.down("sm")]: {
       height: "100%",
       padding: theme.spacing(10, 0),

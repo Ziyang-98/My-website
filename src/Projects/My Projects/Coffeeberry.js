@@ -1,5 +1,4 @@
 import CoffeeberryLogo from "../../Images/Projects/coffeeberry/coffeeberrylogo.PNG";
-// import CoffeeberryPreview from "../../Images/Projects/coffeeberry/coffeeberrypreview.PNG";
 import HomePageImg from "../../Images/Projects/coffeeberry/homepage.PNG";
 import MarketImg from "../../Images/Projects/coffeeberry/marketpage.PNG";
 import ProductImg from "../../Images/Projects/coffeeberry/productpage.PNG";

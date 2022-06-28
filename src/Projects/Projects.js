@@ -75,10 +75,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
   },
-  image: {
-    // height: "100%",
-    // width: "100%",
-  },
+  image: {},
   logo: {
     marginLeft: theme.spacing(1),
     height: 20,
@@ -132,7 +129,7 @@ export default function Portfolio() {
     description,
     roles,
     links,
-    techStack
+    techStack,
   ) => {
     setOpen(true);
     setTitle(title);
@@ -191,7 +188,7 @@ export default function Portfolio() {
                         project.description,
                         project.roles,
                         project.links,
-                        project.techStack
+                        project.techStack,
                       )
                     }
                   >

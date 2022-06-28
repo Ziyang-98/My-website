@@ -1,5 +1,4 @@
 import CoralReefPreview from "../../Images/Projects/coralreef/coralreefpreview.PNG";
-// import CoralReefShowcase from "../../Images/Projects/coralreef/coralreefshowcase.PNG";
 import LandingPageImg from "../../Images/Projects/coralreef/landingpage.PNG";
 import OptionsImg from "../../Images/Projects/coralreef/optionspage.PNG";
 import SelectionPageImg from "../../Images/Projects/coralreef/selectionpage.PNG";

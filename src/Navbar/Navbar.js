@@ -51,18 +51,14 @@ const useStyles = makeStyles((theme) => ({
     },
     margin: theme.spacing(1, 8),
     [theme.breakpoints.down("sm")]: {
-      // minWidth: 150,
       margin: theme.spacing(1, 3),
     },
     [theme.breakpoints.down("xs")]: {
-      // minWidth: 100,
       margin: theme.spacing(1, 1.5),
     },
   },
   title: {
     color: theme.palette.whiteColor.main,
-    // "#F7FCFC",
-    // fontWeight: 525,
   },
   icon: {
     color: theme.palette.whiteColor.main,
