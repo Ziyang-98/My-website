@@ -20,9 +20,7 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: theme.spacing(8),
     marginBottom: theme.spacing(3),
   },
-  dialogTitle: {
-    // paddingTop: theme.spacing(2),
-  },
+  dialogTitle: {},
   cancel: {
     position: "absolute",
     right: theme.spacing(0.1),

@@ -14,11 +14,7 @@ import {
 } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
-  container: {
-    // display: "flex",
-    // flexDirection: "column",
-    // justifyContent: "center",
-  },
+  container: {},
   paper: {
     width: "100%",
     minWidth: "100%",
@@ -36,7 +32,7 @@ function App() {
   const theme = createTheme({
     typography: {
       fontFamily: ["-apple-system", "BlinkMacSystemFont", "sans-serif"].join(
-        ","
+        ",",
       ),
     },
     palette: {
