@@ -13,6 +13,7 @@ import Bob from "./My Projects/Bob";
 import CommonCents from "./My Projects/CommonCents";
 import Coffeeberry from "./My Projects/Coffeeberry";
 import CoralReefConservation from "./My Projects/CoralReefConservation";
+import JobTrack from "./My Projects/JobTrack";
 import Dialog from "./Dialog";
 import ScrollAnimation from "react-animate-on-scroll";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
@@ -67,6 +68,9 @@ const useStyles = makeStyles((theme) => ({
       width: 290,
     },
   },
+  cardClickable: {
+    height: "100%",
+  },
   cardMedia: {
     marginTop: "10%",
     marginBottom: "10%",
@@ -93,6 +97,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const projects = [
+  JobTrack,
   CoralReefConservation,
   Coffeeberry,
   CommonCents,
@@ -129,7 +134,7 @@ export default function Portfolio() {
     description,
     roles,
     links,
-    techStack,
+    techStack
   ) => {
     setOpen(true);
     setTitle(title);
@@ -180,6 +185,7 @@ export default function Portfolio() {
               >
                 <Card className={classes.card} elevation={2}>
                   <CardActionArea
+                    className={classes.cardClickable}
                     onClick={() =>
                       handleClick(
                         project.title,
@@ -188,7 +194,7 @@ export default function Portfolio() {
                         project.description,
                         project.roles,
                         project.links,
-                        project.techStack,
+                        project.techStack
                       )
                     }
                   >
