@@ -71,7 +71,7 @@ export default function CustomizedDialogs({
         {jobscope
           ? jobscope.map((role) => (
               <div>
-                <Typography variant="body1" gutterBottom>
+                <Typography variant="body1">
                   <li>{role}</li>
                 </Typography>
                 <br />
