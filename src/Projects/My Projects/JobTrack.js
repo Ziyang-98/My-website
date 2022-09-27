@@ -22,7 +22,7 @@ const JobTrack = {
     small: { width: 400, height: 200 },
   },
   description:
-    "The Mod Planner is an Single-Page Application that is designed using the MERN stack. The app allows job applicants to " +
+    "Job Track is an Single-Page Application that is designed using the MERN stack. The app allows job applicants to " +
     "track their job applications with ease. It also allows them to plan future job listings to apply to." +
     "Users are able to quickly import their job track information across multiple platforms as well.",
   roles: [
