@@ -68,9 +68,6 @@ export default function Icons() {
       </Typography>
       <Box className={classes.iconBox}>
         <div className={classes.iconHolder}>
-          <Tooltip title="Java" TransitionComponent={Zoom} enterTouchDelay="50">
-            <img src={JavaIcon} className={classes.icon} alt="java icon" />
-          </Tooltip>
           <Tooltip
             title="Javascript"
             TransitionComponent={Zoom}
@@ -93,22 +90,16 @@ export default function Icons() {
               alt="typescript icon"
             />
           </Tooltip>
+          <Tooltip title="Java" TransitionComponent={Zoom} enterTouchDelay="50">
+            <img src={JavaIcon} className={classes.icon} alt="java icon" />
+          </Tooltip>
+
           <Tooltip
             title="Python"
             TransitionComponent={Zoom}
             enterTouchDelay="50"
           >
             <img src={PythonIcon} className={classes.icon} alt="python icon" />
-          </Tooltip>
-          <Tooltip
-            title="HTML5"
-            TransitionComponent={Zoom}
-            enterTouchDelay="50"
-          >
-            <img src={HtmlIcon} className={classes.icon} alt="html5 icon" />
-          </Tooltip>
-          <Tooltip title="CSS3" TransitionComponent={Zoom} enterTouchDelay="50">
-            <img src={CssIcon} className={classes.icon} alt="css3 icon" />
           </Tooltip>
           <Tooltip title="C++" TransitionComponent={Zoom} enterTouchDelay="50">
             <img src={CIcon} className={classes.icon} alt="c++ icon" />
@@ -123,6 +114,16 @@ export default function Icons() {
       </Typography>
       <Box className={classes.iconBox}>
         <div className={classes.iconHolder}>
+          <Tooltip
+            title="HTML5"
+            TransitionComponent={Zoom}
+            enterTouchDelay="50"
+          >
+            <img src={HtmlIcon} className={classes.icon} alt="html5 icon" />
+          </Tooltip>
+          <Tooltip title="CSS3" TransitionComponent={Zoom} enterTouchDelay="50">
+            <img src={CssIcon} className={classes.icon} alt="css3 icon" />
+          </Tooltip>
           <Tooltip
             title="ReactJS"
             TransitionComponent={Zoom}

@@ -17,9 +17,9 @@ const JobTrack = {
     height: "100%",
   },
   showcaseSizes: {
-    large: { width: 800, height: 400 },
-    medium: { width: 500, height: 250 },
-    small: { width: 350, height: 175 },
+    large: { width: 1000, height: 500 },
+    medium: { width: 600, height: 300 },
+    small: { width: 400, height: 200 },
   },
   description:
     "The Mod Planner is an Single-Page Application that is designed using the MERN stack. The app allows job applicants to " +
