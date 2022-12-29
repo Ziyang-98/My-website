@@ -50,12 +50,12 @@ const useStyles = (theme) => ({
       backgroundColor: "#9AA7F7",
       borderColor: "#005cbf",
     },
-    margin: theme.spacing(1, 8),
-    [theme.breakpoints.down("sm")]: {
-      margin: theme.spacing(1, 3),
+    margin: "8px 64px",
+    [theme.breakpoints.down("md")]: {
+      margin: "8px 24px",
     },
-    [theme.breakpoints.down("xs")]: {
-      margin: theme.spacing(1, 1.5),
+    [theme.breakpoints.down("sm")]: {
+      margin: "8px 18px",
     },
   },
   title: {

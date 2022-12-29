@@ -1,12 +1,13 @@
 import React from "react";
 import Navbar from "components/Navbar";
 import Home from "sections/HomeSection";
-import About from "sections/AboutSection";
-import Portfolio from "sections/PortfolioSection";
-import Projects from "sections/ProjectsSection";
+// import About from "sections/AboutSection";
+// import Portfolio from "sections/PortfolioSection";
+// import Projects from "sections/ProjectsSection";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
-import { ThemeProvider, createTheme } from "@mui/material/styles";
+import { ThemeProvider } from "@mui/material/styles";
+import { lightTheme, darkTheme } from "common/theme";
 
 const styles = {
   container: {},
@@ -14,6 +15,7 @@ const styles = {
     width: "100%",
     minWidth: "100%",
     overflowX: "hidden",
+    bgcolor: "background.main",
   },
 };
 
@@ -24,37 +26,14 @@ function App() {
     setToggleDark(!toggleDark);
   };
 
-  const theme = createTheme({
-    typography: {
-      fontFamily: ["-apple-system", "BlinkMacSystemFont", "sans-serif"].join(
-        ","
-      ),
-    },
-    palette: {
-      mode: toggleDark ? "dark" : "light",
-
-      primary: {
-        main: toggleDark ? "#7580e8" : "#3f51b5",
-      },
-      whiteColor: {
-        main: toggleDark ? "#002984" : "#F7FCFC",
-      },
-      typography: {
-        h2: {
-          fontSize: 11,
-        },
-      },
-    },
-  });
-
   return (
     <React.Fragment>
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={toggleDark ? darkTheme : lightTheme}>
         <Box sx={styles.container}>
           <Paper elevation={0} sx={styles.paper}>
             <Navbar />
-            {/* <Home handleToggle={handleToggle} />
-            <About />
+            <Home handleToggle={handleToggle} />
+            {/* <About />
             <Portfolio />
             <Projects /> */}
           </Paper>

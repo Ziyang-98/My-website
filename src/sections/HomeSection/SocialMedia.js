@@ -1,30 +1,27 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Box from "@material-ui/core/Box";
-import FacebookIcon from "@material-ui/icons/Facebook";
-import LinkedInIcon from "@material-ui/icons/LinkedIn";
-import GitHubIcon from "@material-ui/icons/GitHub";
-import InstagramIcon from "@material-ui/icons/Instagram";
-import Tooltip from "@material-ui/core/Tooltip";
-import Link from "@material-ui/core/Link";
+import Box from "@mui/material/Box";
+import Tooltip from "@mui/material/Tooltip";
+import Link from "@mui/material/Link";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import InstagramIcon from "@mui/icons-material/Instagram";
 
-const useStyles = makeStyles((theme) => ({
+const styles = {
   root: {
-    marginTop: theme.spacing(3),
+    marginTop: "24px",
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-evenly",
   },
-}));
+};
 
 const SocialMedia = () => {
-  const classes = useStyles();
-
   return (
-    <Box className={classes.root}>
-      <div className={classes.icon}>
-        <Tooltip title="Facebook" className={classes.toolTip}>
+    <Box sx={styles.root}>
+      <Box sx={styles.icon}>
+        <Tooltip title="Facebook" sx={styles.toolTip}>
           <Link
             href="https://www.facebook.com/lim.ziyang.12/"
             target="_blank"
@@ -33,8 +30,8 @@ const SocialMedia = () => {
             <FacebookIcon size="small" />
           </Link>
         </Tooltip>
-      </div>
-      <div className={classes.icon}>
+      </Box>
+      <Box sx={styles.icon}>
         <Tooltip title="LinkedIn">
           <Link
             href="https://www.linkedin.com/in/zi-yang-lim-a2b651188/"
@@ -44,8 +41,8 @@ const SocialMedia = () => {
             <LinkedInIcon size="small" />
           </Link>
         </Tooltip>
-      </div>
-      <div className={classes.icon}>
+      </Box>
+      <Box sx={styles.icon}>
         <Tooltip title="GitHub">
           <Link
             href="https://github.com/Ziyang-98"
@@ -55,8 +52,8 @@ const SocialMedia = () => {
             <GitHubIcon size="small" />
           </Link>
         </Tooltip>
-      </div>
-      <div className={classes.icon}>
+      </Box>
+      <Box sx={styles.icon}>
         <Tooltip title="Instagram">
           <Link
             href="https://www.instagram.com/_papergoat_/?hl=en"
@@ -66,7 +63,7 @@ const SocialMedia = () => {
             <InstagramIcon size="small" />
           </Link>
         </Tooltip>
-      </div>
+      </Box>
     </Box>
   );
 };

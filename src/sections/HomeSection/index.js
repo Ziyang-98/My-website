@@ -1,17 +1,18 @@
 import React from "react";
-import { makeStyles, useTheme } from "@material-ui/core/styles";
-import Box from "@material-ui/core/Box";
-import Avatar from "@material-ui/core/Avatar";
-import Typography from "@material-ui/core/Typography";
-import Chip from "@material-ui/core/Chip";
-import EmailIcon from "@material-ui/icons/Email";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
+import Box from "@mui/material/Box";
+import Avatar from "@mui/material/Avatar";
+import Typography from "@mui/material/Typography";
+import Chip from "@mui/material/Chip";
+import EmailIcon from "@mui/icons-material/Email";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import ScrollAnimation from "react-animate-on-scroll";
-import "animate.css/animate.compat.css";
 import ProfilePic from "assets/profile/dp.jpeg";
 import SocialMedia from "./SocialMedia";
 
-const useStyles = makeStyles((theme) => ({
+import "animate.css/animate.compat.css";
+
+const useStyles = (theme) => ({
   container: {
     display: "flex",
     flexDirection: "row-reverse",
@@ -20,9 +21,9 @@ const useStyles = makeStyles((theme) => ({
     flexWrap: "wrap",
     zIndex: 1,
     height: "100vh",
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("md")]: {
       height: "100%",
-      padding: theme.spacing(10, 0),
+      padding: theme.spacing(8, 0),
     },
   },
 
@@ -30,7 +31,10 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    padding: theme.spacing(5),
+    padding: "66px",
+    [theme.breakpoints.down("sm")]: {
+      padding: "18px",
+    },
     zIndex: 1,
   },
 
@@ -38,15 +42,13 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    padding: theme.spacing(5),
+    padding: "66px",
     zIndex: 1,
   },
 
   avatar: {
-    [theme.breakpoints.down("xl")]: {
-      width: theme.spacing(45),
-      height: theme.spacing(45),
-    },
+    width: theme.spacing(45),
+    height: theme.spacing(45),
     [theme.breakpoints.down("lg")]: {
       width: theme.spacing(40),
       height: theme.spacing(40),
@@ -66,7 +68,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   nameHolder: {
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("md")]: {
       flexDirection: "column",
       display: "flex",
       alignItems: "center",
@@ -90,55 +92,43 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     justifyContent: "space-evenly",
   },
-
-  emailHolder: {},
-}));
+});
 
 export default function Home({ handleToggle }) {
-  const classes = useStyles();
   const theme = useTheme();
-  const mobileVP = useMediaQuery(theme.breakpoints.down("xs"));
+  const styles = useStyles(theme);
+  const mobileVP = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
-    <Box className={classes.container} id="Home">
+    <Box sx={styles.container} id="Home">
       <ScrollAnimation animateIn="fadeIn" animateOnce={true} delay={750}>
-        <Box className={classes.imageHolder}>
-          <Avatar
-            alt="Lim Zi Yang"
-            src={ProfilePic}
-            className={classes.avatar}
-          />
+        <Box sx={styles.imageHolder}>
+          <Avatar alt="Lim Zi Yang" src={ProfilePic} sx={styles.avatar} />
         </Box>
       </ScrollAnimation>
       <ScrollAnimation animateIn="fadeIn" delay={500} animateOnce={true}>
-        <Box className={classes.infoHolder}>
-          <Box className={classes.textHolder}>
+        <Box sx={styles.infoHolder}>
+          <Box sx={styles.textHolder}>
             <Chip
               label={
-                <Typography
-                  variant="subtitle1"
-                  className={classes.introduction}
-                >
+                <Typography variant="subtitle1" sx={styles.introduction}>
                   Hello, I'm
                 </Typography>
               }
               color="primary"
               onClick={handleToggle}
             />
-            <Box className={classes.nameHolder}>
-              <Typography
-                variant={mobileVP ? "h3" : "h2"}
-                className={classes.name}
-              >
+            <Box sx={styles.nameHolder}>
+              <Typography variant={mobileVP ? "h3" : "h2"} sx={styles.name}>
                 Lim Zi Yang
               </Typography>
-              <Typography variant="h5" className={classes.occupation}>
+              <Typography variant="h5" sx={styles.occupation}>
                 Computer Science Student @ NUS
               </Typography>
             </Box>
-            <Box className={classes.infoDescription}>
+            <Box sx={styles.infoDescription}>
               <EmailIcon />
-              <div className={classes.emailHolder}>
+              <div sx={styles.emailHolder}>
                 <Typography variant="subtitle2">
                   limziyang8@gmail.com
                 </Typography>
