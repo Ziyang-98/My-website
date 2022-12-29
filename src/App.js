@@ -1,9 +1,9 @@
 import React from "react";
-import Home from "./Home/Home";
-import About from "./About/About";
-import Navbar from "./Navbar/Navbar";
-import Portfolio from "./Portfolio/Portfolio";
-import Projects from "./Projects/Projects";
+import Navbar from "components/Navbar";
+import Home from "sections/HomeSection";
+import About from "sections/AboutSection";
+import Portfolio from "sections/PortfolioSection";
+import Projects from "sections/ProjectsSection";
 import Box from "@material-ui/core/Box";
 import Paper from "@material-ui/core/Paper";
 
@@ -32,7 +32,7 @@ function App() {
   const theme = createTheme({
     typography: {
       fontFamily: ["-apple-system", "BlinkMacSystemFont", "sans-serif"].join(
-        ",",
+        ","
       ),
     },
     palette: {

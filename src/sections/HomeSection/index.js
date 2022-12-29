@@ -1,16 +1,15 @@
 import React from "react";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
-import ProfilePic from "../Images/Profile/dp.jpeg";
 import Box from "@material-ui/core/Box";
 import Avatar from "@material-ui/core/Avatar";
 import Typography from "@material-ui/core/Typography";
 import Chip from "@material-ui/core/Chip";
 import EmailIcon from "@material-ui/icons/Email";
-import SocialMedia from "./SocialMedia";
-import ScrollAnimation from "react-animate-on-scroll";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
-
+import ScrollAnimation from "react-animate-on-scroll";
 import "animate.css/animate.compat.css";
+import ProfilePic from "assets/profile/dp.jpeg";
+import SocialMedia from "./SocialMedia";
 
 const useStyles = makeStyles((theme) => ({
   container: {

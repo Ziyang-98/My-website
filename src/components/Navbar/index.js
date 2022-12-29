@@ -2,7 +2,6 @@ import React from "react";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
-import { Link } from "react-scroll";
 import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
@@ -13,6 +12,7 @@ import ProjectsIcon from "@material-ui/icons/EmojiObjects";
 import Tooltip from "@material-ui/core/Tooltip";
 import Zoom from "@material-ui/core/Zoom";
 import Typography from "@material-ui/core/Typography";
+import { Link } from "react-scroll";
 
 const useStyles = makeStyles((theme) => ({
   root: {},

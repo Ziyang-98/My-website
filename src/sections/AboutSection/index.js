@@ -1,11 +1,10 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Avatar from "../Images/Profile/avataaars.png";
 import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
-import Icons from "./Icons";
+import Avatar from "assets/profile/avatar.png";
 import ScrollAnimation from "react-animate-on-scroll";
-import "animate.css/animate.compat.css";
+import Icons from "./Icons";
 
 const useStyles = makeStyles((theme) => ({
   container: {

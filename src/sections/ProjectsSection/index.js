@@ -8,16 +8,15 @@ import CardMedia from "@material-ui/core/CardMedia";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
-import ModPlanner from "./My Projects/Modplanner";
-import Bob from "./My Projects/Bob";
-import CommonCents from "./My Projects/CommonCents";
-import Coffeeberry from "./My Projects/Coffeeberry";
-import CoralReefConservation from "./My Projects/CoralReefConservation";
-import JobTrack from "./My Projects/JobTrack";
+import ModPlanner from "./projects/Modplanner";
+import Bob from "./projects/Bob";
+import CommonCents from "./projects/CommonCents";
+import Coffeeberry from "./projects/Coffeeberry";
+import CoralReefConservation from "./projects/CoralReefConservation";
+import JobTrack from "./projects/JobTrack";
 import Dialog from "./Dialog";
 import ScrollAnimation from "react-animate-on-scroll";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
-import "animate.css/animate.compat.css";
 
 const useStyles = makeStyles((theme) => ({
   container: {

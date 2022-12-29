@@ -1,8 +1,8 @@
-import BobPreview from "../../Images/Projects/bob/bobpreview.PNG";
-import BobShowcase from "../../Images/Projects/bob/bobshowcase.PNG";
-import JavaIcon from "../../Images/Logos/Language/java.png";
-import JavaFXIcon from "../../Images/Logos/Framework/javafx.PNG";
-import GradleIcon from "../../Images/Logos/Framework/gradle.png";
+import BobPreview from "assets/projects/bob/bobpreview.PNG";
+import BobShowcase from "assets/projects/bob/bobshowcase.PNG";
+import JavaIcon from "assets/logos/language/java.png";
+import JavaFXIcon from "assets/logos/framework/javafx.PNG";
+import GradleIcon from "assets/logos/framework/gradle.png";
 
 const Bob = {
   title: "Bob",

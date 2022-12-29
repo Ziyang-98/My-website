@@ -1,9 +1,9 @@
-import JobTrackShowcase from "../../Images/Projects/jobtrack/jobtrackshowcase.PNG";
-import JobTrackLogo from "../../Images/Projects/jobtrack/jobtracklogo.png";
-import JavascriptIcon from "../../Images/Logos/Language/javascript.png";
-import ReactIcon from "../../Images/Logos/Framework/react.png";
-import NodejsIcon from "../../Images/Logos/Framework/nodejs.png";
-import MongoDbIcon from "../../Images/Logos/Framework/mongodb.PNG";
+import JobTrackShowcase from "assets/projects/jobtrack/jobtrackshowcase.PNG";
+import JobTrackLogo from "assets/projects/jobtrack/jobtracklogo.png";
+import JavascriptIcon from "assets/logos/language/javascript.png";
+import ReactIcon from "assets/logos/framework/react.png";
+import NodejsIcon from "assets/logos/framework/nodejs.png";
+import MongoDbIcon from "assets/logos/framework/mongodb.PNG";
 
 const JobTrack = {
   title: "Job Track",

@@ -5,7 +5,6 @@ import Typography from "@material-ui/core/Typography";
 import Exp from "./ExpTimeLine";
 import ScrollAnimation from "react-animate-on-scroll";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
-import "animate.css/animate.compat.css";
 
 const useStyles = makeStyles((theme) => ({
   container: {

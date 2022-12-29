@@ -1,8 +1,8 @@
-import CommonCentsPreview from "../../Images/Projects/commoncents/commoncentspreview.png";
-import CommonCentsShowcase from "../../Images/Projects/commoncents/commoncentsshowcase.png";
-import JavaIcon from "../../Images/Logos/Language/java.png";
-import JavaFXIcon from "../../Images/Logos/Framework/javafx.PNG";
-import GradleIcon from "../../Images/Logos/Framework/gradle.png";
+import CommonCentsPreview from "assets/projects/commoncents/commoncentspreview.png";
+import CommonCentsShowcase from "assets/projects/commoncents/commoncentsshowcase.png";
+import JavaIcon from "assets/logos/language/java.png";
+import JavaFXIcon from "assets/logos/framework/javafx.PNG";
+import GradleIcon from "assets/logos/framework/gradle.png";
 
 const CommonCents = {
   title: "Common Cents",

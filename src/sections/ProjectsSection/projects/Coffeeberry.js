@@ -1,14 +1,13 @@
-import CoffeeberryLogo from "../../Images/Projects/coffeeberry/coffeeberrylogo.PNG";
-import HomePageImg from "../../Images/Projects/coffeeberry/homepage.PNG";
-import MarketImg from "../../Images/Projects/coffeeberry/marketpage.PNG";
-import ProductImg from "../../Images/Projects/coffeeberry/productpage.PNG";
-import ManagePostingImg from "../../Images/Projects/coffeeberry/managepostingpage.PNG";
-import CreatePostingImg from "../../Images/Projects/coffeeberry/createpostingpage.PNG";
-
-import OrdersImg from "../../Images/Projects/coffeeberry/orderspage.PNG";
-import JavascriptIcon from "../../Images/Logos/Language/javascript.png";
-import ReactIcon from "../../Images/Logos/Framework/react.png";
-import NodejsIcon from "../../Images/Logos/Framework/nodejs.png";
+import CoffeeberryLogo from "assets/projects/coffeeberry/coffeeberrylogo.PNG";
+import HomePageImg from "assets/projects/coffeeberry/homepage.PNG";
+import MarketImg from "assets/projects/coffeeberry/marketpage.PNG";
+import ProductImg from "assets/projects/coffeeberry/productpage.PNG";
+import ManagePostingImg from "assets/projects/coffeeberry/managepostingpage.PNG";
+import CreatePostingImg from "assets/projects/coffeeberry/createpostingpage.PNG";
+import OrdersImg from "assets/projects/coffeeberry/orderspage.PNG";
+import JavascriptIcon from "assets/logos/language/javascript.png";
+import ReactIcon from "assets/logos/framework/react.png";
+import NodejsIcon from "assets/logos/framework/nodejs.png";
 
 const Coffeeberry = {
   title: "Coffeeberry",
