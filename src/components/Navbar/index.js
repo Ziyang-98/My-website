@@ -1,23 +1,24 @@
 import React from "react";
-import { makeStyles, useTheme } from "@material-ui/core/styles";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import Button from "@material-ui/core/Button";
-import IconButton from "@material-ui/core/IconButton";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
-import HomeIcon from "@material-ui/icons/Home";
-import AboutIcon from "@material-ui/icons/Info";
-import PortfolioIcon from "@material-ui/icons/AccountBox";
-import ProjectsIcon from "@material-ui/icons/EmojiObjects";
-import Tooltip from "@material-ui/core/Tooltip";
-import Zoom from "@material-ui/core/Zoom";
-import Typography from "@material-ui/core/Typography";
+import { useTheme } from "@mui/material/styles";
+import AppBar from "@mui/material/AppBar";
+import Toolbar from "@mui/material/Toolbar";
+import Button from "@mui/material/Button";
+import IconButton from "@mui/material/IconButton";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import HomeIcon from "@mui/icons-material/Home";
+import AboutIcon from "@mui/icons-material/Info";
+import PortfolioIcon from "@mui/icons-material/AccountBox";
+import ProjectsIcon from "@mui/icons-material/EmojiObjects";
+import Tooltip from "@mui/material/Tooltip";
+import Zoom from "@mui/material/Zoom";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
 import { Link } from "react-scroll";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = (theme) => ({
   root: {},
   appBar: {
-    borderBottom: `1px solid ${theme.palette.divider}`,
+    borderBottom: `1px solid ${theme.palette.Boxider}`,
     backgroundColor: theme.palette.primary.main,
   },
   toolbar: {
@@ -63,27 +64,22 @@ const useStyles = makeStyles((theme) => ({
   icon: {
     color: theme.palette.whiteColor.main,
   },
-}));
+});
 
 export default function DenseAppBar() {
-  const classes = useStyles();
   const theme = useTheme();
+  const styles = useStyles(theme);
   const desktopVP = useMediaQuery(theme.breakpoints.up("sm"));
 
   return (
-    <div className={classes.root}>
-      <AppBar
-        position="fixed"
-        color="default"
-        elevation={0}
-        className={classes.appBar}
-      >
-        <Toolbar className={classes.toolbar}>
+    <Box sx={styles.root}>
+      <AppBar position="fixed" color="default" elevation={0} sx={styles.appBar}>
+        <Toolbar sx={styles.toolbar}>
           {desktopVP && (
-            <div className={classes.links}>
+            <Box sx={styles.links}>
               <Link className="toHome" to="Home" smooth={true} duration={1000}>
-                <Button size="large" className={classes.button}>
-                  <Typography className={classes.title} variant="button">
+                <Button size="large" sx={styles.button}>
+                  <Typography sx={styles.title} variant="button">
                     Home
                   </Typography>
                 </Button>
@@ -95,8 +91,8 @@ export default function DenseAppBar() {
                 smooth={true}
                 duration={1000}
               >
-                <Button size="large" className={classes.button}>
-                  <Typography className={classes.title} variant="button">
+                <Button size="large" sx={styles.button}>
+                  <Typography sx={styles.title} variant="button">
                     About
                   </Typography>
                 </Button>
@@ -108,8 +104,8 @@ export default function DenseAppBar() {
                 smooth={true}
                 duration={1000}
               >
-                <Button size="large" className={classes.button}>
-                  <Typography className={classes.title} variant="button">
+                <Button size="large" sx={styles.button}>
+                  <Typography sx={styles.title} variant="button">
                     Portfolio
                   </Typography>
                 </Button>
@@ -121,24 +117,24 @@ export default function DenseAppBar() {
                 smooth={true}
                 duration={1000}
               >
-                <Button size="large" className={classes.button}>
-                  <Typography className={classes.title} variant="button">
+                <Button size="large" sx={styles.button}>
+                  <Typography sx={styles.title} variant="button">
                     Projects
                   </Typography>
                 </Button>
               </Link>
-            </div>
+            </Box>
           )}
           {!desktopVP && (
-            <div className={classes.links}>
+            <Box sx={styles.links}>
               <Link className="toHome" to="Home" smooth={true} duration={1000}>
                 <Tooltip
                   title="Home"
                   TransitionComponent={Zoom}
                   enterTouchDelay="50"
                 >
-                  <IconButton aria-label="toHome" className={classes.button}>
-                    <HomeIcon className={classes.icon} />
+                  <IconButton aria-label="toHome" sx={styles.button}>
+                    <HomeIcon sx={styles.icon} />
                   </IconButton>
                 </Tooltip>
               </Link>
@@ -154,8 +150,8 @@ export default function DenseAppBar() {
                   TransitionComponent={Zoom}
                   enterTouchDelay="50"
                 >
-                  <IconButton aria-label="toAbout" className={classes.button}>
-                    <AboutIcon className={classes.icon} />
+                  <IconButton aria-label="toAbout" sx={styles.button}>
+                    <AboutIcon sx={styles.icon} />
                   </IconButton>
                 </Tooltip>
               </Link>
@@ -171,11 +167,8 @@ export default function DenseAppBar() {
                   TransitionComponent={Zoom}
                   enterTouchDelay="50"
                 >
-                  <IconButton
-                    aria-label="toPortfolio"
-                    className={classes.button}
-                  >
-                    <PortfolioIcon className={classes.icon} />
+                  <IconButton aria-label="toPortfolio" sx={styles.button}>
+                    <PortfolioIcon sx={styles.icon} />
                   </IconButton>
                 </Tooltip>
               </Link>
@@ -191,18 +184,15 @@ export default function DenseAppBar() {
                   TransitionComponent={Zoom}
                   enterTouchDelay="50"
                 >
-                  <IconButton
-                    aria-label="toProjects"
-                    className={classes.button}
-                  >
-                    <ProjectsIcon className={classes.icon} />
+                  <IconButton aria-label="toProjects" sx={styles.button}>
+                    <ProjectsIcon sx={styles.icon} />
                   </IconButton>
                 </Tooltip>
               </Link>
-            </div>
+            </Box>
           )}
         </Toolbar>
       </AppBar>
-    </div>
+    </Box>
   );
 }

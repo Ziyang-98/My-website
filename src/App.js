@@ -4,23 +4,18 @@ import Home from "sections/HomeSection";
 import About from "sections/AboutSection";
 import Portfolio from "sections/PortfolioSection";
 import Projects from "sections/ProjectsSection";
-import Box from "@material-ui/core/Box";
-import Paper from "@material-ui/core/Paper";
+import Box from "@mui/material/Box";
+import Paper from "@mui/material/Paper";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
 
-import {
-  makeStyles,
-  createTheme,
-  ThemeProvider,
-} from "@material-ui/core/styles";
-
-const useStyles = makeStyles((theme) => ({
+const styles = {
   container: {},
   paper: {
     width: "100%",
     minWidth: "100%",
     overflowX: "hidden",
   },
-}));
+};
 
 function App() {
   const [toggleDark, setToggleDark] = React.useState(false);
@@ -36,7 +31,7 @@ function App() {
       ),
     },
     palette: {
-      type: toggleDark ? "dark" : "light",
+      mode: toggleDark ? "dark" : "light",
 
       primary: {
         main: toggleDark ? "#7580e8" : "#3f51b5",
@@ -52,18 +47,16 @@ function App() {
     },
   });
 
-  const classes = useStyles();
-
   return (
     <React.Fragment>
       <ThemeProvider theme={theme}>
-        <Box className={classes.container}>
-          <Paper elevation={0} className={classes.paper}>
+        <Box sx={styles.container}>
+          <Paper elevation={0} sx={styles.paper}>
             <Navbar />
-            <Home handleToggle={handleToggle} />
+            {/* <Home handleToggle={handleToggle} />
             <About />
             <Portfolio />
-            <Projects />
+            <Projects /> */}
           </Paper>
         </Box>
       </ThemeProvider>
