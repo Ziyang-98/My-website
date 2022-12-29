@@ -23,7 +23,7 @@ const JobTrack = {
   },
   description:
     "Job Track is an Single-Page Application that is designed using the MERN stack. The app allows job applicants to " +
-    "track their job applications with ease by allows them to add details of their past, present and future job applications." +
+    "track their job applications with ease by allows them to record information for their job applications." +
     "Users are able to quickly import their job track information across multiple browser platforms as well.",
   roles: [
     "Designed and built the frontend with ReactJS",
