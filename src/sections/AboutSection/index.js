@@ -24,7 +24,7 @@ const useStyles = (theme) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    width: 600,
+    width: 450,
     padding: 16,
     [theme.breakpoints.down("md")]: {
       width: 450,
@@ -38,7 +38,10 @@ const useStyles = (theme) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    width: 600,
+    width: 800,
+    [theme.breakpoints.down("sm")]: {
+      width: 450,
+    },
   },
 
   image: {

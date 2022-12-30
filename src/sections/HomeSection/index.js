@@ -23,18 +23,15 @@ const useStyles = (theme) => ({
     height: "100vh",
     [theme.breakpoints.down("md")]: {
       height: "100%",
-      padding: theme.spacing(8, 0),
+      padding: "96px",
     },
   },
-
   infoHolder: {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    padding: "66px",
-    [theme.breakpoints.down("sm")]: {
-      padding: "18px",
-    },
+    // padding: "5%",
+    padding: "24px",
     zIndex: 1,
   },
 
@@ -42,7 +39,7 @@ const useStyles = (theme) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    padding: "66px",
+    padding: "24px",
     zIndex: 1,
   },
 
