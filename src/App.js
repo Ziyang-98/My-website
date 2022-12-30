@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "components/Navbar";
 import Home from "sections/HomeSection";
-// import About from "sections/AboutSection";
+import About from "sections/AboutSection";
 // import Portfolio from "sections/PortfolioSection";
 // import Projects from "sections/ProjectsSection";
 import Box from "@mui/material/Box";
@@ -33,8 +33,8 @@ function App() {
           <Paper elevation={0} sx={styles.paper}>
             <Navbar />
             <Home handleToggle={handleToggle} />
-            {/* <About />
-            <Portfolio />
+            <About />
+            {/* <Portfolio />
             <Projects /> */}
           </Paper>
         </Box>

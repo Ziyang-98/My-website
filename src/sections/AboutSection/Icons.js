@@ -1,9 +1,9 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Tooltip from "@material-ui/core/Tooltip";
-import Typography from "@material-ui/core/Typography";
-import Zoom from "@material-ui/core/Zoom";
-import Box from "@material-ui/core/Box";
+import { useTheme } from "@mui/material/styles";
+import Tooltip from "@mui/material/Tooltip";
+import Typography from "@mui/material/Typography";
+import Zoom from "@mui/material/Zoom";
+import Box from "@mui/material/Box";
 import PythonIcon from "assets/logos/language/python.png";
 import JavascriptIcon from "assets/logos/language/javascript.png";
 import TypescriptIcon from "assets/logos/language/typescript.png";
@@ -25,7 +25,7 @@ import MongoDbIcon from "assets/logos/framework/mongodb.PNG";
 import FirebaseIcon from "assets/logos/framework/firebase.png";
 import GoogleDialogFlowIcon from "assets/logos/framework/dialogflow.png";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = (theme) => ({
   root: {
     marginTop: theme.spacing(4),
   },
@@ -56,18 +56,19 @@ const useStyles = makeStyles((theme) => ({
     width: 40,
     padding: theme.spacing(1),
   },
-}));
+});
 
 export default function Icons() {
-  const classes = useStyles();
+  const theme = useTheme();
+  const styles = useStyles(theme);
 
   return (
-    <div className={classes.root}>
-      <Typography variant="subtitle1" className={classes.title}>
+    <Box sx={styles.root}>
+      <Typography variant="subtitle1" sx={styles.title}>
         Languages
       </Typography>
-      <Box className={classes.iconBox}>
-        <div className={classes.iconHolder}>
+      <Box sx={styles.iconBox}>
+        <Box sx={styles.iconHolder}>
           <Tooltip
             title="Javascript"
             TransitionComponent={Zoom}
@@ -75,7 +76,7 @@ export default function Icons() {
           >
             <img
               src={JavascriptIcon}
-              className={classes.icon}
+              style={styles.icon}
               alt="javascript icon"
             />
           </Tooltip>
@@ -86,12 +87,12 @@ export default function Icons() {
           >
             <img
               src={TypescriptIcon}
-              className={classes.icon}
+              style={styles.icon}
               alt="typescript icon"
             />
           </Tooltip>
           <Tooltip title="Java" TransitionComponent={Zoom} enterTouchDelay="50">
-            <img src={JavaIcon} className={classes.icon} alt="java icon" />
+            <img src={JavaIcon} style={styles.icon} alt="java icon" />
           </Tooltip>
 
           <Tooltip
@@ -99,90 +100,82 @@ export default function Icons() {
             TransitionComponent={Zoom}
             enterTouchDelay="50"
           >
-            <img src={PythonIcon} className={classes.icon} alt="python icon" />
+            <img src={PythonIcon} style={styles.icon} alt="python icon" />
           </Tooltip>
           <Tooltip title="C++" TransitionComponent={Zoom} enterTouchDelay="50">
-            <img src={CIcon} className={classes.icon} alt="c++ icon" />
+            <img src={CIcon} style={styles.icon} alt="c++ icon" />
           </Tooltip>
           <Tooltip title="Ruby" TransitionComponent={Zoom} enterTouchDelay="50">
-            <img src={RubyIcon} className={classes.icon} alt="ruby icon" />
+            <img src={RubyIcon} style={styles.icon} alt="ruby icon" />
           </Tooltip>
-        </div>
+        </Box>
       </Box>
-      <Typography variant="subtitle1" className={classes.title}>
+      <Typography variant="subtitle1" sx={styles.title}>
         Frameworks and Tools
       </Typography>
-      <Box className={classes.iconBox}>
-        <div className={classes.iconHolder}>
+      <Box sx={styles.iconBox}>
+        <Box sx={styles.iconHolder}>
           <Tooltip
             title="HTML5"
             TransitionComponent={Zoom}
             enterTouchDelay="50"
           >
-            <img src={HtmlIcon} className={classes.icon} alt="html5 icon" />
+            <img src={HtmlIcon} style={styles.icon} alt="html5 icon" />
           </Tooltip>
           <Tooltip title="CSS3" TransitionComponent={Zoom} enterTouchDelay="50">
-            <img src={CssIcon} className={classes.icon} alt="css3 icon" />
+            <img src={CssIcon} style={styles.icon} alt="css3 icon" />
           </Tooltip>
           <Tooltip
             title="ReactJS"
             TransitionComponent={Zoom}
             enterTouchDelay="50"
           >
-            <img src={ReactIcon} className={classes.icon} alt="reactjs icon" />
+            <img src={ReactIcon} style={styles.icon} alt="reactjs icon" />
           </Tooltip>
           <Tooltip
             title="NodeJS"
             TransitionComponent={Zoom}
             enterTouchDelay="50"
           >
-            <img src={NodejsIcon} className={classes.icon} alt="nodejs icon" />
+            <img src={NodejsIcon} style={styles.icon} alt="nodejs icon" />
           </Tooltip>
           <Tooltip
             title="GraplQL"
             TransitionComponent={Zoom}
             enterTouchDelay="50"
           >
-            <img
-              src={GraphQLIcon}
-              className={classes.icon}
-              alt="graphql icon"
-            />
+            <img src={GraphQLIcon} style={styles.icon} alt="graphql icon" />
           </Tooltip>
           <Tooltip title="Git" TransitionComponent={Zoom} enterTouchDelay="50">
-            <img src={GitIcon} className={classes.icon} alt="git icon" />
+            <img src={GitIcon} style={styles.icon} alt="git icon" />
           </Tooltip>
           <Tooltip
             title="GitHub"
             TransitionComponent={Zoom}
             enterTouchDelay="50"
           >
-            <img src={GitHubIcon} className={classes.icon} alt="github icon" />
+            <img src={GitHubIcon} style={styles.icon} alt="github icon" />
           </Tooltip>
           <Tooltip
             title="Bit Bucket"
             TransitionComponent={Zoom}
             enterTouchDelay="50"
           >
-            <img
-              src={BitBucketIcon}
-              className={classes.icon}
-              alt="bitbucket icon"
-            />
+            <img src={BitBucketIcon} style={styles.icon} alt="bitbucket icon" />
           </Tooltip>
           <Tooltip
             title="Gradle"
             TransitionComponent={Zoom}
             enterTouchDelay="50"
           >
-            <img src={GradleIcon} className={classes.icon} alt="gradle icon" />
+            <img src={GradleIcon} style={styles.icon} alt="gradle icon" />
           </Tooltip>
           <Tooltip
             title="Apache Maven"
             TransitionComponent={Zoom}
             enterTouchDelay="50"
           >
-            <img src={MavenIcon} className={classes.icon} alt="maven icon" />
+            <img src={MavenIcon} style={styles.icon} alt="maven icon" />
           </Tooltip>
           <Tooltip
             title="Spring Boot"
@@ -191,7 +184,7 @@ export default function Icons() {
           >
             <img
               src={SpringBootIcon}
-              className={classes.icon}
+              style={styles.icon}
               alt="springboot icon"
             />
           </Tooltip>
@@ -200,22 +193,14 @@ export default function Icons() {
             TransitionComponent={Zoom}
             enterTouchDelay="50"
           >
-            <img
-              src={MongoDbIcon}
-              className={classes.icon}
-              alt="Mongodb icon"
-            />
+            <img src={MongoDbIcon} style={styles.icon} alt="Mongodb icon" />
           </Tooltip>
           <Tooltip
             title="Firebase"
             TransitionComponent={Zoom}
             enterTouchDelay="50"
           >
-            <img
-              src={FirebaseIcon}
-              className={classes.icon}
-              alt="firebase icon"
-            />
+            <img src={FirebaseIcon} style={styles.icon} alt="firebase icon" />
           </Tooltip>
           <Tooltip
             title="Google Dialogflow"
@@ -224,12 +209,12 @@ export default function Icons() {
           >
             <img
               src={GoogleDialogFlowIcon}
-              className={classes.icon}
+              style={styles.icon}
               alt="dialogflow icon"
             />
           </Tooltip>
-        </div>
+        </Box>
       </Box>
-    </div>
+    </Box>
   );
 }
