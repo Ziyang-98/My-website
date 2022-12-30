@@ -1,12 +1,12 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Box from "@material-ui/core/Box";
-import Typography from "@material-ui/core/Typography";
-import Avatar from "assets/profile/avatar.png";
+import { useTheme } from "@mui/material/styles";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
 import ScrollAnimation from "react-animate-on-scroll";
+import Avatar from "assets/profile/avatar.png";
 import Icons from "./Icons";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = (theme) => ({
   container: {
     zIndex: 1,
     display: "flex",
@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     flexWrap: "wrap",
     padding: theme.spacing(20, 0),
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("md")]: {
       paddingTop: theme.spacing(10),
       paddingBottom: theme.spacing(15),
     },
@@ -25,8 +25,12 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     justifyContent: "center",
     width: 600,
+    padding: 16,
     [theme.breakpoints.down("md")]: {
       width: 450,
+    },
+    [theme.breakpoints.down("sm")]: {
+      width: 350,
     },
   },
 
@@ -35,9 +39,6 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     justifyContent: "center",
     width: 600,
-    [theme.breakpoints.down("md")]: {
-      width: 450,
-    },
   },
 
   image: {
@@ -73,37 +74,37 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     justifyContent: "center",
   },
-}));
+});
 
 export default function About() {
-  const classes = useStyles();
+  const theme = useTheme();
+  const styles = useStyles(theme);
   return (
-    <Box className={classes.container} id="About">
+    <Box sx={styles.container} id="About">
       <ScrollAnimation animateIn="fadeIn" delay={100} animateOnce={true}>
-        <Box className={classes.imageHolder}>
-          <img src={Avatar} className={classes.image} alt="About Avatar" />
+        <Box sx={styles.imageHolder}>
+          <img src={Avatar} style={styles.image} alt="About Avatar" />
         </Box>
       </ScrollAnimation>
-
-      <Box className={classes.infoHolder}>
-        <div className={classes.infoBox}>
+      <Box sx={styles.infoHolder}>
+        <div sx={styles.infoBox}>
           <ScrollAnimation animateIn="fadeIn" delay={300} animateOnce={true}>
-            <div className={classes.title}>
+            <div sx={styles.title}>
               <Typography variant="h4">About Me</Typography>
             </div>
-            <div className={classes.details}>
+            <div sx={styles.details}>
               <Typography variant="subtitle1">
                 Hello, I'm a Year 4 Computer Science Student who is studying in
                 NUS. I am passionate about various fields of computing such as
                 Artificial Intelligence (A.I.) and Software Engineering. My
                 specialization lies in full-stack engineering. Personally, I
-                enjoy developing web applications and services. Here's a list of
-                languanges and frameworks that I am familiar with:{" "}
+                enjoy developing web applications and services. Here's are the
+                languanges and frameworks that I am familiar with:
               </Typography>
             </div>
           </ScrollAnimation>
           <ScrollAnimation animateIn="fadeIn" delay={450} animateOnce={true}>
-            <Box className={classes.iconHolder} flexWrap="noWrap">
+            <Box flexWrap="noWrap">
               <Icons />
             </Box>
           </ScrollAnimation>
