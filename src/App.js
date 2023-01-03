@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "components/Navbar";
 import Home from "sections/HomeSection";
 import About from "sections/AboutSection";
-// import Portfolio from "sections/PortfolioSection";
+import Portfolio from "sections/PortfolioSection";
 // import Projects from "sections/ProjectsSection";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
@@ -34,8 +34,8 @@ function App() {
             <Navbar />
             <Home handleToggle={handleToggle} />
             <About />
-            {/* <Portfolio />
-            <Projects /> */}
+            <Portfolio />
+            {/* <Projects /> */}
           </Paper>
         </Box>
       </ThemeProvider>
