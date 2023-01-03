@@ -1,16 +1,16 @@
 import React from "react";
-import { makeStyles, useTheme } from "@material-ui/core/styles";
-import Box from "@material-ui/core/Box";
-import Typography from "@material-ui/core/Typography";
+import { useTheme } from "@mui/material/styles";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
 import Exp from "./ExpTimeLine";
 import ScrollAnimation from "react-animate-on-scroll";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = (theme) => ({
   container: {
-    paddingTop: theme.spacing(15),
-    paddingBottom: theme.spacing(15),
-    [theme.breakpoints.down("sm")]: {
+    paddingTop: theme.spacing(20),
+    paddingBottom: theme.spacing(20),
+    [theme.breakpoints.down("md")]: {
       paddingTop: theme.spacing(10),
       paddingBottom: theme.spacing(10),
     },
@@ -34,35 +34,35 @@ const useStyles = makeStyles((theme) => ({
   description: {
     color: "#bbbbbf",
   },
-}));
+});
 
 export default function Portfolio() {
-  const classes = useStyles();
   const theme = useTheme();
+  const styles = useStyles(theme);
   const mobileVP = useMediaQuery(theme.breakpoints.down("xs"));
 
   return (
-    <div className={classes.container} id="Portfolio">
-      <Box className={classes.titleHolder}>
+    <Box sx={styles.container} id="Portfolio">
+      <Box sx={styles.titleHolder}>
         <ScrollAnimation animateIn="fadeIn" delay={200} animateOnce={true}>
           <Typography variant={mobileVP ? "h4" : "h3"}>
             My Experiences
           </Typography>
         </ScrollAnimation>
       </Box>
-      <Box className={classes.infoHolder}>
+      <Box sx={styles.infoHolder}>
         <ScrollAnimation animateIn="fadeIn" delay={800} animateOnce={true}>
-          <Typography variant="body1" className={classes.description}>
+          <Typography variant="body1" sx={styles.description}>
             Click on each icon to find out more
           </Typography>
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeIn" delay={450} animateOnce={true}>
-          <Box className={classes.expHolder} id="Experiences">
+          <Box sx={styles.expHolder} id="Experiences">
             <Exp />
           </Box>
         </ScrollAnimation>
       </Box>
-    </div>
+    </Box>
   );
 }
 

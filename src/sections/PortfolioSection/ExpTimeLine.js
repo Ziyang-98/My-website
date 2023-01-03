@@ -24,10 +24,6 @@ const useStyles = (theme) => ({
     padding: "8px 16px",
   },
   duration: {
-    // marginTop: theme.spacing(2),
-    // [theme.breakpoints.down("xs")]: {
-    //   flex: 0.3,
-    // },
     py: "24px",
   },
   content: {
@@ -116,7 +112,7 @@ export default function ExpTimeline() {
               {lastItem !== exp && <TimelineConnector />}
             </TimelineSeparator>
             <TimelineContent sx={styles.content}>
-              <Paper elevation={4} sx={styles.paper}>
+              <Paper elevation={6} sx={styles.paper}>
                 <Typography variant="h6" component="h2">
                   {exp.jobTitle}
                 </Typography>
