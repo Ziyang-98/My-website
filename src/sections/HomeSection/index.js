@@ -30,7 +30,6 @@ const useStyles = (theme) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    // padding: "5%",
     padding: "24px",
     zIndex: 1,
   },
