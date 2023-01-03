@@ -24,10 +24,15 @@ const useStyles = (theme) => ({
     padding: "8px 16px",
   },
   duration: {
-    marginTop: theme.spacing(2),
-    [theme.breakpoints.down("xs")]: {
-      flex: 0.3,
-    },
+    // marginTop: theme.spacing(2),
+    // [theme.breakpoints.down("xs")]: {
+    //   flex: 0.3,
+    // },
+    py: "24px",
+  },
+  content: {
+    py: "18px",
+    px: 2,
   },
   icon: {
     color: theme.palette.whiteColor.main,
@@ -84,10 +89,12 @@ export default function ExpTimeline() {
         const Icon = exp.icon;
         return (
           <TimelineItem>
-            <TimelineOppositeContent sx={styles.duration}>
-              <Typography variant="body2" color="textSecondary">
-                {exp.duration}
-              </Typography>
+            <TimelineOppositeContent
+              sx={styles.duration}
+              variant="body2"
+              color="text.secondary"
+            >
+              {exp.duration}
             </TimelineOppositeContent>
             <TimelineSeparator>
               <TimelineDot color="primary">
@@ -108,7 +115,7 @@ export default function ExpTimeline() {
               </TimelineDot>
               {lastItem !== exp && <TimelineConnector />}
             </TimelineSeparator>
-            <TimelineContent>
+            <TimelineContent sx={styles.content}>
               <Paper elevation={4} sx={styles.paper}>
                 <Typography variant="h6" component="h2">
                   {exp.jobTitle}
