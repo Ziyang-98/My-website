@@ -3,8 +3,6 @@ import Box from "@mui/material/Box";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { Typography } from "@mui/material";
-import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
-import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 
 import Carousel from "react-material-ui-carousel";
 
@@ -24,7 +22,6 @@ const useStyles = (theme) => ({
 function Item({ showcase, index, width, height }) {
   const theme = useTheme();
   const styles = useStyles(theme);
-
   return (
     <Box sx={styles.showcaseHolder}>
       <img
@@ -51,11 +48,10 @@ function ShowcaseCarousel({ showcases, showcaseSizes }) {
   const small = useMediaQuery(theme.breakpoints.only("xs"));
   return (
     <Carousel
-      NextIcon={<NavigateNextIcon />}
-      PrevIcon={<NavigateBeforeIcon />}
-      navButtonsAlwaysInvisible={showcases.length <= 1}
+      navButtonsAlwaysVisible={showcases.length > 1}
       indicators={showcases.length > 1}
-      autoPlay={true}
+      autoPlay
+      animation={"slide"}
     >
       {showcases.map((item, i) => {
         return small ? (

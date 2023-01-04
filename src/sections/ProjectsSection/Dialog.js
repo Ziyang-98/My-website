@@ -15,9 +15,6 @@ import Carousel from "./Carousel";
 
 const useStyles = (theme) => ({
   imageHolder: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
     paddingTop: theme.spacing(8),
     marginBottom: theme.spacing(3),
   },
