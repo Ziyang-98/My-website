@@ -1,4 +1,4 @@
-import ShoppingCart from "@material-ui/icons/ShoppingCart";
+import ShoppingCart from "@mui/icons-material/ShoppingCart";
 
 const Shopee = {
   jobTitle: "Software Engineer Intern",

@@ -1,4 +1,4 @@
-import SchoolIcon from "@material-ui/icons/School";
+import SchoolIcon from "@mui/icons-material/School";
 
 const CS2030STA = {
   jobTitle: "University Teaching Assistant",

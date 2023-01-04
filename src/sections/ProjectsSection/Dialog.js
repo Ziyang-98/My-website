@@ -1,18 +1,19 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
-import Button from "@material-ui/core/Button";
-import Dialog from "@material-ui/core/Dialog";
-import DialogContent from "@material-ui/core/DialogContent";
-import DialogContentText from "@material-ui/core/DialogContentText";
-import DialogTitle from "@material-ui/core/DialogTitle";
-import Tooltip from "@material-ui/core/Tooltip";
-import IconButton from "@material-ui/core/IconButton";
-import CancelIcon from "@material-ui/icons/Close";
-import Zoom from "@material-ui/core/Zoom";
+import { useTheme } from "@mui/material/styles";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+import Dialog from "@mui/material/Dialog";
+import DialogContent from "@mui/material/DialogContent";
+import DialogContentText from "@mui/material/DialogContentText";
+import DialogTitle from "@mui/material/DialogTitle";
+import Tooltip from "@mui/material/Tooltip";
+import IconButton from "@mui/material/IconButton";
+import CancelIcon from "@mui/icons-material/Close";
+import Zoom from "@mui/material/Zoom";
 import Carousel from "./Carousel";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = (theme) => ({
   imageHolder: {
     display: "flex",
     alignItems: "center",
@@ -62,7 +63,7 @@ const useStyles = makeStyles((theme) => ({
   linkButtons: {
     margin: theme.spacing(1),
   },
-}));
+});
 
 export default function ScrollDialog({
   open,
@@ -84,9 +85,10 @@ export default function ScrollDialog({
       }
     }
   }, [open]);
-  const classes = useStyles();
+  const theme = useTheme();
+  const styles = useStyles(theme);
   return (
-    <div>
+    <Box>
       <Dialog
         open={open}
         onClose={handleClose}
@@ -95,52 +97,21 @@ export default function ScrollDialog({
         aria-labelledby="scroll-dialog-title"
         aria-describedby="scroll-dialog-description"
       >
-        <IconButton
-          className={classes.cancel}
-          onClick={handleClose}
-          component="span"
-        >
+        <IconButton sx={styles.cancel} onClick={handleClose} component="span">
           <CancelIcon />
         </IconButton>
 
         {/*---------- Showcase Image ----------*/}
-        <div className={classes.imageHolder}>
+        <Box sx={styles.imageHolder}>
           <Carousel
             showcases={image !== null ? image.showcases : null}
             showcaseSizes={showcaseSizes}
           />
-          {/* {large && (
-            <img
-              src={image !== null ? image.showcase : null}
-              className={classes.image}
-              alt="showcase"
-              width={showcaseSize.large.width}
-              height={showcaseSize.large.height}
-            />
-          )}
-          {medium && (
-            <img
-              src={image !== null ? image.showcase : null}
-              className={classes.image}
-              alt="showcase"
-              width={showcaseSize.medium.width}
-              height={showcaseSize.medium.height}
-            />
-          )}
-          {small && (
-            <img
-              src={image !== null ? image.showcase : null}
-              className={classes.image}
-              alt="showcase"
-              width={showcaseSize.small.width}
-              height={showcaseSize.small.height}
-            />
-          )} */}
-        </div>
+        </Box>
 
         {/*---------- Title ----------*/}
-        <DialogTitle className={classes.dialogTitle} id="scroll-dialog-title">
-          <Typography className={classes.title} variant="h4">
+        <DialogTitle sx={styles.dialogTitle} id="scroll-dialog-title">
+          <Typography sx={styles.title} variant="h4">
             {title}
           </Typography>
         </DialogTitle>
@@ -155,24 +126,20 @@ export default function ScrollDialog({
           </DialogContentText>
 
           {/*---------- My Roles ----------*/}
-          <div className={classes.rolesHolder}>
+          <Box sx={styles.rolesHolder}>
             <DialogContentText
               id="scroll-dialog-roles"
               ref={descriptionElementRef}
               tabIndex={-1}
             >
-              <Typography
-                className={classes.roleTitle}
-                variant="h5"
-                color="default"
-              >
+              <Typography sx={styles.roleTitle} variant="h5" color="default">
                 My Role:{" "}
               </Typography>
               <ul>
                 {roles.map((role) => (
                   <li>
                     <Typography
-                      className={classes.techstack}
+                      sx={styles.techstack}
                       variant="body1"
                       component="p"
                       color="default"
@@ -183,7 +150,7 @@ export default function ScrollDialog({
                 ))}
               </ul>
             </DialogContentText>
-          </div>
+          </Box>
 
           {/*---------- Tech Stack ----------*/}
           <DialogContentText
@@ -192,32 +159,32 @@ export default function ScrollDialog({
             tabIndex={-1}
           >
             <Typography
-              className={classes.techstack}
+              sx={styles.techstack}
               variant="h5"
               component="p"
               color="default"
             >
               Tech Stack:
             </Typography>
-            <div className={classes.iconsHolder}>
+            <Box sx={styles.iconsHolder}>
               {techStack.map((icon) => (
                 <Tooltip
                   title={icon.name}
                   TransitionComponent={Zoom}
                   enterTouchDelay="50"
                 >
-                  <img src={icon.img} className={classes.icons} alt="icon" />
+                  <img src={icon.img} style={styles.icons} alt="icon" />
                 </Tooltip>
               ))}
-            </div>
+            </Box>
           </DialogContentText>
 
           {/*---------- Links ----------*/}
-          <div className={classes.linkHolder}>
+          <Box sx={styles.linkHolder}>
             {links.map((link) => (
               <Button
                 variant="contained"
-                className={classes.linkButtons}
+                sx={styles.linkButtons}
                 target="_blank"
                 color="primary"
                 href={link.link}
@@ -225,9 +192,9 @@ export default function ScrollDialog({
                 {link.name}
               </Button>
             ))}
-          </div>
+          </Box>
         </DialogContent>
       </Dialog>
-    </div>
+    </Box>
   );
 }

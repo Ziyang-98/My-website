@@ -1,4 +1,4 @@
-import AccountBalanceIcon from "@material-ui/icons/AccountBalance";
+import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
 
 const Frank = {
   jobTitle: "Software Engineer Intern",

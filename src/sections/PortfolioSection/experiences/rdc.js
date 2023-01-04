@@ -1,4 +1,4 @@
-import BusinessIcon from "@material-ui/icons/Business";
+import BusinessIcon from "@mui/icons-material/Business";
 
 const RDC = {
   jobTitle: "Software Engineer Intern",

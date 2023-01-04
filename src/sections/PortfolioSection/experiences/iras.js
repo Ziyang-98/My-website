@@ -1,4 +1,4 @@
-import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
+import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 
 const IRAS = {
   jobTitle: "Part-time Software Developer",
