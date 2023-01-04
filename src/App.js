@@ -3,7 +3,7 @@ import Navbar from "components/Navbar";
 import Home from "sections/HomeSection";
 import About from "sections/AboutSection";
 import Portfolio from "sections/PortfolioSection";
-// import Projects from "sections/ProjectsSection";
+import Projects from "sections/ProjectsSection";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import { ThemeProvider } from "@mui/material/styles";
@@ -35,7 +35,7 @@ function App() {
             <Home handleToggle={handleToggle} />
             <About />
             <Portfolio />
-            {/* <Projects /> */}
+            <Projects />
           </Paper>
         </Box>
       </ThemeProvider>

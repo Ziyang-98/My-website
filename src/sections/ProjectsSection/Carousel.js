@@ -1,12 +1,14 @@
 import React from "react";
-import { makeStyles, useTheme } from "@material-ui/core/styles";
-import Carousel from "react-material-ui-carousel";
-import NavigateBeforeIcon from "@material-ui/icons/NavigateBefore";
-import NavigateNextIcon from "@material-ui/icons/NavigateNext";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
-import { Typography } from "@material-ui/core";
+import Box from "@mui/material/Box";
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { Typography } from "@mui/material";
+import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
+import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 
-const useStyles = makeStyles((theme) => ({
+import Carousel from "react-material-ui-carousel";
+
+const useStyles = (theme) => ({
   showcaseHolder: {
     display: "flex",
     flexDirection: "column",
@@ -17,13 +19,14 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(2, 0, 0, 0),
     fontStyle: "italic",
   },
-}));
+});
 
 function Item({ showcase, index, width, height }) {
-  const classes = useStyles();
+  const theme = useTheme();
+  const styles = useStyles(theme);
 
   return (
-    <div className={classes.showcaseHolder}>
+    <Box sx={styles.showcaseHolder}>
       <img
         src={showcase.image}
         alt={"showcase" + index}
@@ -33,11 +36,11 @@ function Item({ showcase, index, width, height }) {
       <Typography
         variant="subtitle1"
         color="textPrimary"
-        className={classes.showcaseTitle}
+        className={styles.showcaseTitle}
       >
         {showcase.title}
       </Typography>
-    </div>
+    </Box>
   );
 }
 

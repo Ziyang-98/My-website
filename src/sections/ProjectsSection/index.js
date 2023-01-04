@@ -1,13 +1,14 @@
 import React from "react";
-import { makeStyles, useTheme } from "@material-ui/core/styles";
-import Box from "@material-ui/core/Box";
-import Typography from "@material-ui/core/Typography";
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
-import CardMedia from "@material-ui/core/CardMedia";
-import CardActionArea from "@material-ui/core/CardActionArea";
-import Grid from "@material-ui/core/Grid";
-import Container from "@material-ui/core/Container";
+import { useTheme } from "@mui/material/styles";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import CardActionArea from "@mui/material/CardActionArea";
+import Grid from "@mui/material/Grid";
+import Container from "@mui/material/Container";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import ModPlanner from "./projects/Modplanner";
 import Bob from "./projects/Bob";
 import CommonCents from "./projects/CommonCents";
@@ -16,9 +17,8 @@ import CoralReefConservation from "./projects/CoralReefConservation";
 import JobTrack from "./projects/JobTrack";
 import Dialog from "./Dialog";
 import ScrollAnimation from "react-animate-on-scroll";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = (theme) => ({
   container: {
     paddingTop: theme.spacing(10),
     paddingBottom: theme.spacing(15),
@@ -40,21 +40,14 @@ const useStyles = makeStyles((theme) => ({
   cardGrid: {
     paddingTop: theme.spacing(2),
     paddingBottom: theme.spacing(8),
+  },
+  outerGrid: {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
   },
-  outerGrid: {
-    width: 903,
-    [theme.breakpoints.down("sm")]: {
-      width: 543,
-    },
-    [theme.breakpoints.down("xs")]: {
-      width: 300,
-    },
-  },
   card: {
-    height: "100%",
+    height: 320,
     width: 285,
     display: "flex",
     flexDirection: "column",
@@ -93,7 +86,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   cardButton: {},
-}));
+});
 
 const projects = [
   JobTrack,
@@ -105,8 +98,8 @@ const projects = [
 ];
 
 export default function Portfolio() {
-  const classes = useStyles();
   const theme = useTheme();
+  const styles = useStyles(theme);
   const mobileVP = useMediaQuery(theme.breakpoints.down("xs"));
 
   const showcaseStub = [
@@ -155,36 +148,36 @@ export default function Portfolio() {
   const descriptionDelay = delay + addOnDelay * projects.length + delay;
 
   return (
-    <div className={classes.container} id="Projects">
-      <Box className={classes.titleHolder}>
+    <Box sx={styles.container} id="Projects">
+      <Box sx={styles.titleHolder}>
         <ScrollAnimation animateIn="fadeIn" delay={200} animateOnce={true}>
           <Typography variant={mobileVP ? "h4" : "h3"}>My Projects</Typography>
         </ScrollAnimation>
       </Box>
-      <Box className={classes.descriptionHolder}>
+      <Box sx={styles.descriptionHolder}>
         <ScrollAnimation
           animateIn="fadeIn"
           delay={descriptionDelay}
           animateOnce={true}
         >
-          <Typography variant="body1" className={classes.description}>
+          <Typography variant="body1" sx={styles.description}>
             Click on each card to find out more
           </Typography>
         </ScrollAnimation>
       </Box>
-      <Container className={classes.cardGrid} maxWidth="md">
-        <Grid container className={classes.outerGrid} spacing={2}>
+      <Container sx={styles.cardGrid} maxWidth="md">
+        <Grid container sx={styles.outerGrid} spacing={2}>
           {projects.map((project) => (
             <Grid item>
               <ScrollAnimation
                 animateIn="fadeIn"
                 delay={(delay += addOnDelay)}
                 animateOnce={true}
-                className={classes.card}
+                sx={styles.card}
               >
-                <Card className={classes.card} elevation={2}>
+                <Card sx={styles.card} elevation={2}>
                   <CardActionArea
-                    className={classes.cardClickable}
+                    sx={styles.cardClickable}
                     onClick={() =>
                       handleClick(
                         project.title,
@@ -197,31 +190,28 @@ export default function Portfolio() {
                       )
                     }
                   >
-                    <CardMedia
-                      className={classes.cardMedia}
-                      title="Image title"
-                    >
+                    <CardMedia sx={styles.cardMedia} title="Image title">
                       <img
-                        className={classes.image}
+                        sx={styles.image}
                         src={project.image.preview}
                         alt="showcase"
                         width={project.previewSize.width}
                         height={project.previewSize.height}
                       />
                     </CardMedia>
-                    <CardContent className={classes.cardContent}>
-                      <div className={classes.cardTitleHolder}>
+                    <CardContent sx={styles.cardContent}>
+                      <Box sx={styles.cardTitleHolder}>
                         <Typography gutterBottom variant="h5" component="span">
                           {project.title}
                           {project.image.logo && (
                             <img
-                              className={classes.logo}
+                              style={styles.logo}
                               src={project.image.logo}
                               alt="logo"
                             />
                           )}
                         </Typography>
-                      </div>
+                      </Box>
                       <Typography component="p">
                         {project.shortDescription}
                       </Typography>
@@ -231,7 +221,7 @@ export default function Portfolio() {
               </ScrollAnimation>
             </Grid>
           ))}
-        </Grid>{" "}
+        </Grid>
       </Container>
       <Dialog
         open={open}
@@ -244,6 +234,6 @@ export default function Portfolio() {
         techStack={techStack}
         handleClose={handleClose}
       />
-    </div>
+    </Box>
   );
 }
