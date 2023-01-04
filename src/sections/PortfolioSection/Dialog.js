@@ -63,7 +63,7 @@ export default function CustomizedDialogs({
         <Typography variant="h6" component="p" color="primary">
           {company}
         </Typography>
-        <Typography variant="body1" component="p">
+        <Typography variant="body1" component="p" color="text.secondary">
           {duration}
         </Typography>
       </DialogTitle>

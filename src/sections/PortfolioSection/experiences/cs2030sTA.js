@@ -1,7 +1,7 @@
 import SchoolIcon from "@material-ui/icons/School";
 
 const CS2030TA = {
-  jobTitle: "NUS Teaching Assistant",
+  jobTitle: "University Teaching Assistant",
   company: "National University of Singapore",
   duration: "Jan 2021 - Apr 2021",
   description:
