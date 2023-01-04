@@ -23,7 +23,7 @@ const styles = (theme) => ({
 const DialogTitle = withStyles(styles)((props) => {
   const { children, classes, onClose, ...other } = props;
   return (
-    <MuiDialogTitle disableTypography className={classes.root} {...other}>
+    <MuiDialogTitle className={classes.root} {...other}>
       <Typography variant="h6">{children}</Typography>
       {onClose ? (
         <IconButton
@@ -69,12 +69,11 @@ export default function CustomizedDialogs({
       </DialogTitle>
       <DialogContent>
         {jobscope
-          ? jobscope.map((role) => (
-              <div>
-                <Typography variant="body2">
+          ? jobscope.map((role, index) => (
+              <div key={index}>
+                <Typography variant="body2" sx={{ marginBottom: "16px" }}>
                   <li>{role}</li>
                 </Typography>
-                <br />
               </div>
             ))
           : null}

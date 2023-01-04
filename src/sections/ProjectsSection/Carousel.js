@@ -33,13 +33,15 @@ function Item({ showcase, index, width, height }) {
       <Typography
         variant="subtitle1"
         color="textPrimary"
-        className={styles.showcaseTitle}
+        sx={styles.showcaseTitle}
       >
         {showcase.title}
       </Typography>
     </Box>
   );
 }
+
+const ADD_CAROUSELL_HEIGHT = 50;
 
 function ShowcaseCarousel({ showcases, showcaseSizes }) {
   // Breakpoints to resize showcase
@@ -48,32 +50,39 @@ function ShowcaseCarousel({ showcases, showcaseSizes }) {
   const small = useMediaQuery(theme.breakpoints.only("xs"));
   return (
     <Carousel
+      navButtonsAlwaysInvisible={showcases.length <= 1}
       navButtonsAlwaysVisible={showcases.length > 1}
       indicators={showcases.length > 1}
       autoPlay
       animation={"slide"}
+      height={
+        (small
+          ? showcaseSizes.small.height
+          : medium
+          ? showcaseSizes.medium.height
+          : showcaseSizes.large.height) + ADD_CAROUSELL_HEIGHT
+      }
     >
       {showcases.map((item, i) => {
-        return small ? (
+        return (
           <Item
+            key={i}
             showcase={item}
             index={i}
-            width={showcaseSizes.small.width}
-            height={showcaseSizes.small.height}
-          />
-        ) : medium ? (
-          <Item
-            showcase={item}
-            index={i}
-            width={showcaseSizes.medium.width}
-            height={showcaseSizes.medium.height}
-          />
-        ) : (
-          <Item
-            showcase={item}
-            index={i}
-            width={showcaseSizes.large.width}
-            height={showcaseSizes.large.height}
+            width={
+              small
+                ? showcaseSizes.small.width
+                : medium
+                ? showcaseSizes.medium.width
+                : showcaseSizes.large.width
+            }
+            height={
+              small
+                ? showcaseSizes.small.height
+                : medium
+                ? showcaseSizes.medium.height
+                : showcaseSizes.large.height
+            }
           />
         );
       })}

@@ -37,6 +37,7 @@ const useStyles = (theme) => ({
     marginBottom: theme.spacing(5),
   },
   roleTitle: {
+    fontSize: 25,
     marginBottom: theme.spacing(2),
   },
   techstack: {
@@ -85,113 +86,110 @@ export default function ScrollDialog({
   const theme = useTheme();
   const styles = useStyles(theme);
   return (
-    <Box>
-      <Dialog
-        open={open}
-        onClose={handleClose}
-        maxWidth="md"
-        scroll="body"
-        aria-labelledby="scroll-dialog-title"
-        aria-describedby="scroll-dialog-description"
-      >
-        <IconButton sx={styles.cancel} onClick={handleClose} component="span">
-          <CancelIcon />
-        </IconButton>
+    <Dialog
+      open={open}
+      onClose={handleClose}
+      maxWidth="md"
+      scroll="body"
+      aria-labelledby="scroll-dialog-title"
+      aria-describedby="scroll-dialog-description"
+      key={title}
+    >
+      <IconButton sx={styles.cancel} onClick={handleClose} component="span">
+        <CancelIcon />
+      </IconButton>
 
-        {/*---------- Showcase Image ----------*/}
-        <Box sx={styles.imageHolder}>
-          <Carousel
-            showcases={image !== null ? image.showcases : null}
-            showcaseSizes={showcaseSizes}
-          />
-        </Box>
+      {/*---------- Showcase Image ----------*/}
+      <Box sx={styles.imageHolder}>
+        <Carousel
+          showcases={image !== null ? image.showcases : null}
+          showcaseSizes={showcaseSizes}
+        />
+      </Box>
 
-        {/*---------- Title ----------*/}
-        <DialogTitle sx={styles.dialogTitle} id="scroll-dialog-title">
-          <Typography sx={styles.title} variant="h4">
-            {title}
-          </Typography>
-        </DialogTitle>
-        <DialogContent>
-          {/*---------- Description ----------*/}
+      {/*---------- Title ----------*/}
+      <DialogTitle sx={styles.dialogTitle} id="scroll-dialog-title">
+        <Typography sx={styles.title}>{title}</Typography>
+      </DialogTitle>
+      <DialogContent>
+        {/*---------- Description ----------*/}
+        <DialogContentText
+          id="scroll-dialog-description"
+          ref={descriptionElementRef}
+          tabIndex={-1}
+        >
+          {description}
+        </DialogContentText>
+
+        {/*---------- My Roles ----------*/}
+        <Box sx={styles.rolesHolder}>
           <DialogContentText
-            id="scroll-dialog-description"
-            ref={descriptionElementRef}
-            tabIndex={-1}
-          >
-            {description}
-          </DialogContentText>
-
-          {/*---------- My Roles ----------*/}
-          <Box sx={styles.rolesHolder}>
-            <DialogContentText
-              id="scroll-dialog-roles"
-              ref={descriptionElementRef}
-              tabIndex={-1}
-            >
-              <Typography sx={styles.roleTitle} variant="h5" color="default">
-                My Role:{" "}
-              </Typography>
-              <ul>
-                {roles.map((role) => (
-                  <li>
-                    <Typography
-                      sx={styles.techstack}
-                      variant="body1"
-                      component="p"
-                      color="default"
-                    >
-                      {role}
-                    </Typography>
-                  </li>
-                ))}
-              </ul>
-            </DialogContentText>
-          </Box>
-
-          {/*---------- Tech Stack ----------*/}
-          <DialogContentText
-            id="scroll-dialog-techStack"
+            id="scroll-dialog-roles"
             ref={descriptionElementRef}
             tabIndex={-1}
           >
             <Typography
-              sx={styles.techstack}
-              variant="h5"
-              component="p"
-              color="default"
+              sx={styles.roleTitle}
+              component={"span"}
+              color="text.primary"
             >
-              Tech Stack:
+              My Role:
             </Typography>
-            <Box sx={styles.iconsHolder}>
-              {techStack.map((icon) => (
-                <Tooltip
-                  title={icon.name}
-                  TransitionComponent={Zoom}
-                  enterTouchDelay="50"
-                >
-                  <img src={icon.img} style={styles.icons} alt="icon" />
-                </Tooltip>
+            <ul>
+              {roles.map((role, index) => (
+                <li key={index}>
+                  <Typography
+                    sx={styles.techstack}
+                    component={"span"}
+                    color="default"
+                  >
+                    {role}
+                  </Typography>
+                </li>
               ))}
-            </Box>
+            </ul>
           </DialogContentText>
+        </Box>
 
-          {/*---------- Links ----------*/}
-          <Box sx={styles.linkHolder}>
-            {links.map((link) => (
-              <Button
-                variant="contained"
-                sx={styles.linkButtons}
-                target="_blank"
-                color="primary"
-                href={link.link}
+        {/*---------- Tech Stack ----------*/}
+        <DialogContentText
+          id="scroll-dialog-techStack"
+          ref={descriptionElementRef}
+          tabIndex={-1}
+        >
+          <Typography sx={styles.techstack} color="text.primary">
+            Tech Stack:
+          </Typography>
+          <Box sx={styles.iconsHolder}>
+            {techStack.map((icon, index) => (
+              <Tooltip
+                key={index}
+                title={icon.name}
+                TransitionComponent={Zoom}
+                enterTouchDelay="50"
               >
-                {link.name}
-              </Button>
+                <img src={icon.img} style={styles.icons} alt="icon" />
+              </Tooltip>
             ))}
           </Box>
-        </DialogContent>
-      </Dialog>
-    </Box>
+        </DialogContentText>
+
+        {/*---------- Links ----------*/}
+        <Box sx={styles.linkHolder}>
+          {links.map((link, index) => (
+            <Button
+              key={index}
+              variant="contained"
+              sx={styles.linkButtons}
+              target="_blank"
+              color="primary"
+              href={link.link}
+            >
+              {link.name}
+            </Button>
+          ))}
+        </Box>
+      </DialogContent>
+    </Dialog>
   );
 }

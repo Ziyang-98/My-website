@@ -22,7 +22,7 @@ const JobTrack = {
     small: { width: 400, height: 200 },
   },
   description:
-    "Job Track is an Single-Page Application that is designed using the MERN stack. The app allows job applicants to " +
+    "Job Track is an Single-Page Application that is created using the MERN stack. The app helps users to " +
     "track their job applications with ease by allows them to record information for their job applications." +
     "Users are able to quickly import their job track information across multiple browser platforms as well.",
   roles: [
