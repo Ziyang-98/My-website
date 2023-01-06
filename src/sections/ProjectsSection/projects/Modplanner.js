@@ -46,8 +46,8 @@ const Modplanner = {
     "The project, handled by a team of two, aims to ease the process " +
     "of module planning for NUS students. (Note: Give the website some time to load due to inactivity on heruko servers)",
   roles: [
-    "Designed and built the frontend with ReactJS",
-    "Added web hooks in the backend API to push or get data from the database, MongoDB",
+    "Designed and built the user interface with ReactJS",
+    "Added web hooks in the server to push or get data from the MongoDB database",
   ],
   links: [
     {

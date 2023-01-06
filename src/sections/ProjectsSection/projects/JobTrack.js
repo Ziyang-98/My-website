@@ -26,8 +26,8 @@ const JobTrack = {
     "track their job applications with ease by allows them to record information for their job applications." +
     "Users are able to quickly import their job track information across multiple browser platforms as well.",
   roles: [
-    "Designed and built the frontend with ReactJS",
-    "Built the backend with NodeJS, ExpressJS with MongoDB as the database",
+    "Designed and built the user interface with ReactJS",
+    "Built the server with NodeJS, ExpressJS with MongoDB as the database",
     "Implemented CI/CD and a serverless function to pull filtered and cleaned API data",
   ],
   links: [

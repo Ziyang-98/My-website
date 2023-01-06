@@ -41,9 +41,8 @@ const Coffeeberry = {
     "platform optimized and tuned for the coffee bean industry. This project was idealized and created " +
     "in 24 hours for HackNRoll Hackathon 2021.",
   roles: [
-    "Designed the User Interface of the app",
-    "Implemented the frontend API",
-    "Integrated the backend and frontend logic",
+    "Designed and developed the user interface of the app with ReactJS",
+    "Integrated the server and the user interface",
   ],
   links: [
     {

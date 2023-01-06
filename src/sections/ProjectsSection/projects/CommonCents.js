@@ -30,9 +30,9 @@ const CommonCents = {
     "on a software engineering module, CS2103T, in NUS.",
   roles: [
     "Team Lead: Led the overall direction and development of the project",
-    "Designed and implemented the model structure of the app",
-    "Implemented the logic execution of features in the app",
-    'Designed and implemented various features of the app (More information can be found under "Contributions" link below)',
+    "Designed and implemented the model structure of the application",
+    "Implemented the logical execution of features in the application",
+    'Designed and implemented other significant features in the app (More information can be found under "Contributions" link below)',
   ],
   links: [
     {
