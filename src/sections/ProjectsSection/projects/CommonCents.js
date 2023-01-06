@@ -32,7 +32,7 @@ const CommonCents = {
     "Team Lead: Led the overall direction and development of the project",
     "Designed and implemented the model structure of the application",
     "Implemented the logical execution of features in the application",
-    'Designed and implemented other significant features in the app (More information can be found under "Contributions" link below)',
+    'More information can be found under "Contributions" link below',
   ],
   links: [
     {

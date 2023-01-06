@@ -16,7 +16,6 @@ import Coffeeberry from "./projects/Coffeeberry";
 import CoralReefConservation from "./projects/CoralReefConservation";
 import JobTrack from "./projects/JobTrack";
 import Dialog from "./Dialog";
-import ScrollAnimation from "react-animate-on-scroll";
 
 const useStyles = (theme) => ({
   container: {
@@ -143,82 +142,67 @@ export default function Portfolio() {
   };
 
   // Card animation delay
-  let delay = 100;
-  const addOnDelay = 100;
-  const descriptionDelay = delay + addOnDelay * projects.length + delay;
+  // let delay = 100;
+  // const addOnDelay = 100;
+  // const descriptionDelay = delay + addOnDelay * projects.length + delay;
 
   return (
     <Box sx={styles.container} id="Projects">
       <Box sx={styles.titleHolder}>
-        <ScrollAnimation animateIn="fadeIn" delay={200} animateOnce={true}>
-          <Typography variant={mobileVP ? "h4" : "h3"}>My Projects</Typography>
-        </ScrollAnimation>
+        <Typography variant={mobileVP ? "h4" : "h3"}>My Projects</Typography>
       </Box>
       <Box sx={styles.descriptionHolder}>
-        <ScrollAnimation
-          animateIn="fadeIn"
-          delay={descriptionDelay}
-          animateOnce={true}
-        >
-          <Typography variant="body1" sx={styles.description}>
-            Click on each card to find out more
-          </Typography>
-        </ScrollAnimation>
+        <Typography variant="body1" sx={styles.description}>
+          Click on each card to find out more
+        </Typography>
       </Box>
       <Container sx={styles.cardGrid} maxWidth="md">
         <Grid container sx={styles.outerGrid} spacing={2}>
           {projects.map((project) => (
             <Grid item>
-              <ScrollAnimation
-                animateIn="fadeIn"
-                delay={(delay += addOnDelay)}
-                animateOnce={true}
-                sx={styles.card}
-              >
-                <Card sx={styles.card} elevation={2}>
-                  <CardActionArea
-                    sx={styles.cardClickable}
-                    onClick={() =>
-                      handleClick(
-                        project.title,
-                        project.image,
-                        project.showcaseSizes,
-                        project.description,
-                        project.roles,
-                        project.links,
-                        project.techStack
-                      )
-                    }
-                  >
-                    <CardMedia sx={styles.cardMedia} title="Image title">
-                      <img
-                        sx={styles.image}
-                        src={project.image.preview}
-                        alt="showcase"
-                        width={project.previewSize.width}
-                        height={project.previewSize.height}
-                      />
-                    </CardMedia>
-                    <CardContent sx={styles.cardContent}>
-                      <Box sx={styles.cardTitleHolder}>
-                        <Typography gutterBottom variant="h5" component="span">
-                          {project.title}
-                          {project.image.logo && (
-                            <img
-                              style={styles.logo}
-                              src={project.image.logo}
-                              alt="logo"
-                            />
-                          )}
-                        </Typography>
-                      </Box>
-                      <Typography component="p">
-                        {project.shortDescription}
+              <Card sx={styles.card} elevation={2}>
+                <CardActionArea
+                  sx={styles.cardClickable}
+                  onClick={() =>
+                    handleClick(
+                      project.title,
+                      project.image,
+                      project.showcaseSizes,
+                      project.description,
+                      project.roles,
+                      project.links,
+                      project.techStack
+                    )
+                  }
+                >
+                  <CardMedia sx={styles.cardMedia} title="Image title">
+                    <img
+                      sx={styles.image}
+                      src={project.image.preview}
+                      alt="showcase"
+                      width={project.previewSize.width}
+                      height={project.previewSize.height}
+                    />
+                  </CardMedia>
+                  <CardContent sx={styles.cardContent}>
+                    <Box sx={styles.cardTitleHolder}>
+                      <Typography gutterBottom variant="h5" component="span">
+                        {project.title}
+                        {project.image.logo && (
+                          <img
+                            style={styles.logo}
+                            src={project.image.logo}
+                            alt="logo"
+                          />
+                        )}
                       </Typography>
-                    </CardContent>
-                  </CardActionArea>
-                </Card>
-              </ScrollAnimation>
+                    </Box>
+                    <Typography component="p">
+                      {project.shortDescription}
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+              </Card>
             </Grid>
           ))}
         </Grid>

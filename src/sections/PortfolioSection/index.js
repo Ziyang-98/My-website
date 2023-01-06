@@ -3,7 +3,6 @@ import { useTheme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Exp from "./ExpTimeLine";
-import ScrollAnimation from "react-animate-on-scroll";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
 const useStyles = (theme) => ({
@@ -44,23 +43,15 @@ export default function Portfolio() {
   return (
     <Box sx={styles.container} id="Portfolio">
       <Box sx={styles.titleHolder}>
-        <ScrollAnimation animateIn="fadeIn" delay={200} animateOnce={true}>
-          <Typography variant={mobileVP ? "h4" : "h3"}>
-            My Experiences
-          </Typography>
-        </ScrollAnimation>
+        <Typography variant={mobileVP ? "h4" : "h3"}>My Experiences</Typography>
       </Box>
       <Box sx={styles.infoHolder}>
-        <ScrollAnimation animateIn="fadeIn" delay={800} animateOnce={true}>
-          <Typography variant="body1" sx={styles.description}>
-            Click on each icon to find out more
-          </Typography>
-        </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeIn" delay={450} animateOnce={true}>
-          <Box sx={styles.expHolder} id="Experiences">
-            <Exp />
-          </Box>
-        </ScrollAnimation>
+        <Typography variant="body1" sx={styles.description}>
+          Click on each icon to find out more
+        </Typography>
+        <Box sx={styles.expHolder} id="Experiences">
+          <Exp />
+        </Box>
       </Box>
     </Box>
   );
