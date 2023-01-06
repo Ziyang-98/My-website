@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useTheme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Avatar from "@mui/material/Avatar";
@@ -6,11 +6,10 @@ import Typography from "@mui/material/Typography";
 import Chip from "@mui/material/Chip";
 import EmailIcon from "@mui/icons-material/Email";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import ScrollAnimation from "react-animate-on-scroll";
+import Fade from "@mui/material/Fade";
+import VizSensor from "react-visibility-sensor";
 import ProfilePic from "assets/profile/dp.jpeg";
 import SocialMedia from "./SocialMedia";
-
-import "animate.css/animate.compat.css";
 
 const useStyles = (theme) => ({
   container: {
@@ -102,47 +101,54 @@ export default function Home({ handleToggle }) {
   const theme = useTheme();
   const styles = useStyles(theme);
   const mobileVP = useMediaQuery(theme.breakpoints.down("sm"));
+  let [visible, setVisible] = useState(false);
 
   return (
-    <Box sx={styles.container} id="Home">
-      <ScrollAnimation animateIn="fadeIn" animateOnce={true} delay={750}>
-        <Box sx={styles.imageHolder}>
-          <Avatar alt="Lim Zi Yang" src={ProfilePic} sx={styles.avatar} />
-        </Box>
-      </ScrollAnimation>
-      <ScrollAnimation animateIn="fadeIn" delay={500} animateOnce={true}>
-        <Box sx={styles.infoHolder}>
-          <Box sx={styles.textHolder}>
-            <Chip
-              label={
-                <Typography variant="subtitle1" sx={styles.introduction}>
-                  Hello, I'm
-                </Typography>
-              }
-              color="primary"
-              onClick={handleToggle}
-            />
-            <Box sx={styles.nameHolder}>
-              <Typography variant={mobileVP ? "h3" : "h2"} sx={styles.name}>
-                Lim Zi Yang
-              </Typography>
-              <Typography variant="h5" sx={styles.occupation}>
-                Computer Science Student @ NUS
-              </Typography>
-            </Box>
-            <Box sx={styles.infoDescription}>
-              <EmailIcon />
-              <div sx={styles.emailHolder}>
-                <Typography variant="subtitle2">
-                  limziyang8@gmail.com
-                </Typography>
-              </div>
-            </Box>
-
-            <SocialMedia />
+    <VizSensor
+      onChange={() => {
+        setVisible(true);
+      }}
+    >
+      <Box sx={styles.container} id="Home">
+        <Fade in={visible} timeout={900} style={{ transitionDelay: `300ms` }}>
+          <Box sx={styles.imageHolder}>
+            <Avatar alt="Lim Zi Yang" src={ProfilePic} sx={styles.avatar} />
           </Box>
-        </Box>
-      </ScrollAnimation>
-    </Box>
+        </Fade>
+        <Fade in={visible} timeout={900}>
+          <Box sx={styles.infoHolder}>
+            <Box sx={styles.textHolder}>
+              <Chip
+                label={
+                  <Typography variant="subtitle1" sx={styles.introduction}>
+                    Hello, I'm
+                  </Typography>
+                }
+                color="primary"
+                onClick={handleToggle}
+              />
+              <Box sx={styles.nameHolder}>
+                <Typography variant={mobileVP ? "h3" : "h2"} sx={styles.name}>
+                  Lim Zi Yang
+                </Typography>
+                <Typography variant="h5" sx={styles.occupation}>
+                  Computer Science Student @ NUS
+                </Typography>
+              </Box>
+              <Box sx={styles.infoDescription}>
+                <EmailIcon />
+                <div sx={styles.emailHolder}>
+                  <Typography variant="subtitle2">
+                    limziyang8@gmail.com
+                  </Typography>
+                </div>
+              </Box>
+
+              <SocialMedia />
+            </Box>
+          </Box>
+        </Fade>
+      </Box>
+    </VizSensor>
   );
 }
