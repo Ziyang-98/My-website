@@ -69,6 +69,14 @@ const useStyles = (theme) => ({
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
+      width: "380px",
+    },
+    [theme.breakpoints.down("sm")]: {
+      flexDirection: "column",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      width: "300px",
     },
   },
 

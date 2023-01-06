@@ -26,6 +26,7 @@ import GitLabIcon from "assets/logos/framework/gitlab.png";
 import SpringBootIcon from "assets/logos/framework/springboot.png";
 import GradleIcon from "assets/logos/framework/gradle.png";
 import MavenIcon from "assets/logos/framework/maven.png";
+import JavaFXIcon from "assets/logos/framework/javafx.PNG";
 import DockerIcon from "assets/logos/framework/docker.png";
 import KubernetesIcon from "assets/logos/framework/kubernetes.png";
 import FirebaseIcon from "assets/logos/framework/firebase.png";
@@ -53,11 +54,6 @@ const useStyles = (theme) => ({
     marginTop: theme.spacing(2),
     marginBottom: theme.spacing(2),
     flexWrap: "wrap",
-    [theme.breakpoints.down("sm")]: {
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-    },
   },
 
   icon: {
@@ -78,8 +74,8 @@ const languages = [
 ];
 
 const frameworks = [
-  { img: HtmlIcon, title: "HTML", alt: "html icon" },
-  { img: CssIcon, title: "CSS", alt: "css icon" },
+  { img: HtmlIcon, title: "HTML5", alt: "html icon" },
+  { img: CssIcon, title: "CSS3", alt: "css icon" },
   { img: ReactIcon, title: "ReactJS", alt: "reactjs icon" },
   { img: NodejsIcon, title: "NodeJS", alt: "nodejs icon" },
   { img: QianKunIcon, title: "qiankun", alt: "qiankun icon" },
@@ -92,6 +88,7 @@ const frameworks = [
   { img: SpringBootIcon, title: "SpringBoot", alt: "springboot icon" },
   { img: GradleIcon, title: "Gradle", alt: "gradle icon" },
   { img: MavenIcon, title: "Maven", alt: "maven icon" },
+  { img: JavaFXIcon, title: "JavaFX", alt: "javafx icon" },
   { img: DockerIcon, title: "Docker", alt: "docker icon" },
   { img: KubernetesIcon, title: "Kubernetes", alt: "kubernetes icon" },
   { img: FirebaseIcon, title: "Firebase", alt: "firebase icon" },
