@@ -1,26 +1,23 @@
 import React from "react";
-import Home from "./Home/Home";
-import About from "./About/About";
-import Navbar from "./Navbar/Navbar";
-import Portfolio from "./Portfolio/Portfolio";
-import Projects from "./Projects/Projects";
-import Box from "@material-ui/core/Box";
-import Paper from "@material-ui/core/Paper";
+import Navbar from "components/Navbar";
+import Home from "sections/HomeSection";
+import About from "sections/AboutSection";
+import Portfolio from "sections/PortfolioSection";
+import Projects from "sections/ProjectsSection";
+import Box from "@mui/material/Box";
+import Paper from "@mui/material/Paper";
+import { ThemeProvider } from "@mui/material/styles";
+import { lightTheme, darkTheme } from "common/theme";
 
-import {
-  makeStyles,
-  createTheme,
-  ThemeProvider,
-} from "@material-ui/core/styles";
-
-const useStyles = makeStyles((theme) => ({
+const styles = {
   container: {},
   paper: {
     width: "100%",
     minWidth: "100%",
     overflowX: "hidden",
+    bgcolor: "background.main",
   },
-}));
+};
 
 function App() {
   const [toggleDark, setToggleDark] = React.useState(false);
@@ -29,36 +26,11 @@ function App() {
     setToggleDark(!toggleDark);
   };
 
-  const theme = createTheme({
-    typography: {
-      fontFamily: ["-apple-system", "BlinkMacSystemFont", "sans-serif"].join(
-        ",",
-      ),
-    },
-    palette: {
-      type: toggleDark ? "dark" : "light",
-
-      primary: {
-        main: toggleDark ? "#7580e8" : "#3f51b5",
-      },
-      whiteColor: {
-        main: toggleDark ? "#002984" : "#F7FCFC",
-      },
-      typography: {
-        h2: {
-          fontSize: 11,
-        },
-      },
-    },
-  });
-
-  const classes = useStyles();
-
   return (
     <React.Fragment>
-      <ThemeProvider theme={theme}>
-        <Box className={classes.container}>
-          <Paper elevation={0} className={classes.paper}>
+      <ThemeProvider theme={toggleDark ? darkTheme : lightTheme}>
+        <Box sx={styles.container}>
+          <Paper elevation={0} sx={styles.paper}>
             <Navbar />
             <Home handleToggle={handleToggle} />
             <About />
