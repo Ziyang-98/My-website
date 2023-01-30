@@ -12,7 +12,7 @@ import NodejsIcon from "assets/logos/framework/nodejs.png";
 const Coffeeberry = {
   title: "Coffeeberry",
   shortDescription:
-    "A web e-commerce app that connects coffee bean suppliers and coffee bean buyers",
+    "A web e-commerce app that connects coffee bean suppliers and coffee bean buyers.",
   image: {
     logo: null,
     preview: CoffeeberryLogo,
@@ -41,8 +41,8 @@ const Coffeeberry = {
     "platform optimized and tuned for the coffee bean industry. This project was idealized and created " +
     "in 24 hours for HackNRoll Hackathon 2021.",
   roles: [
-    "Designed and developed the user interface of the app with ReactJS",
-    "Integrated the server and the user interface",
+    "Designed and developed the user interface of the web application's client with ReactJS",
+    "Integrated logic between the server and the client",
   ],
   links: [
     {

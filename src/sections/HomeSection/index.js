@@ -8,7 +8,7 @@ import EmailIcon from "@mui/icons-material/Email";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Fade from "@mui/material/Fade";
 import VizSensor from "react-visibility-sensor";
-import ProfilePic from "assets/profile/dp.jpeg";
+import ProfilePic from "assets/profile/dp.jpg";
 import SocialMedia from "./SocialMedia";
 
 const useStyles = (theme) => ({
