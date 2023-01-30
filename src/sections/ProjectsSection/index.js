@@ -43,8 +43,11 @@ const useStyles = (theme) => ({
   },
   outerGrid: {
     display: "flex",
-    justifyContent: "center",
+    justifyContent: "space-between",
     alignItems: "center",
+    [theme.breakpoints.down("md")]: {
+      justifyContent: "center",
+    },
   },
   card: {
     height: 320,

@@ -1,4 +1,11 @@
 import PeerPrepLogo from "assets/projects/peerprep/peerpreplogo.png";
+import LoginPageImg from "assets/projects/peerprep/loginpage.PNG";
+import MatchingPageImg from "assets/projects/peerprep/matchingpage.PNG";
+import MatchingDialogImg from "assets/projects/peerprep/matchingdialog.PNG";
+import CollaborationPageImg from "assets/projects/peerprep/collaborationpage.PNG";
+import ChatFeatureImg from "assets/projects/peerprep/chatfeature.PNG";
+import HistoryPageImg from "assets/projects/peerprep/historypage.PNG";
+import ProfilePageImg from "assets/projects/peerprep/profilepage.PNG";
 
 import JavascriptIcon from "assets/logos/language/javascript.png";
 import ReactIcon from "assets/logos/framework/react.png";
@@ -11,20 +18,36 @@ import RedisIcon from "assets/logos/framework/redis.png";
 const PeerPrep = {
   title: "PeerPrep",
   shortDescription:
-    "A web app that simulates coding interviews for job applicants.",
+    "A web app that simulates real-time collaborative coding interviews.",
   image: {
     logo: null,
     preview: PeerPrepLogo,
-    showcases: [],
+    showcases: [
+      { image: LoginPageImg, title: "Login Page" },
+      { image: MatchingPageImg, title: "Matching Page" },
+      { image: MatchingDialogImg, title: "Matching Difficulty Dialog" },
+      { image: CollaborationPageImg, title: "Collaboration Room Page" },
+      {
+        image: ChatFeatureImg,
+        title: "Chat Feature in Collaboration Room",
+        specificSizes: {
+          large: { width: 630, height: 450 },
+          medium: { width: 420, height: 300 },
+          small: { width: 300, height: 250 },
+        },
+      },
+      { image: HistoryPageImg, title: "Question History Page" },
+      { image: ProfilePageImg, title: "Profie Management Page" },
+    ],
   },
   previewSize: {
     width: "30%",
     height: "100%",
   },
   showcaseSizes: {
-    large: { width: 650, height: 470 },
-    medium: { width: 500, height: 360 },
-    small: { width: 320, height: 230 },
+    large: { width: 900, height: 450 },
+    medium: { width: 600, height: 300 },
+    small: { width: 500, height: 250 },
   },
 
   description:

@@ -53,7 +53,7 @@ function ShowcaseCarousel({ showcases, showcaseSizes }) {
       navButtonsAlwaysInvisible={showcases.length <= 1}
       navButtonsAlwaysVisible={showcases.length > 1}
       indicators={showcases.length > 1}
-      autoPlay
+      autoPlay={false}
       animation={"slide"}
       height={
         (small
@@ -64,6 +64,7 @@ function ShowcaseCarousel({ showcases, showcaseSizes }) {
       }
     >
       {showcases.map((item, i) => {
+        const sizes = item.specificSizes ?? showcaseSizes;
         return (
           <Item
             key={i}
@@ -71,17 +72,17 @@ function ShowcaseCarousel({ showcases, showcaseSizes }) {
             index={i}
             width={
               small
-                ? showcaseSizes.small.width
+                ? sizes.small.width
                 : medium
-                ? showcaseSizes.medium.width
-                : showcaseSizes.large.width
+                ? sizes.medium.width
+                : sizes.large.width
             }
             height={
               small
-                ? showcaseSizes.small.height
+                ? sizes.small.height
                 : medium
-                ? showcaseSizes.medium.height
-                : showcaseSizes.large.height
+                ? sizes.medium.height
+                : sizes.large.height
             }
           />
         );
