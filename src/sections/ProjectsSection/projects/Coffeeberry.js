@@ -12,7 +12,7 @@ import NodejsIcon from "assets/logos/framework/nodejs.png";
 const Coffeeberry = {
   title: "Coffeeberry",
   shortDescription:
-    "A web e-commerce app that connects coffee bean suppliers and coffee bean buyers",
+    "A web e-commerce app that connects coffee bean suppliers and coffee bean buyers.",
   image: {
     logo: null,
     preview: CoffeeberryLogo,

@@ -7,7 +7,7 @@ import MongoDbIcon from "assets/logos/framework/mongodb.PNG";
 
 const JobTrack = {
   title: "Job Track",
-  shortDescription: "A web app that makes life easier for any job applicants",
+  shortDescription: "A web app that makes life easier for any job applicants.",
   image: {
     preview: JobTrackLogo,
     showcases: [{ image: JobTrackShowcase, title: "Main Page" }],

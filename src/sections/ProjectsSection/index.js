@@ -15,6 +15,7 @@ import CommonCents from "./projects/CommonCents";
 import Coffeeberry from "./projects/Coffeeberry";
 import CoralReefConservation from "./projects/CoralReefConservation";
 import JobTrack from "./projects/JobTrack";
+import PeerPrep from "./projects/PeerPrep";
 import Dialog from "./Dialog";
 
 const useStyles = (theme) => ({
@@ -88,6 +89,7 @@ const useStyles = (theme) => ({
 });
 
 const projects = [
+  PeerPrep,
   JobTrack,
   CoralReefConservation,
   Coffeeberry,
@@ -140,11 +142,6 @@ export default function Portfolio() {
   const handleClose = () => {
     setOpen(false);
   };
-
-  // Card animation delay
-  // let delay = 100;
-  // const addOnDelay = 100;
-  // const descriptionDelay = delay + addOnDelay * projects.length + delay;
 
   return (
     <Box sx={styles.container} id="Projects">

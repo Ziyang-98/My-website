@@ -29,6 +29,7 @@ import MavenIcon from "assets/logos/framework/maven.png";
 import JavaFXIcon from "assets/logos/framework/javafx.PNG";
 import DockerIcon from "assets/logos/framework/docker.png";
 import KubernetesIcon from "assets/logos/framework/kubernetes.png";
+import RedisIcon from "assets/logos/framework/redis.png";
 import FirebaseIcon from "assets/logos/framework/firebase.png";
 import GoogleCloudPlatformIcon from "assets/logos/framework/googlecloudplatform.png";
 import GoogleDialogFlowIcon from "assets/logos/framework/dialogflow.png";
@@ -91,6 +92,7 @@ const frameworks = [
   { img: JavaFXIcon, title: "JavaFX", alt: "javafx icon" },
   { img: DockerIcon, title: "Docker", alt: "docker icon" },
   { img: KubernetesIcon, title: "Kubernetes", alt: "kubernetes icon" },
+  { img: RedisIcon, title: "Redis", alt: "redis icon" },
   { img: FirebaseIcon, title: "Firebase", alt: "firebase icon" },
   {
     img: GoogleCloudPlatformIcon,
