@@ -82,9 +82,10 @@ export default function About() {
               Hello, I'm a Year 4 Computer Science Student who is studying in
               NUS. I am passionate about various fields of computing such as
               Artificial Intelligence (A.I.) and Software Engineering. My
-              specialization lies in full-stack engineering. Personally, I enjoy
-              developing web applications and services. Here's are the
-              languanges and frameworks that I am familiar with:
+              specialization lies in full-stack engineering and I like to work
+              on projects developing web applications and services apart from
+              school. Here are the programming languanges and frameworks that I
+              am familiar with:
             </Typography>
           </Box>
 

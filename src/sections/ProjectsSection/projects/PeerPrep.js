@@ -51,13 +51,13 @@ const PeerPrep = {
   },
 
   description:
-    "PeerPrep is a web application that is developed using the MERN stack. The app follows a microservice architecture which is managed by Docker & Kubernetes and uses a Redis cache. " +
-    "The project aims to help students ace their coding interviews through real-time collaborative coding, peer reviews and peer mock interviews. " +
-    "The app features a matching system according to question difficulty, mock interview questions and a real-time code editor for users to practice coding answers for the interview",
+    "PeerPrep is a web application that is developed using the MERN stack. The app follows a microservice architecture which uses a Redis cache and is managed by Docker. " +
+    "The project aims to help students ace their coding interviews through peer reviews, peer mock interviews and collaborative coding. " +
+    "The app features a matching system according to question difficulty, mock interview questions and a real-time code editor for peers to practice coding together.",
   roles: [
     "Designed the user interface of the web application ",
     "Implemented the Matching Page & Collaboration Room Page with ReactJS",
-    "Implemented the server for real-time collaboration for the coding platform with NodeJS",
+    "Implemented the server for real-time collaboration on the coding platform with NodeJS",
   ],
   links: [
     {
