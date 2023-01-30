@@ -27,7 +27,7 @@ const Bob = {
     "and deadlines through conversations. Features include a variety of commands that " +
     "allow users to manage their tasks in an optimal environment for CLI. " +
     "This greenfield individual project is based on a software engineering module, CS2103T, in NUS.",
-  roles: ["Designed, developed and integrated the overall application"],
+  roles: ["Designed, developed and integrated the application"],
   links: [
     {
       name: "Project Info",

@@ -46,7 +46,7 @@ const CoralReefConservation = {
     "The app also comes with an administrative system for the marine biologists in Reef Ecology Lab to upload data easily to the library available.",
   roles: [
     "Designed the user interface and the model schemas of the database",
-    "Developed the user interface (mainly the results page) with ReactJS",
+    "Developed the user interface of the results page with ReactJS",
     "Implemented a multi-criteria priority sorting algorithm to filter results",
   ],
   links: [
