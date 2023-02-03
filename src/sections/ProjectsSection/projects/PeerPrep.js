@@ -47,7 +47,7 @@ const PeerPrep = {
   showcaseSizes: {
     large: { width: 900, height: 450 },
     medium: { width: 600, height: 300 },
-    small: { width: 500, height: 250 },
+    small: { width: 320, height: 160 },
   },
 
   description:
