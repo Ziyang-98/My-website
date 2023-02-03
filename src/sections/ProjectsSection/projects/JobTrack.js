@@ -35,6 +35,10 @@ const JobTrack = {
       name: "Project Link",
       link: "https://job-track-9c538.web.app/",
     },
+    {
+      name: "Repository",
+      link: "https://github.com/Ziyang-98/job-tracker",
+    },
   ],
   techStack: [
     { name: "Javascript", img: JavascriptIcon },
