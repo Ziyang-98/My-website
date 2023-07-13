@@ -132,7 +132,7 @@ export default function Home({ handleToggle }) {
                   Lim Zi Yang
                 </Typography>
                 <Typography variant="h5" sx={styles.occupation}>
-                  Computer Science Student @ NUS
+                  Software Engineer @ DSTA Singapore
                 </Typography>
               </Box>
               <Box sx={styles.infoDescription}>
