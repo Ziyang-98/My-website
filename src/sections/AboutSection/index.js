@@ -79,13 +79,13 @@ export default function About() {
           </Box>
           <Box sx={styles.details}>
             <Typography variant="subtitle1">
-              Hello, I'm a Year 4 Computer Science Student who is studying in
-              NUS. I am passionate about various fields of computing such as
-              Artificial Intelligence (A.I.) and Software Engineering. My
-              specialization lies in full-stack engineering and I like to work
-              on projects developing web applications and services apart from
-              school. Here are the programming languanges and frameworks that I
-              am familiar with:
+              Hi there! My name is Zi Yang and I'm Full-Stack Software Engineer
+              working at DSTA Singapore. I'm a tech enthusiast and I enjoy
+              keeping up with the latest trends of Artificial Intelligence
+              (A.I.) and Software Engineering. Apart from work, I like to work
+              on my personal projects, developing web applications and services
+              for leisure and exposure. Here are the programming languanges and
+              frameworks that I am familiar with:
             </Typography>
           </Box>
 
