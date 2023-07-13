@@ -79,13 +79,15 @@ export default function About() {
           </Box>
           <Box sx={styles.details}>
             <Typography variant="subtitle1">
-              Hi there! My name is Zi Yang and I'm Full-Stack Software Engineer
-              working at DSTA Singapore. I'm a tech enthusiast and I enjoy
-              keeping up with the latest trends of Artificial Intelligence
-              (A.I.) and Software Engineering. Apart from work, I like to work
-              on my personal projects, developing web applications and services
-              for leisure and exposure. Here are the programming languanges and
-              frameworks that I am familiar with:
+              Hi there, my name is Lim Zi Yang. I graduated from the National
+              University of Singapore with a Bachelors in Computing{" "}
+              {"(Computer Science)"} in 2023 and I'm currently Full-Stack
+              Software Engineer working at DSTA Singapore. I'm a tech enthusiast
+              and I enjoy keeping up with the latest trends of Artificial
+              Intelligence (A.I.) and Software Engineering. Apart from work, I
+              like to work on my personal projects, developing web applications
+              and services for leisure and exposure. Here are the programming
+              languanges and frameworks that I am familiar with:
             </Typography>
           </Box>
 
