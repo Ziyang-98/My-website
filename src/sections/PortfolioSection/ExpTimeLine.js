@@ -12,6 +12,7 @@ import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
 import TimelineDot from "@mui/lab/TimelineDot";
 import Dialog from "sections/PortfolioSection/Dialog";
+import DSTA from "sections/PortfolioSection/experiences/dsta";
 import SHOPEE from "sections/PortfolioSection/experiences/shopee";
 import RDC from "sections/PortfolioSection/experiences/rdc";
 import FRANK from "sections/PortfolioSection/experiences/frank";
@@ -49,7 +50,7 @@ const useStyles = (theme) => ({
   },
 });
 
-const experiences = [SHOPEE, RDC, FRANK, CS2030STA, IRAS, CS2030TA];
+const experiences = [DSTA, SHOPEE, RDC, FRANK, CS2030STA, IRAS, CS2030TA];
 
 export default function ExpTimeline() {
   const theme = useTheme();
